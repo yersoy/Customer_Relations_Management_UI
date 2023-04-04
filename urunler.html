@@ -1,0 +1,1492 @@
+﻿<!DOCTYPE html>
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Ritma Flex İş Yönetim Platformu</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link href="assets/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="assets/css/ionicons.min.css" rel="stylesheet" />
+    <link href="assets/css/jqvmap.min.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.snow.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.core.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.bubble.css" rel="stylesheet" />
+    <link href="assets/js/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.profile.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.filemgr.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.mail.css" rel="stylesheet" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+    <link href="assets/css/skin.light.css" rel="stylesheet" />
+    <link href="assets/css/customs.css" rel="stylesheet" />
+    <script src="https://kit-pro.fontawesome.com/releases/v5.10.1/js/pro.min.js" data-auto-fetch-svg></script>
+    <style>
+      .ys-truncate-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="df-roboto">
+    <header class="navbar navbar-header navbar-header-fixed">
+      <div class="d-none align-items-center pos-fixed t-0 z-index-50 w-100 ht-40 tx-white tx-12 justify-content-center bg-dark pd-y-5 pd-x-20 alert-dismissible" role="alert">
+        <i data-feather="info" class="wd-16 ht-16"></i> Aylık aboneliğinizin bitimine 3 gün kaldı. Yenilemek için <button type="button" class="btn btn-xs btn-warning lh--9 mg-l-10">Yenile</button>
+        <button type="button" class="close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <a href="" id="mainMenuOpen" class="burger-menu">
+        <i data-feather="menu"></i>
+      </a>
+      <div class="navbar-brand wd-sm-auto-f">
+        <a href="index.html" class="df-logo">
+          <img src="assets/logo_ritmaflex.svg" class="ht-25" />
+        </a>
+        <div class="dropdown tx-12 mg-l-40">
+          <button class="btn btn-xs btn-outline-light dropdown-toggle pd-x-3 pd-y-3" type="button" id="companies" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="d-inline-flex align-items-center justify-content-start">
+              <div class="wd-35">
+                <div class="avatar avatar-xs">
+                  <img src="http://via.placeholder.com/30" class="rounded" alt="">
+                </div>
+              </div>
+              <div class="tx-left lh-0 pd-r-10">ZY Elektrikli Traktör</div>
+            </div>
+          </button>
+          <div class="dropdown-menu mn-wd-100p tx-12" aria-labelledby="companies">
+            <a class="dropdown-item" href="#">ZY Elektrikli Traktör</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item tx-primary" href="#modal_ritmafirma" data-toggle="modal">Bölge Müdürlüğü</a>
+            <a class="dropdown-item tx-primary" href="#modal_ritmafirma" data-toggle="modal">Bayii</a>
+          </div>
+        </div>
+      </div>
+      <div id="navbarMenu" class="navbar-menu-wrapper">
+        <div class="navbar-menu-header">
+          <a href="index.html" class="df-logo">
+            <img src="assets/logo_ritmaflex.svg" class="ht-25" />
+          </a>
+          <a id="mainMenuClose" href="#">
+            <i data-feather="x"></i>
+          </a>
+        </div>
+        <ul class="nav navbar-menu">
+          <li class="nav-label pd-l-20 pd-lg-l-25 d-lg-none">Menü</li>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link">Kontaklar</a>
+            <div class="navbar-menu-sub">
+              <div class="d-lg-flex">
+                <ul>
+                  <li class="nav-label">Kontak Türleri</li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html" class="nav-sub-link">Müşteri</a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html" class="nav-sub-link">Tedarikçi</a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html" class="nav-sub-link">Bölge Müdürlüğü</a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html" class="nav-sub-link">Bayii</a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html" class="nav-sub-link">Rakip</a>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="nav-label">Yeni</li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html#yeni1" class="nav-sub-link">
+                      <i class="far fa-plus"></i>Yeni Müşteri </a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html#yeni2" class="nav-sub-link">
+                      <i class="far fa-plus"></i>Yeni Tedarikçi </a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html#yeni3" class="nav-sub-link">
+                      <i class="far fa-plus"></i>Yeni Bölge Müdürlüğü </a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html#yeni4" class="nav-sub-link">
+                      <i class="far fa-plus"></i>Yeni Bayi </a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html#yeni5" class="nav-sub-link">
+                      <i class="far fa-plus"></i>Yeni Rakip </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="urunler.html" class="nav-link">Ürünler</a>
+          </li>
+          <li class="nav-item">
+            <a href="servisler.html" class="nav-link">Servisler</a>
+          </li>
+          <!--<li class="nav-item with-sub"><a href="" class="nav-link">CRM</a><div class="navbar-menu-sub"><div class="d-lg-flex"><ul><li class="nav-label">Pazarlama</li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                            Fırsat
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                            Görüşme
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-plus"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><line x1="9" y1="15" x2="15" y2="15" /></svg>
+                            Teklif
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone-incoming"><polyline points="16 2 16 8 22 8"></polyline><line x1="23" y1="1" x2="16" y2="8"></line><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            Şikayet Yönetimi
+                        </a></li><li class="nav-label mg-t-20">Ürün Yönetimi </li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><i class="fas fa-barcode mg-r-15"></i>
+                            Ürünler
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" /><line x1="7" y1="7" x2="7.01" y2="7" /></svg>
+                            Fiyatlar
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21" /><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></svg>
+                            Müşteri Ürünleri
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Kategoriler
+                        </a></li></ul><ul><li class="nav-label">Satış </li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            Sipariş
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            Satış
+                    <li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                            Hedef Kota
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                            Dashboard
+                        </a></li><li class="nav-label mg-t-20">Müşteri</li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Kontak Kişiler
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Potansiyel Kayıtlar
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Harita Görünümü
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round"
+                                 class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Müşteri Dağılımı
+                        </a></li></ul></div></div></li><li class="nav-item with-sub"><a href="" class="nav-link">Servis</a><ul class="navbar-menu-sub"><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tool"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>
+                    Servis
+                </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-paperclip"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" /></svg>
+                    Bakım Sözleşmesi
+                </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    Müşteri Ürünü
+                </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone-incoming"><polyline points="16 2 16 8 22 8"></polyline><line x1="23" y1="1" x2="16" y2="8"></line><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    Ticket - Müşteri Destek
+                </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+                    Servis Dağılımı
+                </a></li></ul></li><li class="nav-item with-sub"><a href="" class="nav-link">Stok</a><div class="navbar-menu-sub"><div class="d-lg-flex"><ul><li class="nav-label">Stok Hareketleri</li><li class="nav-sub-item"><a href="page-signin.html" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            Stok Giriş
+                        </a></li><li class="nav-sub-item"><a href="page-signup.html" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-upload"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                            Stok Çıkış
+                        </a><li class="nav-sub-item"><a href="page-verify.html" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-truck"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                            Depo Transferi
+                        </a></li></ul><ul><li class="nav-label">Kayıtlar</li><li class="nav-sub-item"><a href="page-500.html" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>Stok Takibi
+                        </a></li><li class="nav-sub-item"><a href="page-404.html" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>Stok Hareketleri
+                        </a></li><li class="nav-sub-item"><a href="page-500.html" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg> Ürün Stok Geçmişi
+                        </a></li></ul></div></div></li><li class="nav-item with-sub"><a href="" class="nav-link">Demirbaş</a><div class="navbar-menu-sub"><div class="d-lg-flex"><ul><li class="nav-label">Kurumsal Envanter</li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            Demirbaş
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-upload"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                            Zimmet Kaydı
+                        </a><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                            Zimmet Teslimi
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+                            Zimmet Transfer
+                        </a></li></ul><ul><li class="nav-label">Kayıtlar</li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>Demirbaş Envanteri
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>Demirbaş Geçmişi
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg> Demirbaş Hareket Geçmişi
+                        </a></li></ul></div></div></li><li class="nav-item with-sub"><a href="" class="nav-link">Satınalma</a><div class="navbar-menu-sub"><div class="d-lg-flex"><ul><li class="nav-label">Süreç Takibi</li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            Ürün Talebi
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            Satınalma Süreci
+                        </a><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            Satınalma Siparişleri
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-flag"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                            Satınalmalar
+                        </a></li></ul><ul><li class="nav-label">Kayıtlar</li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>Ürün Talep Havuzu
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>Tedarikçiler
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg> Dashboard
+                        </a></li></ul></div></div></li><li class="nav-item with-sub"><a href="" class="nav-link">Ön Muhasebe</a><div class="navbar-menu-sub"><div class="d-lg-flex"><ul><li class="nav-label">Faturalar</li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-minus"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                            Alış Faturası
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-plus"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                            Satış Faturası
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10" /><line x1="15" y1="9" x2="9" y2="15" /><line x1="9" y1="9" x2="15" y2="15" /></svg>
+                            İade Faturaları
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            Masraf Merkezi
+                        </a></li><li class="nav-label mg-t-20">Finans Takip</li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            Finans Ajandası
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+                            Çek - Senet
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-anchor"><circle cx="12" cy="5" r="3"></circle><line x1="12" y1="22" x2="12" y2="8"></line><path d="M5 12H2a10 10 0 0 0 20 0h-3"></path></svg>
+                            Banka - Kasa
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                            Ödeme Görüşmeleri
+                        </a></li></ul><ul><li class="nav-label">Cari Takip </li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                            Borç Alacak
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-divide"><circle cx="12" cy="6" r="2"></circle><line x1="5" y1="12" x2="19" y2="12"></line><circle cx="12" cy="18" r="2"></circle></svg>
+                            Ödeme ve Tahsilatlar
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-check"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                            Personel Ödemeleri
+                        </a></li><li class="nav-sub-item"><a href="#" class="nav-sub-link"><svg
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                            BA - BS Listesi
+                        </a></li></ul></div></div></li>-->
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <a id="navbarSearch" href="" class="search-link d-flex">
+          <i data-feather="search"></i>
+        </a>
+        <div class="dropdown dropdown-message">
+          <a href="agenda.html" class="dropdown-link new-indicator d-flex" data-tooltip data-placement="bottom" title="Ajanda">
+            <i data-feather="calendar"></i>
+          </a>
+        </div>
+        <div class="dropdown dropdown-message">
+          <a href="" class="dropdown-link new-indicator d-flex" data-toggle="dropdown">
+            <i data-feather="message-square"></i>
+            <span>5</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-header">Mesajlar</div>
+            <a href="" class="dropdown-item">
+              <div class="media">
+                <div class="avatar avatar-sm avatar-online">
+                  <img src="http://via.placeholder.com/350" class="rounded-circle" alt="">
+                </div>
+                <div class="media-body mg-l-15">
+                  <p>
+                    <strong>Ali Osman Yıldırım</strong>, ₺ 650 tutarlı servis için onay bekliyor
+                  </p>
+                  <span>Bugün - 10:00</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-footer">
+              <a href="">Hepsini listeleyin</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown dropdown-notification">
+          <a href="" class="dropdown-link new-indicator d-flex" data-toggle="dropdown">
+            <i data-feather="bell"></i>
+            <span>2</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-header">Bildirimler</div>
+            <a href="" class="dropdown-item">
+              <div class="media">
+                <div class="avatar avatar-sm avatar-online">
+                  <img src="http://via.placeholder.com/350" class="rounded-circle" alt="">
+                </div>
+                <div class="media-body mg-l-15">
+                  <p>Serkan Erkut tarafından <strong> Ertuğrullar Traktör Makina A.Ş</strong> için yeni servis oluşturdu. </p>
+                  <span>az önce</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-footer">
+              <a href="">Hepsini listeleyin</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown dropdown-profile">
+          <a href="#" class="dropdown-link" data-toggle="dropdown" data-display="static">
+            <div class="avatar avatar-sm">
+              <img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg" />
+            </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right tx-13">
+            <div class="avatar avatar-lg mg-b-15">
+              <img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg" />
+            </div>
+            <h6 class="tx-semibold mg-b-5">Uğur Büyükalkan</h6>
+            <p class="mg-b-25 tx-12 tx-color-03">Müşteri Temsilcisi</p>
+            <a href="#" class="dropdown-item">
+              <i data-feather="user"></i>Kontak </a>
+            <a href="#" class="dropdown-item">
+              <i data-feather="life-buoy"></i> Yardım </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i data-feather="settings"></i> Hesap Ayaları </a>
+            <a href="#" class="dropdown-item">
+              <i data-feather="settings"></i> Sistem Ayarları </a>
+            <div class="dropdown-divider"></div>
+            <a href="login.html" class="dropdown-item">
+              <i data-feather="log-out"></i> Çıkış yap </a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-search">
+        <div class="navbar-search-header">
+          <input type="search" class="form-control" placeholder="Aramalarınızı buradan yapabilirsiniz...">
+          <button class="btn">
+            <i data-feather="search"></i>
+          </button>
+          <a id="navbarSearchClose" href="" class="link-03 mg-l-5 mg-lg-l-10">
+            <i data-feather="x"></i>
+          </a>
+        </div>
+        <div class="navbar-search-body">
+          <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Son Aramalarınız</label>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Mehmet Özdemir</a>
+            </li>
+            <li>
+              <a href="#">Ali Osman Yıldırım</a>
+            </li>
+            <li>
+              <a href="#">Agri Tarım Makineleri Ltd. Şti.</a>
+            </li>
+          </ul>
+          <hr class="mg-y-30 bd-0">
+          <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Yeni Eklenenler</label>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Erkunt Traktör A.Ş</a>
+            </li>
+            <li>
+              <a href="#">Ertuğrullar Tarım Makinaları A.Ş.</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="content content-fixed pd-20 pd-b-0-f">
+      <div class="pos-relative pd-x-0">
+        <ul class="nav nav-line">
+          <li class="nav-item">
+            <a href="urunler.html" class="nav-link">Ürünler</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content pd-20 pd-t-0-f">
+      <div id="summary_list" class="row row-xs mg-y-20">
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header d-flex align-items-center justify-content-between">
+              <div class="media ht-35 align-items-center" style="width: 87%;">
+                <a href="urunler-yeni.html" style="width: 100%;">
+                  <h6 class="tx-primary mg-b-0 tx-inverse tx-semibold mg-b-0 ys-truncate-title">KTM Elcik Koruma</h6>
+                  <span class="d-block tx-12 text-muted">#123534</span>
+                </a>
+              </div>
+              <a href="urunler-yeni.html" class="tx-18 lh-0">
+                <span class="badge badge-warning">Kritik Stok</span>
+              </a>
+            </div>
+            <div class="card-body ht-75 pd-15 pd-t-10-f">
+              <p class="tx-13 tx-color-03  mg-b-0">Yedek Parça / İç Aksamlar</p>
+              <p class="tx-13 tx-color-03  mg-b-0">Alış ₺ 827</p>
+              <p class="tx-13 tx-color-03  mg-b-0">Satış ₺ 1499</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header d-flex align-items-center justify-content-between">
+              <div class="media ht-35 align-items-center" style="width: 87%;">
+                <a href="urunler-yeni.html" style="width: 100%;">
+                  <h6 class="tx-primary mg-b-0 tx-inverse tx-semibold mg-b-0 ys-truncate-title">Traktör Sinyal Kolu</h6>
+                  <span class="d-block tx-12 text-muted">#123534</span>
+                </a>
+              </div>
+              <a href="urunler-yeni.html" class="tx-18 lh-0">
+                <i class="icon ion-md-arrow-forward"></i>
+              </a>
+            </div>
+            <div class="card-body ht-75 pd-15 pd-t-10-f">
+              <p class="tx-13 tx-color-03  mg-b-0">Yedek Parça / İç Aksamlar</p>
+              <p class="tx-13 tx-color-03  mg-b-0">Alış ₺ 87</p>
+              <p class="tx-13 tx-color-03  mg-b-0">Satış ₺ 199</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header d-flex align-items-center justify-content-between">
+              <div class="media ht-35 align-items-center" style="width: 87%;">
+                <a href="urunler-yeni.html" style="width: 100%;">
+                  <h6 class="tx-primary mg-b-0 tx-inverse tx-semibold mg-b-0 ys-truncate-title">Kontak Anahtarı</h6>
+                  <span class="d-block tx-12 text-muted">#123534</span>
+                </a>
+              </div>
+              <a href="urunler-yeni.html" class="tx-18 lh-0">
+                <span class="badge badge-secondary">Satışa Kapalı</span>
+              </a>
+            </div>
+            <div class="card-body ht-75 pd-15 pd-t-10-f">
+              <p class="tx-13 tx-color-03  mg-b-0">Yedek Parça / İç Aksamlar</p>
+              <p class="tx-13 tx-color-03  mg-b-0">Alış ₺ 87</p>
+              <p class="tx-13 tx-color-03  mg-b-0">Satış ₺ 199</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="card">
+            <div class="card-header d-flex align-items-center justify-content-between">
+              <div class="media ht-35 align-items-center" style="width: 87%;">
+                <a href="urunler-yeni.html" style="width: 100%;">
+                  <h6 class="tx-primary mg-b-0 tx-inverse tx-semibold mg-b-0 ys-truncate-title">Michelin Yedek Lastik</h6>
+                  <span class="d-block tx-12 text-muted">#123534</span>
+                </a>
+              </div>
+              <a href="urunler-yeni.html" class="tx-18 lh-0">
+                <i class="icon ion-md-arrow-forward"></i>
+              </a>
+            </div>
+            <div class="card-body ht-75 pd-15 pd-t-10-f">
+              <p class="tx-13 tx-color-03  mg-b-0">Yedek Parça / İç Aksamlar</p>
+              <p class="tx-13 tx-color-03  mg-b-0">Alış ₺ 87</p>
+              <p class="tx-13 tx-color-03  mg-b-0">Satış ₺ 199</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="myTab" role="tablist" class="d-flex pos-relative bd-b justify-content-between">
+        <ul class="nav nav-line bd-0">
+          <li class="nav-item mg-l-0-f">
+            <a class="nav-link pd-x-15-f pd-y-15-f active" id="list1-tab" href="#list1" data-toggle="tab" role="tab">
+              <span class="tx-14">Aktif</span>
+            </a>
+          </li>
+          <li class="nav-item mg-l-0-f">
+            <a class="nav-link pd-x-15-f pd-y-15-f" id="list2-tab" href="#list2" data-toggle="tab" role="tab">
+              <span class="tx-14">Marka</span>
+            </a>
+          </li>
+          <li class="nav-item mg-l-0-f">
+            <a class="nav-link pd-x-15-f pd-y-15-f" id="list3-tab" href="#list3" data-toggle="tab" role="tab">
+              <span class="tx-14">Kategori</span>
+            </a>
+          </li>
+          <li class="nav-item mg-l-0-f">
+            <a class="nav-link pd-x-15-f pd-y-15-f" id="list4-tab" href="#list4" data-toggle="tab" role="tab">
+              <span class="tx-14">Durum</span>
+            </a>
+          </li>
+          <li class="nav-item mg-l-0-f">
+            <a class="nav-link pd-x-15-f pd-y-15-f" id="list5-tab" href="#list5" data-toggle="tab" role="tab">
+              <span class="tx-14">Fiyat</span>
+            </a>
+          </li>
+          <li class="nav-item pos-absolute r-0">
+            <a class="nav-link pd-x-15-f pd-y-15-f" id="list6-tab" href="#list6" data-toggle="tab" role="tab">
+              <span class="tx-14">
+                <i class="fas fa-archive mg-r-8"></i>Arşiv </span>
+              <span class="tx-12 tx-semibold lh-normal bg-gray-200 rounded pd-x-5 pd-y-2 mg-l-10">25.744</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="myTabContent" class="tab-content bg-white bd bd-b-0-f">
+        <div id="list1" class="tab-pane fade show active" role="tabpanel">
+          <div class="d-flex mn-ht-120 scroll-for-flex">
+            <div class="mw-140 pos-relative pd-20 cursor-pointer bg-primary-light bd-r bd-r-arrow2">
+              <div class="d-flex align-items-baseline tx-semibold">
+                <span class="tx-24 tx-spacing--2">106</span>
+              </div>
+              <small class="d-block tx-uppercase tx-11 tx-spacing-1 tx-medium mg-t-10">Tümü</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">14</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Servis</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">7</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Sipariş</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">3</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Fatura</small>
+            </div>
+          </div>
+        </div>
+        <div id="list2" class="tab-pane fade" role="tabpanel">
+          <div class="d-flex mn-ht-120 scroll-for-flex">
+            <div class="mw-140 pos-relative pd-20 cursor-pointer bg-primary-light bd-r bd-r-arrow2">
+              <div class="d-flex align-items-baseline tx-semibold">
+                <span class="tx-24 tx-spacing--2">187</span>
+              </div>
+              <small class="d-block tx-uppercase tx-11 tx-spacing-1 tx-medium mg-t-10">Tümü</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">184</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">ZY Elektrikli</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">22</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">New Holland</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">98</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Fiat</small>
+            </div>
+          </div>
+        </div>
+        <div id="list3" class="tab-pane fade" role="tabpanel">
+          <div class="d-flex mn-ht-120 scroll-for-flex">
+            <div class="mw-140 pos-relative pd-20 cursor-pointer bg-primary-light bd-r bd-r-arrow2">
+              <div class="d-flex align-items-baseline tx-semibold">
+                <span class="tx-24 tx-spacing--2">39</span>
+              </div>
+              <small class="d-block tx-uppercase tx-11 tx-spacing-1 tx-medium mg-t-10">Tümü</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">5</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Traktörler</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">12</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Yedekparça</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">8</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Yan Ürünler</small>
+            </div>
+          </div>
+        </div>
+        <div id="list4" class="tab-pane fade" role="tabpanel">
+          <div class="d-flex mn-ht-120 scroll-for-flex">
+            <div class="mw-140 pos-relative pd-20 cursor-pointer bg-primary-light bd-r bd-r-arrow2">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">18</span>
+              </div>
+              <small class="d-block tx-uppercase tx-11 tx-spacing-1 tx-medium mg-t-10">Aktif</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <span class="pos-absolute wd-10 ht-10 rounded-circle t-10 r-10" style="background-color: limegreen;"></span>
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">5</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Normal</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03  bd-r">
+              <span class="pos-absolute wd-10 ht-10 rounded-circle t-10 r-10" style="        background-color: goldenrod;"></span>
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">2</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Kritik Stok</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer bg-ui-01 bd-r bd-r-arrow1">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">18</span>
+              </div>
+              <small class="d-block tx-uppercase tx-11 tx-spacing-1 tx-medium mg-t-10">Pasif</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <span class="pos-absolute wd-10 ht-10 rounded-circle t-10 r-10" style="background-color: red;"></span>
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">5</span>
+              </div>
+              <small class="d-block tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Stok Yok</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r bd-3">
+              <span class="pos-absolute wd-10 ht-10 rounded-circle t-10 r-10" style="background-color: gray;"></span>
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">2</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Satışa Kapalı</small>
+            </div>
+          </div>
+        </div>
+        <div id="list5" class="tab-pane fade" role="tabpanel">
+          <div class="d-flex mn-ht-120 scroll-for-flex">
+            <div class="mw-140 pos-relative pd-20 cursor-pointer bg-primary-light bd-r bd-r-arrow2">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">18</span>
+              </div>
+              <small class="d-block tx-uppercase tx-11 tx-spacing-1 tx-medium mg-t-10">Tümü</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">5</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">
+                < ₺ 5K </small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03  bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">2</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">₺ 5-10K</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">0</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-medium mg-t-10">₺ 10-20K</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">5</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">₺ 20-50K</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">5</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">₺ 50-100K</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r bd-3">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">5</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">+ ₺ 100K</small>
+            </div>
+          </div>
+        </div>
+        <div id="list6" class="tab-pane fade" role="tabpanel">
+          <div class="d-flex mn-ht-120 scroll-for-flex">
+            <div class="mw-140 pos-relative pd-20 cursor-pointer bg-primary-light bd-r bd-r-arrow2">
+              <div class="d-flex align-items-baseline tx-semibold">
+                <span class="tx-24 tx-spacing--2">25.744</span>
+              </div>
+              <small class="d-block tx-uppercase tx-11 tx-spacing-1 tx-medium mg-t-10">Tümü</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">1.266</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">2020 Yılı</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">794</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">2019 Yılı</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">501</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">2018 Yılı</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">369</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">2017 Yılı</small>
+            </div>
+            <div class="mw-140 pos-relative pd-20 cursor-pointer tx-color-03 bd-r">
+              <div class="d-flex align-items-baseline">
+                <span class="tx-24 tx-spacing--2">22.814</span>
+              </div>
+              <small class="d-block tx-overflow-e tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">2016/2000</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white bd bd-b-0-f pd-20">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <div class="btn-toolbar">
+              <button type="button" id="btnNew" href="#modal_yeni" data-toggle="modal" class="btn btn-sm btn-sm btn-primary mg-r-10">
+                <i class="far fa-plus mg-r-8"></i>Yeni </button>
+              <a id="btnNew" href="fiyat-listesi.html" class="btn btn-sm btn-sm btn-secondary mg-r-10">
+                <i class="far fa-list-ul mg-r-8"></i>Fiyat Listesi </a>
+              <div id="btnBulkActions" class="dropdown" style="display:none;">
+                <button type="button" class="btn btn-sm btn-secondary dropdown-toggle mg-r-10" id="processall" data-toggle="dropdown">Toplu İşlem</button>
+                <div class="dropdown-menu tx-13" aria-labelledby="processall">
+                  <a class="dropdown-item" href="#">
+                    <i class="fa fa-envelope-open mg-r-8"></i>Mail Gönder </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-file-excel mg-r-8"></i>Excele Aktar </a>
+                </div>
+              </div>
+              <button id="btnCancel" style="display:none;" type="button" onclick="OnCancel()" class="btn btn-sm btn-outline-light mg-r-10">
+                <i class="fa fa-ban valign-middle mg-r-6"></i>Seçimi İptal Et </button>
+              <span id="ValRecords" style="display:none;" class="align-items-center tx-12 bd rounded pd-x-10 pd-y-2 bd-light bg-light tx-dark cursor-pointer mg-r-10">1 adet seçili</span>
+              <div id="btnExports" class="dropdown btn btn-white bd-ui-04 pd-0 rounded mg-r-10">
+                <button type="button" class="btn btn-sm btn-white bd-0" id="processexport" data-toggle="dropdown">
+                  <i class="fas fa-download mg-r-8"></i> Dışa aktar </button>
+                <div class="dropdown-menu tx-13" aria-labelledby="processexport">
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-file-pdf mg-r-8"></i>Pdf </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-file-excel mg-r-8"></i>Excel </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-file-csv mg-r-8"></i>Csv </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="btn-toolbar">
+              <div class="mg-l-10">
+                <div class="btn-group tx-12 tx-nowrap pd-2">
+                  <div class="d-flex align-items-center tx-color-03 pd-x-10 bd bd-ui-03 bd-r-0 rounded bg-light rounded-right-0"> Liste adedi</div>
+                  <select onchange="onPageSizeChanged()" id="page-size" class="custom-select custom-select-sm rounded-left-0">
+                    <option value="10">10</option>
+                    <option value="25" selected>25</option>
+                    <option value="50">50</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive bd rounded rounded-top-0 bg-white">
+        <div id="myGrid" class="ag-theme-material"></div>
+      </div>
+    </div>
+    <!-- Modals -->
+    <div id="modal_yeni" class="modal fade effect-scale" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered max-wd-600" role="document">
+        <div class="modal-content tx-14">
+          <div class="modal-header bg-ui-01 pd-x-30 pd-y-15">
+            <a href="" role="button" class="close pos-absolute tx-18 t-15 r-30" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </a>
+            <div class="media align-items-center">
+              <span class="tx-34 tx-color-03 d-none d-sm-block">
+                <i class="far fa-plus"></i>
+              </span>
+              <div class="media-body mg-sm-l-20">
+                <h4 class="tx-16 mg-b-2">Yeni Ürün</h4>
+                <p class="tx-13 tx-color-03 mg-b-0">Ürün oluşturmaya buradan başlayabilirsiniz.</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body tx-14 pd-0 pos-relative">
+            <div class="row pd-x-30 pd-t-0 pd-b-0 mg-t-30">
+              <div class="col-md-6">
+                <div class="form-group mg-b-0">
+                  <select class="form-control select2" data-placeholder="Ürün Tipi Seçiniz">
+                    <option></option>
+                    <option value="Ürün">Ürün</option>
+                    <option value="Hizmet">Hizmet</option>
+                    <option value="Aksesuar">Aksesuar</option>
+                    <option value="Sarf Malzeme">Sarf Malzeme</option>
+                    <option value="Hammadde">Hammadde</option>
+                    <option value="Cihaz">Cihaz</option>
+                    <option value="Yedekparça">Yedekparça</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6"></div>
+            </div>
+            <div class="pd-x-30 pd-t-10 pd-b-15">
+              <div class="form-group mg-b-0">
+                <input type="text" class="form-control" placeholder="Ürün adı">
+              </div>
+            </div>
+            <div>
+              <div id="modal_tabs" class="d-flex pos-relative bd-b justify-content-between">
+                <ul class="nav nav-line pd-x-30 bd-0">
+                  <li class="nav-item mg-l-0-f">
+                    <a class="nav-link d-flex align-items-center pd-x-15-f pd-y-10-f active" href="#modal_tab1" data-toggle="tab">
+                      <div class="avatar avatar-xs mg-r-10">
+                        <span class="avatar-initial rounded-circle bd bd-ui-03 bg-gray-100 tx-secondary lh-0">
+                          <i class="fa fa-info"></i>
+                        </span>
+                      </div>
+                      <span class="tx-14">Bilgiler</span>
+                    </a>
+                  </li>
+                  <li class="nav-item mg-l-0-f">
+                    <a class="nav-link d-flex align-items-center pd-x-15-f pd-y-10-f" href="#modal_tab3" data-toggle="tab">
+                      <div class="avatar avatar-xs mg-r-10">
+                        <span class="avatar-initial rounded-circle bd bd-ui-03 bg-gray-100 tx-secondary lh-0">
+                          <i class="fa fa-dollar-sign"></i>
+                        </span>
+                      </div>
+                      <span class="tx-14">Fiyatlandırma</span>
+                    </a>
+                  </li>
+                  <!--<li class="nav-item mg-l-0-f"><a class="nav-link d-flex align-items-center pd-x-15-f pd-y-10-f" href="#modal_tab4" data-toggle="tab"><div class="avatar avatar-xs mg-r-10"><span class="avatar-initial rounded-circle bd bd-ui-03 bg-gray-100 tx-secondary lh-0"><i class="fa fa-check-double"></i></span></div><span class="tx-14">Özellikler</span></a></li>-->
+                </ul>
+              </div>
+              <div id="modal_tabs_content" class="tab-content bg-ui-01 mn-ht-300 pd-30">
+                <div id="modal_tab1" class="tab-pane fade show active">
+                  <h6 class="mg-t-5 bd-b pd-y-15 mg-b-25">Ürün Bilgileri</h6>
+                  <div class="d-flex align-items-center mg-b-15">
+                    <div class="wd-35p tx-color-03">Ürün Kodu</div>
+                    <div class="wd-65p">
+                      <div>
+                        <div class="input-group mg-b-0">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">#</span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Ürün Kodu">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mg-b-15">
+                    <div class="wd-35p tx-color-03">Marka</div>
+                    <div class="wd-65p">
+                      <select class="form-control select2" data-placeholder="Seçiniz">
+                        <option></option>
+                        <option value="Marka 1">Marka 1</option>
+                        <option value="Marka 2">Marka 2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mg-b-15">
+                    <div class="wd-35p tx-color-03">Model</div>
+                    <div class="wd-65p">
+                      <select class="form-control select2" data-placeholder="Seçiniz">
+                        <option></option>
+                        <option value="Model 1">Model 1</option>
+                        <option value="Model 2">Model 2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mg-b-15">
+                    <div class="wd-35p tx-color-03">Kategori</div>
+                    <div class="wd-65p">
+                      <select class="form-control select2 " id="NestedOptGroups" data-placeholder="Seçiniz">
+                        <option value="Seçiniz" selected>Seçiniz</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mg-b-15">
+                    <div class="wd-35p tx-color-03">Birim</div>
+                    <div class="wd-65p">
+                      <div class="form-group mg-b-0">
+                        <select class="custom-select">
+                          <option value="0">Seçiniz</option>
+                          <option value="1">Adet</option>
+                          <option value="1">Kg</option>
+                          <option value="1">Metre</option>
+                          <option value="1">Koli</option>
+                          <option value="1">Ton</option>
+                          <option value="1">Adam/gün</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <h6 class="mg-t-5 bd-b pd-y-15 mg-b-25">Açıklaması</h6>
+                  <div class="d-flex align-items-center mg-b-0">
+                    <div class="wd-35p tx-color-03">Açıklama</div>
+                    <div class="wd-65p">
+                      <div class="form-group mg-b-0">
+                        <textarea class="form-control ht-100-f" rows="2"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="modal_tab2" class="tab-pane fade">
+                  <h6 class="mg-b-20 bd-b pd-y-5">İngilizce</h6>
+                  <div class="d-flex align-items-center mg-b-15">
+                    <div class="wd-35p tx-color-03">Ürün Adı</div>
+                    <div class="wd-65p">
+                      <div class="form-group mg-b-0">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mg-b-0">
+                    <div class="wd-35p tx-color-03">Açıklama</div>
+                    <div class="wd-65p">
+                      <div class="form-group mg-b-0">
+                        <textarea class="form-control ht-100-f" rows="2"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <h6 class="mg-y-20 bd-b pd-y-5">Almanca</h6>
+                  <div class="d-flex align-items-center mg-b-15">
+                    <div class="wd-35p tx-color-03">Ürün Adı</div>
+                    <div class="wd-65p">
+                      <div class="form-group mg-b-0">
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mg-b-0">
+                    <div class="wd-35p tx-color-03">Açıklama</div>
+                    <div class="wd-65p">
+                      <div class="form-group mg-b-0">
+                        <textarea class="form-control ht-100-f" rows="2"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="modal_tab3" class="tab-pane fade">
+                  <div class="d-flex align-items-center mg-b-15">
+                    <div class="wd-35p tx-color-03">Alış</div>
+                    <div class="wd-65p">
+                      <div class="input-group mg-b-0">
+                        <input type="text" class="form-control wd-100-f" placeholder="0,00">
+                        <select class="custom-select">
+                          <option value="1">TL (₺)</option>
+                          <option value="2">USD ($)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mg-b-15">
+                    <div class="wd-35p tx-color-03">Satış</div>
+                    <div class="wd-65p">
+                      <div class="input-group mg-b-0">
+                        <input type="text" class="form-control wd-100-f" placeholder="0,00">
+                        <select class="custom-select">
+                          <option value="1">TL (₺)</option>
+                          <option value="2">USD ($)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mg-b-15">
+                    <div class="wd-35p tx-color-03">KDV</div>
+                    <div class="wd-65p">
+                      <div class="form-group mg-b-0">
+                        <select class="custom-select">
+                          <option value="0">Seçiniz</option>
+                          <option value="1">%0</option>
+                          <option value="1">%1</option>
+                          <option value="1">%8</option>
+                          <option value="1">%18</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <h6 class="mg-y-20 bd-b pd-y-5">Ekstra Fiyatlandırma</h6>
+                  <div class="d-flex align-items-center mg-b-15">
+                    <div class="wd-35p tx-color-03">Fiyat - 1</div>
+                    <div class="wd-65p">
+                      <div class="input-group mg-b-0">
+                        <input type="text" class="form-control wd-100-f" placeholder="0,00">
+                        <select class="custom-select">
+                          <option value="1">TL (₺)</option>
+                          <option value="2">USD ($)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mg-b-0">
+                    <div class="wd-35p tx-color-03">Fiyat - 2</div>
+                    <div class="wd-65p">
+                      <div class="input-group mg-b-0">
+                        <input type="text" class="form-control wd-100-f" placeholder="0,00">
+                        <select class="custom-select">
+                          <option value="1">TL (₺)</option>
+                          <option value="2">USD ($)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="modal_tab4" class="tab-pane fade">
+                  <div class="d-flex align-items-center mg-b-15">
+                    <div class="wd-35p tx-color-03">Kategori</div>
+                    <div class="wd-65p">
+                      <select class="form-control select2" multiple="multiple">
+                        <option value="Kategori 1">Kategori 1</option>
+                        <option value="Kategori 2">Kategori 2</option>
+                        <option value="Kategori 3">Kategori 3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mg-b-0">
+                    <div class="wd-35p tx-color-03">Tedarikçi</div>
+                    <div class="wd-65p">
+                      <select class="form-control select2" multiple="multiple">
+                        <option value="Tedarikçi 1">Tedarikçi 1</option>
+                        <option value="Tedarikçi 2">Tedarikçi 2</option>
+                        <option value="Tedarikçi 3">Tedarikçi 3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!--<h6 class="mg-y-20 bd-b pd-y-5">Ölçüler</h6><div class="d-flex align-items-center mg-b-15"><div class="wd-35p tx-color-03">Uzunluk</div><div class="wd-65p"><div class="form-group mg-b-0"><input type="text" class="form-control"></div></div></div><div class="d-flex align-items-center mg-b-15"><div class="wd-35p tx-color-03">Genişlik</div><div class="wd-65p"><div class="form-group mg-b-0"><input type="text" class="form-control"></div></div></div><div class="d-flex align-items-center mg-b-15"><div class="wd-35p tx-color-03">Yükseklik</div><div class="wd-65p"><div class="form-group mg-b-0"><input type="text" class="form-control"></div></div></div><div class="d-flex align-items-center mg-b-15"><div class="wd-35p tx-color-03">Ağırlık</div><div class="wd-65p"><div class="form-group mg-b-0"><input type="text" class="form-control"></div></div></div><h6 class="mg-y-20 bd-b pd-y-5">Sınırlandırma</h6><div class="d-flex align-items-center mg-b-15"><div class="wd-35p tx-color-03">Min. Miktar</div><div class="wd-65p"><div class="form-group mg-b-0"><input type="text" class="form-control"></div></div></div><div class="d-flex align-items-center mg-b-0"><div class="wd-35p tx-color-03">Maks. Miktar</div><div class="wd-65p"><div class="form-group mg-b-0"><input type="text" class="form-control"></div></div></div>-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer pd-x-30">
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+            <button type="button" class="btn btn-sm btn-primary" onclick="document.location.href='urunler-yeni.html';">
+              <i class="far fa-plus valign-middle mg-r-6"></i>Oluştur </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_stockchecker" class="modal fade effect-scale" tabindex="-1" role="dialog" aria-labelledby="modal_stockchecker" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content tx-14">
+          <div class="modal-header">
+            <a href="" role="button" class="close pos-absolute t-15 r-15" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </a>
+            <div class="media align-items-center">
+              <span class="tx-color-03 d-none d-sm-block">
+                <i class="fas fa-warehouse tx-60"></i>
+              </span>
+              <div class="media-body mg-sm-l-20">
+                <h4 class="tx-18 tx-sm-20 mg-b-2">Stok Durumu</h4>
+                <p class="tx-13 tx-color-03 mg-b-0">Ürüne ait stok bilgisi burada yer alır.</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body bg-gray-100 bd-b">
+            <div class="d-inline-flex">
+              <div class="pos-relative mw-100 bg-white pd-y-15 pd-x-20 bd rounded mg-r-10">
+                <div class="d-flex align-items-baseline">
+                  <h2 class="tx-24 tx-danger tx-spacing--2 mg-b-0">
+                    <i class="fas fa-exclamation-triangle tx-18"></i>
+                    <small class="mg-l-8">Sorunlu</small>
+                  </h2>
+                </div>
+                <small class="d-block tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Stok Durumu</small>
+              </div>
+              <div class="pos-relative mw-100 bg-white pd-y-15 pd-x-20 bd rounded mg-r-10">
+                <div class="d-flex align-items-baseline">
+                  <h2 class="tx-24 tx-spacing--2 mg-b-0">7</h2>
+                </div>
+                <small class="d-block tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Mevcut Stok</small>
+              </div>
+              <div class="pos-relative mw-100 bg-white pd-y-15 pd-x-20 bd rounded mg-r-10">
+                <div class="d-flex align-items-baseline">
+                  <h2 class="tx-24 tx-spacing--2 mg-b-0">10</h2>
+                </div>
+                <small class="d-block tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Satınalma Siparişi</small>
+              </div>
+              <div class="pos-relative mw-100 bg-white pd-y-15 pd-x-20 bd rounded mg-r-10">
+                <div class="d-flex align-items-baseline">
+                  <h2 class="tx-24 tx-spacing--2 mg-b-0">23</h2>
+                </div>
+                <small class="d-block tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Satış Siparişi</small>
+              </div>
+              <div class="pos-relative mw-100 bg-white pd-y-15 pd-x-20 bd rounded mg-r-10">
+                <div class="d-flex align-items-baseline">
+                  <h2 class="tx-24 tx-danger tx-spacing--2 mg-b-0">-6</h2>
+                </div>
+                <small class="d-block tx-uppercase tx-11 tx-spacing-1 tx-color-03 tx-medium mg-t-10">Nihai Stok</small>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body pos-relative mx-ht-300 scrollbar-primary ritma-scrollbar4">
+            <ul class="nav nav-tabs pos-relative" id="myStockTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link pd-y-6" id="warehouses-tab" href="#warehouses" data-toggle="tab" role="tab">Depolar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pd-y-6 active" id="purchases-tab" href="#purchases" data-toggle="tab" role="tab">Satınalma Siparişlari</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link pd-y-6" id="sales-tab" href="#sales" data-toggle="tab" role="tab">Satış Siparişleri</a>
+              </li>
+            </ul>
+            <div class="tab-content bd rounded rounded-top-0 bd-gray-300 bd-t-0 pd-20" id="myStockTabContent">
+              <div id="warehouses" class="tab-pane fade" role="tabpanel">
+                <div class="table-responsive bd rounded">
+                  <table class="table table-striped table-ritma3 mg-b-0">
+                    <thead class="table-borderless">
+                      <tr>
+                        <th class="wd-10p tx-center">Adet</th>
+                        <th>Depo</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tx-center">3</td>
+                        <td>Merkez</td>
+                      </tr>
+                      <tr>
+                        <td class="tx-center">4</td>
+                        <td>2. El Depo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div id="purchases" class="tab-pane fade show active" role="tabpanel">
+                <div class="table-responsive bd rounded">
+                  <table class="table table-striped table-ritma3 mg-b-0">
+                    <thead class="table-borderless">
+                      <tr>
+                        <th class="wd-10p tx-center">Gelecek</th>
+                        <th class="wd-25p">Sipariş Durumu</th>
+                        <th>Firma</th>
+                        <th class="wd-15p">Tarih</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tx-center">4</td>
+                        <td>
+                          <div class="d-flex">
+                            <span class="mg-r-15">20</span>
+                            <div class="progress wd-90p ht-20">
+                              <div class="progress-bar wd-80p bg-success pd-x-5" role="progressbar">80%</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Erkunt Traktör A.Ş.</td>
+                        <td class="tx-nowrap">17/03/2021</td>
+                      </tr>
+                      <tr>
+                        <td class="tx-center">6</td>
+                        <td>
+                          <div class="d-flex">
+                            <span class="mg-r-15">15</span>
+                            <div class="progress wd-90p ht-20">
+                              <div class="progress-bar wd-40p bg-success pd-x-5" role="progressbar">40%</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Erkunt Traktör A.Ş.</td>
+                        <td class="tx-nowrap">10/03/2021</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div id="sales" class="tab-pane fade" role="tabpanel">
+                <div class="table-responsive bd rounded">
+                  <table class="table table-striped table-ritma3 mg-b-0">
+                    <thead class="table-borderless">
+                      <tr>
+                        <th class="wd-10p tx-center">Gidecek</th>
+                        <th class="wd-25p">Sipariş Durumu</th>
+                        <th>Firma</th>
+                        <th class="wd-15p">Tarih</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tx-center">1</td>
+                        <td>
+                          <div class="d-flex">
+                            <span class="mg-r-15">5</span>
+                            <div class="progress wd-90p ht-20">
+                              <div class="progress-bar wd-80p bg-success pd-x-5" role="progressbar">80%</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Ali Osman Yıldırım</td>
+                        <td class="tx-nowrap">17/03/2021</td>
+                      </tr>
+                      <tr>
+                        <td class="tx-center">2</td>
+                        <td>
+                          <div class="d-flex">
+                            <span class="mg-r-15">6</span>
+                            <div class="progress wd-90p ht-20">
+                              <div class="progress-bar wd-30p bg-success pd-x-5" role="progressbar">33%</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Abdurrahman Kadıoğlu</td>
+                        <td class="tx-nowrap">10/03/2021</td>
+                      </tr>
+                      <tr>
+                        <td class="tx-center">20</td>
+                        <td>
+                          <div class="d-flex">
+                            <span class="mg-r-15">0</span>
+                            <div class="progress wd-90p ht-20">
+                              <div class="progress-bar bg-ui-02 pd-x-5 tx-color-04" role="progressbar">0%</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>Agri Tarım Makineleri Ltd. Şti.</td>
+                        <td class="tx-nowrap">01/03/2021</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary tx-13" data-dismiss="modal">Kapat</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_ritmafirma" class="modal fade effect-scale" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content tx-14">
+          <div class="modal-header bg-ui-01 pd-x-30 pd-y-15">
+            <a href="" role="button" class="close pos-absolute tx-18 t-15 r-30" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </a>
+            <div class="media align-items-center">
+              <span class="tx-34 tx-color-03 d-none d-sm-block">
+                <i class="far fa-building"></i>
+              </span>
+              <div class="media-body mg-sm-l-20">
+                <h4 class="tx-16 mg-b-2">Bölge Müd. & Bayiler</h4>
+                <p class="tx-13 tx-color-03 mg-b-0">Seçim yaparak sadece seçili kayıtlara ulaşabilirsiniz. </p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex w-100 ht-50 bd-b pd-x-30 pd-l-50 align-items-center pos-relative">
+            <i data-feather="search" class="pos-absolute wd-20 ht-20 l-30"></i>
+            <input type="text" class="form-control tx-14 bd-0 shadow-none" placeholder="Kelime arayabilirsiniz">
+            <select class="custom-select custom-select-sm wd-100">
+              <option value="1">Türler</option>
+              <option value="1">Bölge Müd.</option>
+              <option value="1">Bayi</option>
+            </select>
+            <select class="custom-select custom-select-sm wd-md-auto mg-l-6">
+              <option value="1">Bölgeler</option>
+              <option value="1">İstanbul</option>
+              <option value="1">Ankara</option>
+              <option value="1">Kahramanmaraş</option>
+            </select>
+          </div>
+          <div class="modal-body tx-14 pd-0 pos-relative">
+            <div class="pd-30">
+              <div class="table-responsive bd rounded">
+                <table class="table table-hover table-ritma1 mg-b-0 bd-b">
+                  <thead class="table-borderless bg-gray-200">
+                    <tr>
+                      <th class="wd-20p">Tür</th>
+                      <th class="wd-30p">Bölge</th>
+                      <th>Firma</th>
+                      <th class="wd-1 tx-center">Seç</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="tx-nowrap">Bölge Müd.</td>
+                      <td class="tx-nowrap">Ankara</td>
+                      <td class="tx-color-03">Merkez Ltd. Şti.</td>
+                      <td class="tx-center">
+                        <button class="btn btn-sm btn-outline-secondary pd-y-5 pd-x-10" data-tooltip title="Seç">
+                          <i data-feather="check" class="wd-20 ht-20 tx-24"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tx-nowrap">Bayi</td>
+                      <td class="tx-nowrap">Ankara / Nevşehir</td>
+                      <td class="tx-color-03">Ali Veli Ltd. Şti.</td>
+                      <td class="tx-center">
+                        <button class="btn btn-sm btn-outline-secondary pd-y-5 pd-x-10" data-tooltip title="Seç">
+                          <i data-feather="check" class="wd-20 ht-20 tx-24"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tx-nowrap">Bayi</td>
+                      <td class="tx-nowrap">Ankara / Çorum</td>
+                      <td class="tx-color-03">Özgür Traktör Ltd. Şti.</td>
+                      <td class="tx-center">
+                        <button class="btn btn-sm btn-success pd-y-5 pd-x-10" data-tooltip title="Seç">
+                          <i data-feather="check" class="wd-20 ht-20 tx-24"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer pd-x-30">
+            <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+            <button type="button" class="btn btn-sm btn-primary">
+              <i class="far fa-plus valign-middle mg-r-6"></i>Seç </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div> © 2021 RitmaFLEX V1.0.1. Created By RITMA TEKNOLOJI </div>
+      <div>
+        <nav class="nav">
+          <a href="https://themeforest.net/licenses/standard" class="nav-link">Lisans</a>
+          <a href="https://discordapp.com/invite/RYqkVuw" class="nav-link">Yardım Merkezi</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <script src="assets/js/jquery/jquery-ui.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/feather-icons/feather.min.js"></script>
+    <script src="assets/js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/prismjs/prism.js"></script>
+    <script src="assets/js/quill/quill.core.js"></script>
+    <script src="assets/js/quill/quill.min.js"></script>
+    <script src="assets/js/select2/select2.min.js"></script>
+    <script src="assets/js/select2/select2.addons.js"></script>
+    <script src="assets/js/select2/i18n/tr.js"></script>
+    <script src="assets/js/chart.js/Chart.bundle.min.js"></script>
+    <script src="assets/js/dashforge.js"></script>
+    <script src="assets/js-customs/ortak.js"></script>
+    <script src="assets/js-customs/urunler.js"></script>
+    <style>
+      .ag-row-hover {
+        background-color: rgba(59, 72, 99, .15) !important;
+      }
+
+      .ag-column-hover {
+        background-color: rgba(1, 104, 250, .15);
+      }
+
+      .ag-root-wrapper-body.ag-layout-normal {
+        height: auto;
+        /*max-height: 400px !important;*/
+      }
+
+      .ag-paging-panel.ag-unselectable {
+        display: none !important;
+      }
+
+      .ag-status-bar {
+        display: none;
+        border-right: 0 !important;
+        border-bottom: 0 !important;
+        border-left: 0 !important;
+      }
+
+      #myGrid {
+        flex: 1 1 0px;
+        width: 100%;
+        font-family: Roboto !important;
+      }
+    </style>
+    <script>
+      var __basePath = './';
+    </script>
+    <script src="https://unpkg.com/@ag-grid-community/all-modules@25.0.0/dist/ag-grid-community.min.js"></script>
+    <script src="https://unpkg.com/@ag-grid-enterprise/all-modules@25.0.0/dist/ag-grid-enterprise.min.js"></script>
+    <script src="assets/js-aggrid/CustomLoadingCellRenderer.js"></script>
+    <script src="data/urunler.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#NestedOptGroups').select2({
+          width: '100%',
+          data: [{
+            text: 'Araçlar',
+            children: [{
+              id: '1',
+              text: 'BMW i216'
+            }, {
+              id: '2',
+              text: 'Audi q7'
+            }, {
+              text: 'Sedan Araçlar',
+              children: [{
+                id: '3',
+                text: 'Fiat Egea'
+              }, {
+                id: '4',
+                text: 'Ford Focus'
+              }, {
+                text: 'Eski Araçlar',
+                children: [{
+                  id: '5',
+                  text: 'Peaugot 207 1999'
+                }, {
+                  id: '6',
+                  text: 'Peaugot 306 1999'
+                }]
+              }, ]
+            }, {
+              text: 'Ticari Araçlar',
+              children: [{
+                id: '7',
+                text: 'Skania Tır 500bg'
+              }, {
+                id: '8',
+                text: 'Ford F-Max 500bg'
+              }]
+            }, ]
+          }]
+        });
+      });
+    </script>
+  </body>
+</html>

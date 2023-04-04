@@ -1,0 +1,674 @@
+﻿<!DOCTYPE html>
+
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ritma Flex İş Yönetim Platformu</title>
+    <link href="assets/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="assets/css/ionicons.min.css" rel="stylesheet" />
+    <link href="assets/css/jqvmap.min.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.snow.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.core.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.bubble.css" rel="stylesheet" />
+    <link href="assets/js/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.profile.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.filemgr.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.mail.css" rel="stylesheet" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+    <link href="assets/css/skin.light.css" rel="stylesheet" />
+    <link href="assets/css/customs.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/yschat.css">
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+    <script src="https://kit-pro.fontawesome.com/releases/v5.10.1/js/pro.min.js" data-auto-fetch-svg></script>
+    <style>
+        .hover-primary:hover,
+        .hover-primary:focus {
+            color: black !important;
+        }
+        
+        .ql-editor {
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body class="df-roboto">
+
+    <header class="navbar navbar-header navbar-header-fixed">
+
+        <div class="d-none align-items-center pos-fixed t-0 z-index-50 w-100 ht-40 tx-white tx-12 justify-content-center bg-dark pd-y-5 pd-x-20 alert-dismissible" role="alert">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info wd-16 ht-16">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="8"></line>
+            </svg> Aylık aboneliğinizin bitimine 3 gün kaldı. Yenilemek için
+            <button type="button" class="btn btn-xs btn-warning lh--9 mg-l-10">Yenile</button>
+            <button type="button" class="close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+
+        <a href="" id="mainMenuOpen" class="burger-menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="feather feather-menu">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg></a>
+
+        <div class="navbar-brand wd-sm-auto-f">
+
+            <a href="index.html" class="df-logo"><img src="assets/logo_ritmaflex.svg" class="ht-25"></a>
+
+            <div class="dropdown tx-12 mg-l-40">
+                <button class="btn btn-xs btn-outline-light dropdown-toggle pd-x-3 pd-y-3" type="button" id="companies" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="d-inline-flex align-items-center justify-content-start">
+                        <div class="wd-35">
+                            <div class="avatar avatar-xs"><img src="http://via.placeholder.com/30" class="rounded"
+                                    alt=""></div>
+                        </div>
+                        <div class="tx-left lh-0 pd-r-10">ZY Elektrikli Traktör</div>
+                    </div>
+                </button>
+                <div class="dropdown-menu mn-wd-100p tx-12" aria-labelledby="companies">
+                    <a class="dropdown-item" href="#">ZY Elektrikli Traktör</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item tx-primary" href="#modal_ritmafirma" data-toggle="modal">Bölge Müdürlüğü</a>
+                    <a class="dropdown-item tx-primary" href="#modal_ritmafirma" data-toggle="modal">Bayii</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu-wrapper">
+            <div class="navbar-menu-header">
+                <a href="index.html" class="df-logo"><img src="assets/logo_ritmaflex.svg" class="ht-25"></a>
+                <a id="mainMenuClose" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg></a>
+            </div>
+            <ul class="nav navbar-menu">
+                <li class="nav-label pd-l-20 pd-lg-l-25 d-lg-none">Menü</li>
+                <li class="nav-item with-sub">
+                    <a href="" class="nav-link">Kontaklar</a>
+                    <div class="navbar-menu-sub">
+                        <div class="d-lg-flex">
+                            <ul>
+                                <li class="nav-label">Kontak Türleri</li>
+                                <li class="nav-sub-item"><a href="profiller.html" class="nav-sub-link">Müşteri</a></li>
+                                <li class="nav-sub-item"><a href="profiller.html" class="nav-sub-link">Tedarikçi</a>
+                                </li>
+                                <li class="nav-sub-item"><a href="profiller.html" class="nav-sub-link">Bölge
+                                        Müdürlüğü</a></li>
+                                <li class="nav-sub-item"><a href="profiller.html" class="nav-sub-link">Bayii</a></li>
+                                <li class="nav-sub-item"><a href="profiller.html" class="nav-sub-link">Rakip</a></li>
+                            </ul>
+                            <ul>
+                                <li class="nav-label">Yeni</li>
+                                <li class="nav-sub-item"><a href="profiller.html#yeni1" class="nav-sub-link"><svg
+                                            class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false"
+                                            data-prefix="far" data-icon="plus" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z">
+                                            </path>
+                                        </svg><!-- <i class="far fa-plus"></i> -->Yeni Müşteri</a></li>
+                                <li class="nav-sub-item"><a href="profiller.html#yeni2" class="nav-sub-link"><svg
+                                            class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false"
+                                            data-prefix="far" data-icon="plus" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z">
+                                            </path>
+                                        </svg><!-- <i class="far fa-plus"></i> -->Yeni Tedarikçi</a></li>
+                                <li class="nav-sub-item"><a href="profiller.html#yeni3" class="nav-sub-link"><svg
+                                            class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false"
+                                            data-prefix="far" data-icon="plus" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z">
+                                            </path>
+                                        </svg><!-- <i class="far fa-plus"></i> -->Yeni Bölge Müdürlüğü</a></li>
+                                <li class="nav-sub-item"><a href="profiller.html#yeni4" class="nav-sub-link"><svg
+                                            class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false"
+                                            data-prefix="far" data-icon="plus" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z">
+                                            </path>
+                                        </svg><!-- <i class="far fa-plus"></i> -->Yeni Bayi</a></li>
+                                <li class="nav-sub-item"><a href="profiller.html#yeni5" class="nav-sub-link"><svg
+                                            class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false"
+                                            data-prefix="far" data-icon="plus" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z">
+                                            </path>
+                                        </svg><!-- <i class="far fa-plus"></i> -->Yeni Rakip</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="urunler.html" class="nav-link">Ürünler</a></li>
+                <li class="nav-item"><a href="servisler.html" class="nav-link">Servisler</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <a id="navbarSearch" href="" class="search-link d-flex"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg></a>
+            <div class="dropdown dropdown-message">
+                <a href="agenda.html" class="dropdown-link new-indicator d-flex" data-tooltip="" data-placement="bottom" title="" data-original-title="Ajanda"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-calendar">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg></a>
+            </div>
+            <div class="dropdown dropdown-message">
+                <a href="" class="dropdown-link new-indicator d-flex" data-toggle="dropdown">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    <span>5</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header">Mesajlar</div>
+                    <a href="" class="dropdown-item">
+                        <div class="media">
+                            <div class="avatar  avatar-online"><img src="http://via.placeholder.com/350" class="rounded-circle" alt=""></div>
+                            <div class="media-body mg-l-15">
+                                <strong>Socrates Itumay</strong>
+                                <p>nam libero tempore cum so...</p>
+                                <span>Mar 15 12:32pm</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-footer"><a>Hepsini listeleyin</a></div>
+                </div>
+            </div>
+            <div class="dropdown dropdown-notification">
+                <a href="" class="dropdown-link new-indicator d-flex" data-toggle="dropdown">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
+                        <path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0">
+                        </path>
+                    </svg>
+                    <span>2</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header">Bildirimler</div>
+                    <a href="" class="dropdown-item">
+                        <div class="media">
+                            <div class="avatar  avatar-online"><img src="http://via.placeholder.com/350" class="rounded-circle" alt=""></div>
+                            <div class="media-body mg-l-15">
+                                <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                                <span>Mar 15 12:32pm</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-footer"><a href="">Hepsini listeleyin</a></div>
+                </div>
+            </div>
+            <div class="dropdown dropdown-profile">
+                <a href="#" class="dropdown-link" data-toggle="dropdown" data-display="static">
+                    <div class="avatar "><img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg"></div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right tx-13">
+                    <div class="avatar avatar-lg mg-b-15"><img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg"></div>
+                    <h6 class="tx-semibold mg-b-5">Uğur Büyükalkan</h6>
+                    <p class="mg-b-25 tx-12 tx-color-03">Müşteri Temsilcisi</p>
+                    <a href="#" class="dropdown-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>Kontak </a>
+                    <a href="#" class="dropdown-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-life-buoy">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                            <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                            <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                            <line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line>
+                            <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+                        </svg> Yardım</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                            </path>
+                        </svg> Hesap Ayaları</a>
+                    <a href="#" class="dropdown-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                            </path>
+                        </svg> Sistem Ayarları</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="login.html" class="dropdown-item"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg> Çıkış yap</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-search">
+            <div class="navbar-search-header">
+                <input type="search" class="form-control" placeholder="Aramalarınızı buradan yapabilirsiniz...">
+                <button class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-search">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg></button>
+                <a id="navbarSearchClose" href="" class="link-03 mg-l-5 mg-lg-l-10"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg></a>
+            </div>
+            <div class="navbar-search-body">
+                <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Son
+                    Aramalarınız</label>
+                <ul class="list-unstyled">
+                    <li><a href="#">İstaç İstanbul Çevre Yönetimi</a></li>
+                    <li><a href="#">Nsc Bilişim Hizmetleri Ticaret A.Ş.</a></li>
+                    <li><a href="#">Abp Gıda Ölç. Kont. Sis. İth. Paz.</a></li>
+                </ul>
+                <hr class="mg-y-30 bd-0">
+                <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Yeni
+                    Eklenenler</label>
+                <ul class="list-unstyled">
+                    <li><a href="#">Karel Elektronik San. ve Tic. A.Ş</a></li>
+                    <li><a href="#">Bdh Bilişim Destek Hizmetleri San. Tic. A.Ş.</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="chat-wrapper">
+
+        <div class="chat-navleft">
+            <nav class="nav flex-column">
+                <a href="ayarlar-genel.html" class="nav-link " data-toggle="tooltip" title="" data-placement="right" data-original-title="Genel">
+                    <i class="far fa-cog fa-2x"></i>
+                </a>
+                <a href="ayarlar-profiller.html" class="nav-link active" data-toggle="tooltip" title="" data-placement="right" data-original-title="Profil">
+                    <i class="far fa-address-card fa-2x"></i>
+                </a>
+                <a href="#" class="nav-link" data-toggle="tooltip" title="" data-placement="right" data-original-title="Fırsat">
+                    <i class="far fa-bomb fa-2x"></i>
+                </a>
+                <a href="ayarlar-teklifler.html" class="nav-link" data-toggle="tooltip" title="" data-placement="right" data-original-title="Teklif">
+                    <i class="far fa-shopping-cart fa-2x"></i>
+                </a>
+                <a href="#" class="nav-link" data-toggle="tooltip" title="" data-placement="right" data-original-title="Help">
+                    <i class="far fa-shopping-basket fa-2x"></i>
+                </a>
+                <a href="#" class="nav-link" data-toggle="tooltip" title="" data-placement="right" data-original-title="Help">
+                    <i class="far fa-chart-line fa-2x"></i>
+                </a>
+                <a href="#" class="nav-link" data-toggle="tooltip" title="" data-placement="right" data-original-title="Help">
+                    <i class="far fa-users fa-2x"></i>
+                </a>
+                <a href="#" class="nav-link" data-toggle="tooltip" title="" data-placement="right" data-original-title="Help">
+                    <i class="far fa-ticket fa-2x"></i>
+                </a>
+            </nav>
+        </div>
+        <!-- chat-navleft -->
+
+        <div class="chat-content overflow-auto">
+
+            <div class="chat-content-body">
+                <div class="chat-group justify-content-start">
+
+                    <div class="content pd-20 pd-t-0-f mg-t-0 d-flex align-items-center justify-content-center">
+                        <div class="flex-fill max-wd-800">
+                            <ol class="breadcrumb bg-transparent pd-x-0 mg-b-0">
+                                <li class="breadcrumb-item"><a href="ayarlar.html">Ayarlar</a></li>
+                                <li class="breadcrumb-item active"><a href="ayarlar-genel.html">Ayarlar Genel </a></li>
+                            </ol>
+
+                            <h2 class="mg-b-30">E-Posta Şablonları</h2>
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <a class="tx-dark" href="ayarlar-genel.html">
+                                        <i class="fa fa-arrow-left tx-16 valign-textbottom mg-r-10"></i>Geri dön
+                                    </a>
+                                </div>
+                                <div class="card-body pd-0">
+                                    <div class="pd-25">
+                                        <div class="d-flex align-items-center">
+                                            <div class="wd-75p">
+                                                <h6 class="tx-bold">Yeni E-Posta Şablonu Ekle</h6>
+                                                <p class="wd-90p tx-secondary tx-12 mg-b-0">Otomatik Gönderilen SMS'lerinize şablon ekleyin.
+                                                </p>
+                                            </div>
+                                            <div class="wd-25p d-flex align-items-center justify-content-end">
+                                                <button href="#modal_yeni_posta" data-toggle="modal" class="btn btn-sm btn-outline-primary pd-x-10">
+                                                    <i class="far fa-plus mg-r-5"></i> Ekle
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pd-x-20 bd-t bd-ui-02 pd-y-10 d-flex">
+                                        <div class="d-flex wd-100p bg-white rounded pd-x-15 align-items-center mg-y-10 bd bd-ui-03">
+                                            <i class="far fa-search tx-16"></i>
+                                            <input type="text" class="form-control tx-14 bd-0 shadow-none" placeholder="E-Posta Şablonlarda Arayın">
+                                        </div>
+                                    </div>
+                                    <div class="pd-20 bd-t bd-ui-02 d-flex">
+                                        <div class="table-responsive">
+                                            <table class="table table-ritma1 mg-b-0">
+                                                <thead class="table-borderless tx-color-03">
+                                                    <tr>
+                                                        <th scope="col" class="pd-l-0-f">Şablon Adı</th>
+                                                        <th scope="col" class="pd-r-0-f wd-1 tx-right">Düzenle</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="pd-l-0-f">Yeni Kullanıcı</td>
+                                                        <td class="pd-r-0-f tx-right">
+                                                            <div class="d-flex align-items-center">
+                                                                <button href="#modal_yeni_posta" data-toggle="modal" class="btn btn-sm btn-icon btn-outline-light lh-0" data-original-title="Düzenle">
+                                                                    <i class="far fa-pen mg-r-6"></i>
+                                                                </button>
+                                                                <button class="btn btn-sm btn-icon btn-outline-light lh-0 mg-l-6" data-original-title="Sil">
+                                                                    <i class="far fa-trash-alt mg-r-6"></i>
+                                                                </button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="pd-l-0-f">Satış Oluşturma</td>
+                                                        <td class="pd-r-0-f tx-right">
+                                                            <div class="d-flex align-items-center">
+                                                                <button href="#modal_yeni_posta" data-toggle="modal" class="btn btn-sm btn-icon btn-outline-light lh-0" data-original-title="Düzenle">
+                                                                    <i class="far fa-pen mg-r-6"></i> 
+                                                                </button>
+                                                                <button class="btn btn-sm btn-icon btn-outline-light lh-0 mg-l-6" data-original-title="Sil">
+                                                                    <i class="far fa-trash-alt mg-r-6"></i>
+                                                                </button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="pd-l-0-f">Satış Durumu</td>
+                                                        <td class="pd-r-0-f tx-right">
+                                                            <div class="d-flex align-items-center">
+                                                                <button href="#modal_yeni_posta" data-toggle="modal" class="btn btn-sm btn-icon btn-outline-light lh-0" data-original-title="Düzenle">
+                                                                    <i class="far fa-pen mg-r-6"></i>
+                                                                </button>
+                                                                <button class="btn btn-sm btn-icon btn-outline-light lh-0 mg-l-6" data-original-title="Sil">
+                                                                    <i class="far fa-trash-alt mg-r-6"></i>
+                                                                </button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="pd-l-0-f">Teklif Oluşturma</td>
+                                                        <td class="pd-r-0-f tx-right">
+                                                            <div class="d-flex align-items-center">
+                                                                <button href="#modal_yeni_posta" data-toggle="modal" class="btn btn-sm btn-icon btn-outline-light lh-0" data-original-title="Düzenle">
+                                                                    <i class="far fa-pen mg-r-6"></i>
+                                                                </button>
+                                                                <button class="btn btn-sm btn-icon btn-outline-light lh-0 mg-l-6" data-original-title="Sil">
+                                                                    <i  class="far fa-trash-alt mg-r-6"></i>
+                                                                </button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="pd-l-0-f">Teklif Durumu</td>
+                                                        <td class="pd-r-0-f tx-right">
+                                                            <div class="d-flex align-items-center">
+                                                                <button href="#modal_yeni_posta" data-toggle="modal" class="btn btn-sm btn-icon btn-outline-light lh-0" data-original-title="Düzenle">
+                                                                    <i class="far fa-pen mg-r-6"></i>
+                                                                </button>
+                                                                <button class="btn btn-sm btn-icon btn-outline-light lh-0 mg-l-6" data-original-title="Sil">
+                                                                    <i  class="far fa-trash-alt mg-r-6"></i>
+                                                                </button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- chat-content-body -->
+        </div>
+        <!-- chat-content -->
+    </div>
+    <!-- chat-wrapper -->
+    <!-- Modals -->
+
+    <div id="modal_yeni_posta" class="modal fade effect-scale" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+            <div class="modal-content tx-14">
+                <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+                    <div class="media align-items-center">
+                        <span class="tx-36 tx-color-03 d-none d-sm-block"><i class="far fa-envelope"></i></span>
+                        <div class="media-body mg-sm-l-20">
+                            <h4 class="tx-18 tx-sm-20 mg-b-2">E-Posta Şablonu Oluştur</h4>
+                            <p class="tx-13 tx-color-03 mg-b-0">Otomatik Olarak Posta Göndermek için bir şablon oluşturun.
+                            </p>
+                        </div>
+                    </div>
+                    <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-30 r-30">
+                        <i class="far fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body pd-0 pos-relative">
+                    <div class="row">
+                        <div class="col-md-7 col-lg-8 bd-r bd-ui-02 pd-r-0">
+                            <div class="pd-20 pd-y-10-f bd-ui-02">
+                                <div class="form-group mg-b-0">
+                                    <input type="text" class="form-control form-control bd-0" placeholder="Şablon Adı" />
+                                </div>
+                            </div>
+                            <div class="pd-0 bd-t bd-ui-02">
+                                <div class="pos-relative">
+                                    <div class="d-flex ht-40 pd-x-25 bg-gray-50 justify-content-between align-items-center pd-x-6 rounded rounded-bottom-0">
+                                        <div id="hazirmetin_editor-toolbar" class="pd-0-f bd-0-f">
+                                            <div class="ql-formats">
+                                                <select class="ql-font"></select>
+                                                <select class="ql-size">
+                                                    <option value="small"></option>
+                                                    <option selected></option>
+                                                    <option value="large"></option>
+                                                    <option value="huge"></option>
+                                                </select>
+                                            </div>
+                                            <div class="ql-formats">
+                                                <button class="ql-bold"></button>
+                                                <button class="ql-italic"></button>
+                                                <button class="ql-underline"></button>
+                                                <select class="ql-color"></select>
+                                                <select class="ql-background"></select>
+                                            </div>
+                                            <div class="ql-formats">
+                                                <button class="ql-header" value="1"></button>
+                                                <button class="ql-header" value="2"></button>
+                                            </div>
+                                            <div class="ql-formats">
+                                                <select class="ql-align"></select>
+                                                <button class="ql-list" value="ordered"></button>
+                                                <button class="ql-list" value="bullet"></button>
+                                                <button class="ql-link"></button>
+                                            </div>
+                                            <div class="ql-formats">
+                                                <button class="ql-html"><i class="far fa-code"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-block w-100 ht-600 pos-relative">
+                                        <div id="hazirmetin_editor" class="d-block tx-13 bd-0-f" aria-placeholder="Deneme Placeholder"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-lg-4 pd-l-0">
+                            <div class="pd-20 pd-y-10-f pd-r-10-f bd-b bd-ui-02 bd-0">
+                                <div class="input-group mg-b-0">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text pd-l-0 bd-0 bg-white" id="basic-addon1">
+                                            <i class="far fa-search"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control bd-0" placeholder="Taglarda Ara..">
+                                    <div class="input-group-append">
+                                        <select class="custom-select custom-select-sm wd-100 bd-0 mg-t-2 shadow-none-f">
+                                            <option value="-1" selected>Filtrele</option>
+                                            <option value="0">Kullanıcı</option>
+                                            <option value="1">Sipariş</option>
+                                            <option value="2">Satış</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ht-600 overflow-y-auto ritma-scrollbar">
+                                <table class="table table-hover table-ritma3 mg-b-0">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="3" class="pd-0-f "><label class="mail-group-label mg-b-0-f">Kullanıcı</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="bd-t-0-f">
+                                                <h6 class="mg-b-0">{KullaniciAdi}</h6>
+                                            </td>
+                                            <td class="bd-t-0-f wd-1 tx-center"> <button class="btn btn-sm btn-light pd-y-5 pd-x-10 ">
+                                                    <i class="wd-20 ht-20 tx-24 far fa-plus"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td colspan="3" class="pd-0-f "><label class="mail-group-label mg-b-0-f">Sipariş</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6 class="mg-b-0">{Sipariş Kodu}</h6>
+                                            </td>
+                                            <td class="wd-1 tx-center"> <button class="btn btn-sm btn-light pd-y-5 pd-x-10 ">
+                                                    <i class="wd-20 ht-20 tx-24 far fa-plus"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6 class="mg-b-0">{SiparişTakipKodu}</h6>
+                                            </td>
+                                            <td class="wd-1 tx-center"> <button class="btn btn-sm btn-light pd-y-5 pd-x-10 ">
+                                                    <i class="wd-20 ht-20 tx-24 far fa-plus"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <h6 class="mg-b-0">{SiparisKodu}</h6>
+                                            </td>
+                                            <td class="wd-1 tx-center"> <button class="btn btn-sm btn-light pd-y-5 pd-x-10 ">
+                                                    <i class="wd-20 ht-20 tx-24 far fa-plus"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6 class="mg-b-0">{SiparisDurumu}</h6>
+                                            </td>
+                                            <td class="wd-1 tx-center"> <button class="btn btn-sm btn-light pd-y-5 pd-x-10 ">
+                                                    <i class="wd-20 ht-20 tx-24 far fa-plus"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" class="pd-0-f "><label class="mail-group-label mg-b-0-f">İnsan Kaynakları</label></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h6 class="mg-b-0">{RandevuTarihi}</h6>
+                                            </td>
+                                            <td class="wd-1 tx-center"> <button class="btn btn-sm btn-light pd-y-5 pd-x-10 ">
+                                                    <i class="wd-20 ht-20 tx-24 far fa-plus"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer pd-x-30">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-sm btn-primary"><i
+                            class="far fa-save valign-middle mg-r-6"></i>Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <script src="assets/js/jquery/jquery-ui.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/feather-icons/feather.min.js"></script>
+    <script src="assets/js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/prismjs/prism.js"></script>
+    <script src="assets/js/quill/quill.core.js"></script>
+    <script src="assets/js/quill/quill.min.js"></script>
+    <script src="assets/js/select2/select2.min.js"></script>
+    <script src="assets/js/select2/select2.addons.js"></script>
+    <script src="assets/js/select2/i18n/tr.js"></script>
+    <script src="assets/js/chart.js/Chart.bundle.min.js"></script>
+
+    <script src="assets/js/dashforge.js"></script>
+
+    <script src="assets/js-customs/ortak.js"></script>
+
+    <script src="assets/js-customs/ayarlar-profiller.js"></script>
+
+</body>
+
+</html>

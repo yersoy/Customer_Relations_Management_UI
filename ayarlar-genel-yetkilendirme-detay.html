@@ -1,0 +1,3061 @@
+﻿<!DOCTYPE html>
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Ritma Flex İş Yönetim Platformu</title>
+  <link href="assets/css/fontawesome.min.css" rel="stylesheet" />
+  <link href="assets/css/ionicons.min.css" rel="stylesheet" />
+  <link href="assets/css/jqvmap.min.css" rel="stylesheet" />
+  <link href="assets/js/quill/css/quill.snow.css" rel="stylesheet" />
+  <link href="assets/js/quill/css/quill.core.css" rel="stylesheet" />
+  <link href="assets/js/quill/css/quill.bubble.css" rel="stylesheet" />
+  <link href="assets/js/select2/css/select2.min.css" rel="stylesheet" />
+  <link href="assets/css/dashforge.css" rel="stylesheet" />
+  <link href="assets/css/dashforge.profile.css" rel="stylesheet" />
+  <link href="assets/css/dashforge.filemgr.css" rel="stylesheet" />
+  <link href="assets/css/dashforge.contacts.css" rel="stylesheet" />
+  <link href="assets/css/dashforge.mail.css" rel="stylesheet" />
+  <link href="assets/css/animate.min.css" rel="stylesheet" />
+  <link href="assets/css/skin.light.css" rel="stylesheet" />
+  <link href="assets/css/customs.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/yschat.css">
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <script src="https://kit-pro.fontawesome.com/releases/v5.10.1/js/pro.min.js" data-auto-fetch-svg></script>
+  <style>
+    .select2-container--default.select2-container--focus .select2-selection--multiple {
+      padding: 0;
+      border-color: #c0ccda;
+    }
+
+    .select2-container--default.select2-container--focus .select2-selection--multiple {
+      padding-top: 5px;
+    }
+
+    .select2-container--default .select2-selection--multiple .select2-selection__rendered {
+      margin-bottom: 0px;
+      margin-top: 1px;
+      margin-left: -3px;
+    }
+
+    /* modal left side  */
+
+    .modal.left .modal-dialog {
+      position: fixed;
+      margin: auto;
+      width: 320px;
+      height: 100%;
+      -webkit-transform: translate3d(0%, 0, 0);
+      -ms-transform: translate3d(0%, 0, 0);
+      -o-transform: translate3d(0%, 0, 0);
+      transform: translate3d(0%, 0, 0);
+    }
+
+    .modal.left .modal-content {
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .modal.right .modal-body {
+      padding: 15px 15px 80px;
+    }
+
+    .modal.right.fade .modal-dialog {
+      right: -320px;
+      -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+      -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+      -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+      transition: opacity 0.3s linear, left 0.3s ease-out;
+    }
+
+    .modal.right.fade.show .modal-dialog {
+      right: 0;
+    }
+
+    #modalnewuser .modal-body {
+      height: 393px !important;
+    }
+
+    .chat-content {
+      opacity: 1;
+      left: 310px;
+      transform: none;
+      visibility: visible;
+    }
+
+    .contact-sidebar {
+      display: inline-block;
+      width: 100%;
+      left: 0;
+    }
+
+    .chat-group {
+      width: calc(100% - 245px) !important;
+      height: 100%;
+      overflow: auto;
+      padding-bottom: 0 !important;
+    }
+
+    @media (max-width: 800px) {
+      .chat-sidebar {
+        width: 200px;
+      }
+
+      .chat-content {
+        opacity: 1;
+        left: 265px;
+        transform: none;
+        visibility: visible;
+      }
+
+      .chat-group {
+        width: calc(100% - 199px) !important;
+        padding: 0;
+        padding-top: 15px;
+      }
+
+      div.media h6 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 115px;
+      }
+    }
+
+    .select2-selection__rendered {
+      color: #ccc !important
+    }
+
+    .select2-container--default .select2-selection--single {
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    #modalseeall .custom-control-input:checked~.custom-control-label::before {
+      color: #fff;
+      border-color: #10b759 !important;
+      background-color: #10b759 !important
+    }
+
+    #modalseeall .btn-outline-light.disabled,
+    .btn-outline-light:disabled {
+      color: #f4f5f8;
+      background-color: #cdd4e0;
+    }
+
+    .select2-container--default .select2-selection--multiple {
+      padding: 0 !important;
+      padding-left: 3px !important;
+    }
+
+    .form-group .select2-container--default .select2-selection--single {
+      border-radius: 0.25rem !important;
+      border-color: #c0ccda;
+    }
+
+    table tr:first-child td {
+      border-top: none !important;
+    }
+
+    table tr:last-child td {
+      border-bottom: none !important;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+      color: #596882 !important;
+    }
+
+    .list-group-flush .list-group-item {
+      border-right: 0;
+      border-left: 0;
+      border-radius: 0;
+      display: flex !important;
+      height: 77px;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body class="df-roboto app-contact licence-page">
+  <header class="navbar navbar-header navbar-header-fixed">
+    <div
+      class="d-none align-items-center pos-fixed t-0 z-index-50 w-100 ht-40 tx-white tx-12 justify-content-center bg-dark pd-y-5 pd-x-20 alert-dismissible"
+      role="alert">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-info wd-16 ht-16">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12" y2="8"></line>
+      </svg> Aylık aboneliğinizin bitimine 3 gün kaldı. Yenilemek için <button type="button"
+        class="btn btn-xs btn-warning lh--9 mg-l-10">Yenile</button>
+      <button type="button" class="close">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <a href="" id="mainMenuOpen" class="burger-menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </a>
+    <div class="navbar-brand wd-sm-auto-f">
+      <a href="index.html" class="df-logo">
+        <img src="assets/logo_ritmaflex.svg" class="ht-25">
+      </a>
+      <div class="dropdown tx-12 mg-l-40">
+        <button class="btn btn-xs btn-outline-light dropdown-toggle pd-x-3 pd-y-3" type="button" id="companies"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="d-inline-flex align-items-center justify-content-start">
+            <div class="wd-35">
+              <div class="avatar avatar-xs">
+                <img src="http://via.placeholder.com/30" class="rounded" alt="">
+              </div>
+            </div>
+            <div class="tx-left lh-0 pd-r-10">ZY Elektrikli Traktör</div>
+          </div>
+        </button>
+        <div class="dropdown-menu mn-wd-100p tx-12" aria-labelledby="companies">
+          <a class="dropdown-item" href="#">ZY Elektrikli Traktör</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item tx-primary" href="#modal_ritmafirma" data-toggle="modal">Bölge Müdürlüğü</a>
+          <a class="dropdown-item tx-primary" href="#modal_ritmafirma" data-toggle="modal">Bayii</a>
+        </div>
+      </div>
+    </div>
+    <div id="navbarMenu" class="navbar-menu-wrapper">
+      <div class="navbar-menu-header">
+        <a href="index.html" class="df-logo">
+          <img src="assets/logo_ritmaflex.svg" class="ht-25">
+        </a>
+        <a id="mainMenuClose" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-x">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </a>
+      </div>
+      <ul class="nav navbar-menu">
+        <li class="nav-label pd-l-20 pd-lg-l-25 d-lg-none">Menü</li>
+        <li class="nav-item with-sub">
+          <a href="" class="nav-link">Kontaklar</a>
+          <div class="navbar-menu-sub">
+            <div class="d-lg-flex">
+              <ul>
+                <li class="nav-label">Kontak Türleri</li>
+                <li class="nav-sub-item">
+                  <a href="profiller.html" class="nav-sub-link">Müşteri</a>
+                </li>
+                <li class="nav-sub-item">
+                  <a href="profiller.html" class="nav-sub-link">Tedarikçi</a>
+                </li>
+                <li class="nav-sub-item">
+                  <a href="profiller.html" class="nav-sub-link">Bölge Müdürlüğü</a>
+                </li>
+                <li class="nav-sub-item">
+                  <a href="profiller.html" class="nav-sub-link">Bayii</a>
+                </li>
+                <li class="nav-sub-item">
+                  <a href="profiller.html" class="nav-sub-link">Rakip</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="nav-label">Yeni</li>
+                <li class="nav-sub-item">
+                  <a href="profiller.html#yeni1" class="nav-sub-link">
+                    <svg class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false" data-prefix="far"
+                      data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                      data-fa-i2svg="">
+                      <path fill="currentColor"
+                        d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z">
+                      </path>
+                    </svg>
+                    <!-- <i class="far fa-plus"></i> -->Yeni Müşteri </a>
+                </li>
+                <li class="nav-sub-item">
+                  <a href="profiller.html#yeni2" class="nav-sub-link">
+                    <svg class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false" data-prefix="far"
+                      data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                      data-fa-i2svg="">
+                      <path fill="currentColor"
+                        d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z">
+                      </path>
+                    </svg>
+                    <!-- <i class="far fa-plus"></i> -->Yeni Tedarikçi </a>
+                </li>
+                <li class="nav-sub-item">
+                  <a href="profiller.html#yeni3" class="nav-sub-link">
+                    <svg class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false" data-prefix="far"
+                      data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                      data-fa-i2svg="">
+                      <path fill="currentColor"
+                        d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z">
+                      </path>
+                    </svg>
+                    <!-- <i class="far fa-plus"></i> -->Yeni Bölge Müdürlüğü </a>
+                </li>
+                <li class="nav-sub-item">
+                  <a href="profiller.html#yeni4" class="nav-sub-link">
+                    <svg class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false" data-prefix="far"
+                      data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                      data-fa-i2svg="">
+                      <path fill="currentColor"
+                        d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z">
+                      </path>
+                    </svg>
+                    <!-- <i class="far fa-plus"></i> -->Yeni Bayi </a>
+                </li>
+                <li class="nav-sub-item">
+                  <a href="profiller.html#yeni5" class="nav-sub-link">
+                    <svg class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false" data-prefix="far"
+                      data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                      data-fa-i2svg="">
+                      <path fill="currentColor"
+                        d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z">
+                      </path>
+                    </svg>
+                    <!-- <i class="far fa-plus"></i> -->Yeni Rakip </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="urunler.html" class="nav-link">Ürünler</a>
+        </li>
+        <li class="nav-item">
+          <a href="servisler.html" class="nav-link">Servisler</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-right">
+      <a id="navbarSearch" href="" class="search-link d-flex">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-search">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </a>
+      <div class="dropdown dropdown-message">
+        <a href="agenda.html" class="dropdown-link new-indicator d-flex" data-tooltip="" data-placement="bottom"
+          title="" data-original-title="Ajanda">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-calendar">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+        </a>
+      </div>
+      <div class="dropdown dropdown-message">
+        <a href="" class="dropdown-link new-indicator d-flex" data-toggle="dropdown">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-message-square">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span>5</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <div class="dropdown-header">Mesajlar</div>
+          <a href="" class="dropdown-item">
+            <div class="media">
+              <div class="avatar  avatar-online">
+                <img src="http://via.placeholder.com/350" class="rounded-circle" alt="">
+              </div>
+              <div class="media-body mg-l-15">
+                <strong>Socrates Itumay</strong>
+                <p>nam libero tempore cum so...</p>
+                <span>Mar 15 12:32pm</span>
+              </div>
+            </div>
+          </a>
+          <div class="dropdown-footer">
+            <a>Hepsini listeleyin</a>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown dropdown-notification">
+        <a href="" class="dropdown-link new-indicator d-flex" data-toggle="dropdown">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-bell">
+            <path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path>
+          </svg>
+          <span>2</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <div class="dropdown-header">Bildirimler</div>
+          <a href="" class="dropdown-item">
+            <div class="media">
+              <div class="avatar  avatar-online">
+                <img src="http://via.placeholder.com/350" class="rounded-circle" alt="">
+              </div>
+              <div class="media-body mg-l-15">
+                <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries </p>
+                <span>Mar 15 12:32pm</span>
+              </div>
+            </div>
+          </a>
+          <div class="dropdown-footer">
+            <a href="">Hepsini listeleyin</a>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown dropdown-profile">
+        <a href="#" class="dropdown-link" data-toggle="dropdown" data-display="static">
+          <div class="avatar">
+            <img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg">
+          </div>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right tx-13">
+          <div class="avatar avatar-lg mg-b-15">
+            <img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg">
+          </div>
+          <h6 class="tx-semibold mg-b-5">Uğur Büyükalkan</h6>
+          <p class="mg-b-25 tx-12 tx-color-03">Müşteri Temsilcisi</p>
+          <a href="#" class="dropdown-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-user">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>Kontak </a>
+          <a href="#" class="dropdown-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-life-buoy">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="4"></circle>
+              <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+              <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+              <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+              <line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line>
+              <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+            </svg> Yardım </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-settings">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+              </path>
+            </svg> Hesap Ayaları </a>
+          <a href="#" class="dropdown-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-settings">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+              </path>
+            </svg> Sistem Ayarları </a>
+          <div class="dropdown-divider"></div>
+          <a href="login.html" class="dropdown-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-log-out">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg> Çıkış yap </a>
+        </div>
+      </div>
+    </div>
+    <div class="navbar-search">
+      <div class="navbar-search-header">
+        <input type="search" class="form-control" placeholder="Aramalarınızı buradan yapabilirsiniz...">
+        <button class="btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-search">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a id="navbarSearchClose" href="" class="link-03 mg-l-5 mg-lg-l-10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-x">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </a>
+      </div>
+      <div class="navbar-search-body">
+        <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Son
+          Aramalarınız</label>
+        <ul class="list-unstyled">
+          <li>
+            <a href="#">İstaç İstanbul Çevre Yönetimi</a>
+          </li>
+          <li>
+            <a href="#">Nsc Bilişim Hizmetleri Ticaret A.Ş.</a>
+          </li>
+          <li>
+            <a href="#">Abp Gıda Ölç. Kont. Sis. İth. Paz.</a>
+          </li>
+        </ul>
+        <hr class="mg-y-30 bd-0">
+        <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Yeni
+          Eklenenler</label>
+        <ul class="list-unstyled">
+          <li>
+            <a href="#">Karel Elektronik San. ve Tic. A.Ş</a>
+          </li>
+          <li>
+            <a href="#">Bdh Bilişim Destek Hizmetleri San. Tic. A.Ş.</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="chat-wrapper">
+    <div class="chat-navleft">
+      <nav class="nav flex-column">
+        <a href="ayarlar-genel.html" class="nav-link active" data-toggle="tooltip" title="" data-placement="right"
+          data-original-title="Genel">
+          <i class="far fa-cog fa-2x"></i>
+        </a>
+        <a href="ayarlar-profiller.html" class="nav-link" data-toggle="tooltip" title="" data-placement="right"
+          data-original-title="Profil">
+          <i class="far fa-address-card fa-2x"></i>
+        </a>
+        <a href="#" class="nav-link" data-toggle="tooltip" title="" data-placement="right" data-original-title="Fırsat">
+          <i class="far fa-bomb fa-2x"></i>
+        </a>
+        <a href="ayarlar-kullanici-yönetimi.html" class="nav-link" data-toggle="tooltip" title="" data-placement="right"
+          data-original-title="Kullanıcılar">
+          <i class="far fa-users fa-2x"></i>
+        </a>
+        <a href="ayarlar-teklifler.html" class="nav-link" data-toggle="tooltip" title="" data-placement="right"
+          data-original-title="Teklif">
+          <i class="far fa-shopping-cart fa-2x"></i>
+        </a>
+        <a href="#" class="nav-link" data-toggle="tooltip" title="" data-placement="right" data-original-title="Help">
+          <i class="far fa-shopping-basket fa-2x"></i>
+        </a>
+        <a href="#" class="nav-link" data-toggle="tooltip" title="" data-placement="right" data-original-title="Help">
+          <i class="far fa-chart-line fa-2x"></i>
+        </a>
+        <a href="#" class="nav-link" data-toggle="tooltip" title="" data-placement="right" data-original-title="Help">
+          <i class="far fa-comments-alt fa-2x"></i>
+        </a>
+        <a href="#" class="nav-link" data-toggle="tooltip" title="" data-placement="right" data-original-title="Help">
+          <i class="far fa-ticket fa-2x"></i>
+        </a>
+      </nav>
+    </div>
+    <!-- chat-navleft -->
+    <div class="chat-sidebar">
+      <div class="contact-sidebar l-auto">
+        <div class="contact-sidebar-header hsearch">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-search">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <div class="search-form">
+            <input type="search" class="form-control" placeholder="Liste içi arama">
+          </div>
+          
+        </div>
+        <div class="contact-sidebar-header hfilter bg-ui-01 ht-45-f">
+          <i class="far fa-sitemap ys-bg-grey-light"></i>
+          <select name="filter" id="filter" class="select2 form-control bg-ui-01 border-0 shadow-none bg-ui-01"
+            id="filter">
+            <option selected>Tümü</option>
+            <optgroup label="Departmanlar">
+              <option>Satış</option>
+              <option>Pazarlama</option>
+            </optgroup>
+            <optgroup label="Kontaklar">
+              <option>Müşteri</option>
+              <option> Müşteri Adayı</option>
+              <option>Tedarikçi</option>
+              <option>Bölge Müdürlüğü</option>
+              <option>Bayii</option>
+              <option>Yetkili Servis</option>
+              <option disabled>Developer</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="contact-sidebar-body hbody">
+          <div class="tab-content">
+            <div id="tabContact" class="tab-pane fade active show">
+              <div class="pd-y-20 pd-x-10 pd-md-t-0 pd-sm-t-0 pd-lg-t-10 contact-list">
+                <label id="contactA" class="contact-list-divider">B</label>
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online">
+                    <img src="https://via.placeholder.com/500" class="rounded-circle" alt="">
+                  </div>
+                  <div class="media-body mg-l-10">
+                    <h6 class="tx-13 mg-b-3">Burak Altun</h6>
+                    <span class="tx-12">Lead-Developer</span>
+                  </div>
+                  <nav>
+                    <a href="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-star">
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                        </polygon>
+                      </svg>
+                    </a>
+                    <a href="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-edit-2">
+                        <polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon>
+                      </svg>
+                    </a>
+                  </nav>
+                </div>
+                <label id="contactA" class="contact-list-divider">R</label>
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online">
+                    <span class="avatar-initial rounded-circle bg-gray-700">RU</span>
+                  </div>
+                  <div class="media-body mg-l-10">
+                    <h6 class="tx-13 mg-b-3">Ramazan Uzunkavak</h6>
+                    <span class="tx-12">Art Director</span>
+                  </div>
+                  <nav>
+                    <a href="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-star">
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                        </polygon>
+                      </svg>
+                    </a>
+                    <a href="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-edit-2">
+                        <polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon>
+                      </svg>
+                    </a>
+                  </nav>
+                </div>
+                <label id="contactA" class="contact-list-divider">S</label>
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online">
+                    <span class="avatar-initial rounded-circle bg-gray-700">SÜ</span>
+                  </div>
+                  <div class="media-body mg-l-10">
+                    <h6 class="tx-13 mg-b-3">Selim Ünüvar</h6>
+                    <span class="tx-12">Genel Müdür</span>
+                  </div>
+                  <nav>
+                    <a href="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-star">
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                        </polygon>
+                      </svg>
+                    </a>
+                    <a href="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-edit-2">
+                        <polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon>
+                      </svg>
+                    </a>
+                  </nav>
+                </div>
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online">
+                    <span class="avatar-initial rounded-circle bg-primary">SK</span>
+                  </div>
+                  <div class="media-body mg-l-10">
+                    <h6 class="tx-13 mg-b-3">Samet Kaymak</h6>
+                    <span class="tx-12">Developer</span>
+                  </div>
+                  <nav>
+                    <a href="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-star">
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                        </polygon>
+                      </svg>
+                    </a>
+                    <a href="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-edit-2">
+                        <polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon>
+                      </svg>
+                    </a>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wd-100p bd-t pd-20 bd-ui-02 pos-absolute b-0 ht-55 d-flex align-items-center justify-content-center">
+            <button class="btn btn-xs btn-primary wd-100p" href="#modalnewuser" data-toggle="modal">Yeni Hesap Oluştur</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- chat-sidebar -->
+    <div class="chat-content">
+      <div class="chat-content-body">
+        <div class="chat-group justify-content-start">
+          <div class="content pd-20 pd-t-0-f mg-t-0 d-flex align-items-center justify-content-center">
+            <div class="flex-fill container">
+
+              <div class="row">
+                <div class="col-lg-12 col-md-12">
+                  <ol class="breadcrumb bg-transparent pd-x-0 mg-b-0">
+                    <li class="breadcrumb-item">
+                      <a href="ayarlar.html">Ayarlar</a>
+                    </li>
+                    <li class="breadcrumb-item active">Kullanıcılar</li>
+                  </ol>
+                  <button type="button" href="#modalnewuser" data-toggle="modal" class="btn btn-outline-primary pos-absolute r-20 t-0"><i
+                      class="far fa-plus tx-16  mg-r-10"></i> Yeni Kullanıcı Ekle</button>
+                </div>
+              </div>
+              <div class="row row-xs">
+                <div class="col-md-8 mg-t-10 mg-b-15">
+                  <div class="card ht-440">
+                    <div class="card-header pd-l-30">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <a class="tx-dark" href="ayarlar-genel.html">
+                          <i class="far fa-user-clock tx-16 valign-textbottom mg-r-10"></i> Geçmiş Hareketler
+                        </a>
+
+                      </div>
+                    </div>
+                    <div class="card-body pd-25">
+                      <ul class="activity tx-13">
+                        <li class="activity-item">
+                          <img class="activity-icon"
+                            src="https://profile-images.xing.com/images/eaa0b8781f05623e5546493b572f7522-2/selim-%C3%BCn%C3%BCvar.1024x1024.jpg">
+                          <div class="activity-body">
+                            <p class="mg-b-2"><strong>Selim Ünüvar</strong> tarafından"<a href="#" class="link-01">Samet
+                                Kaymak</a>" kullanıcısının erişimi engellendi.</p>
+                            <small class="tx-color-03">1 Saat önce</small>
+                          </div>
+                          <!-- activity-body -->
+                        </li>
+                        <!-- activity-item -->
+                        <li class="activity-item">
+                          <img class="activity-icon"
+                            src="https://media-exp1.licdn.com/dms/image/C5103AQGUgwi-ldujNA/profile-displayphoto-shrink_200_200/0/1516539383739?e=1644451200&v=beta&t=jx7gtmwyxMk1J5WlMOnomqaT5lC0dtEp59CG7s7A4tE"
+                            alt="">
+                          <div class="activity-body">
+                            <p class="mg-b-2"><strong>Ramazan Uzunkavak</strong> tarafından"<a href="#"
+                                class="link-01">Samet Kaymak</a>" kullanıcısının erişimi kısıtlandı.</p>
+                            <small class="tx-color-03">5 Saat Önce</small>
+                          </div>
+                          <!-- activity-body -->
+                        <li class="activity-item">
+                          <img class="activity-icon" src="assets/yersoy.jpg" alt="">
+
+                          <div class="activity-body">
+                            <p class="mg-b-2"><strong>Yusuf Ersoy</strong> tarafından"<a href="#" class="link-01">Samet
+                                Kaymak</a>" kullanıcısına <b>TEKLİF</b> yetkisi tanımlandı.</p>
+                            <small class="tx-color-03">Geçen gün</small>
+                          </div>
+                          <!-- activity-body -->
+                        </li>
+                        <!-- activity-item -->
+                        <li class="activity-item">
+                          <div class="activity-icon bg-primary-light tx-primary">
+                            EÖ
+                          </div>
+                          <div class="activity-body">
+                            <p class="mg-b-2"><strong>Eyüp Öztürk</strong> tarafından"<a href="#" class="link-01">Yusuf
+                                Ersoy</a>" kullanıcısına <b>YÖNETİCİ</b> rölü tanımlandı.</p>
+                            <small class="tx-color-03">Geçen gün</small>
+                          </div>
+                          <!-- activity-body -->
+                        </li>
+                        <!-- activity-item -->
+                        <li class="activity-item">
+                          <div class="activity-icon bg-indigo-light tx-indigo">
+                            BA
+                          </div>
+                          <div class="activity-body">
+                            <p class="mg-b-2"><strong>Burak Altun</strong> kendi özgeçmişini güncelledi.</p>
+                            <small class="tx-color-03">2 gün önce</small>
+                          </div>
+                          <!-- activity-body -->
+                        </li>
+                        <!-- activity-item -->
+                      </ul>
+                      <!-- activity -->
+                    </div>
+                    <!-- card-body -->
+                  </div>
+                  <!-- card -->
+                </div>
+                <div class="col-md-4 mg-t-10 mg-b-15">
+                  <div class="card ht-440">
+                    <div class="card-header pd-l-30">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <a class="tx-dark" href="ayarlar-genel.html">
+                          <i class="far fa-history tx-16 valign-textbottom mg-r-10"></i>Son Görüntüledikleriniz
+                        </a>
+                      </div>
+                    </div>
+                    <div class="card-body pd-0">
+                      <ul class="list-group list-group-flush tx-13">
+                        <li class="list-group-item d-flex pd-sm-x-25">
+                          <div class="avatar d-none d-sm-block"><span
+                              class="avatar-initial rounded-circle bg-primary-light text-primary">SÜ</span></div>
+                          <div class="pd-sm-l-10">
+                            <p class="tx-medium mg-b-0">Selim Ünüvar</p>
+                            <small class="tx-12 tx-color-03 mg-b-0">9 Aralık 18:10</small>
+                          </div>
+                          <div class="mg-l-auto text-right">
+                            <a href="#" data-tooltip="" title="" class="btn btn-sm btn-icon btn-light lh-0"
+                              data-original-title="Görüntüle"> <i class="far fa-arrow-right mg-r-6"></i></a>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex pd-sm-x-25">
+                          <div class="avatar d-none d-sm-block"><span
+                              class="avatar-initial rounded-circle bg-primary-light text-primary">RU</span></div>
+                          <div class="pd-sm-l-10">
+                            <p class="tx-medium mg-b-0">Ramazan Uzunkavak</p>
+                            <small class="tx-12 tx-color-03 mg-b-0">9 Aralık 18:10</small>
+                          </div>
+                          <div class="mg-l-auto text-right">
+                            <a href="#" data-tooltip="" title="" class="btn btn-sm btn-icon btn-light lh-0"
+                              data-original-title="Görüntüle"> <i class="far fa-arrow-right mg-r-6"></i></a>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex pd-sm-x-25">
+                          <div class="avatar d-none d-sm-block"><span
+                              class="avatar-initial rounded-circle bg-primary-light text-primary">SK</span></div>
+                          <div class="pd-sm-l-10">
+                            <p class="tx-medium mg-b-0">Samet Kaymak</p>
+                            <small class="tx-12 tx-color-03 mg-b-0">8 Aralık 14:10</small>
+                          </div>
+                          <div class="mg-l-auto text-right">
+                            <a href="#" data-tooltip="" title="" class="btn btn-sm btn-icon btn-light lh-0"
+                              data-original-title="Görüntüle"> <i class="far fa-arrow-right mg-r-6"></i></a>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex pd-sm-x-25">
+                          <div class="avatar d-none d-sm-block"><span
+                              class="avatar-initial rounded-circle bg-primary-light text-primary">YE</span></div>
+                          <div class="pd-sm-l-10">
+                            <p class="tx-medium mg-b-0">Yusuf Ersoy</p>
+                            <small class="tx-12 tx-color-03 mg-b-0">8 Aralık 14:10</small>
+                          </div>
+                          <div class="mg-l-auto text-right">
+                            <a href="#" data-tooltip="" title="" class="btn btn-sm btn-icon btn-light lh-0"
+                              data-original-title="Görüntüle"> <i class="far fa-arrow-right mg-r-6"></i></a>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex pd-sm-x-25">
+                          <div class="avatar d-none d-sm-block"><span
+                              class="avatar-initial rounded-circle bg-primary-light text-primary">BA</span></div>
+                          <div class="pd-sm-l-10">
+                            <p class="tx-medium mg-b-0">Burak Altun</p>
+                            <small class="tx-12 tx-color-03 mg-b-0">8 Aralık 14:10</small>
+                          </div>
+                          <div class="mg-l-auto text-right">
+                            <a href="#" data-tooltip="" title="" class="btn btn-sm btn-icon btn-light lh-0"
+                              data-original-title="Görüntüle"> <i class="far fa-arrow-right mg-r-6"></i></a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- card-body -->
+                  </div>
+                  <!-- card -->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 col-md-12">
+                  <ol class="breadcrumb bg-transparent pd-x-0 mg-b-0">
+                    <li class="breadcrumb-item">
+                      <a href="ayarlar.html">Ayarlar</a>
+                    </li>
+
+                    <li class="breadcrumb-item active">Kullanıcılar</li>
+                  </ol>
+                  <h2 class="mg-b-30">Selim Ünüvar</h2>
+                  <div class="alert alert-warning" role="alert">
+                    <div class="row">
+                      <div class="col-9 d-flex">
+                        <i class="far fa-info-circle mg-r-6 tx-20 mg-t-0"></i> Kullanıcının Erişimi Kısıtlandı
+                      </div>
+                      <div class="col-3">
+                        <button type="button" class="btn btn-xs btn-secondary lh--9 mg-l-10 float-right  mg-lg-t-0"
+                          href="#modal_erisimkısıtla" data-toggle="modal">Düzenle</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <div class="d-flex align-items-center justify-content-between">
+                    <a class="tx-dark" href="ayarlar-genel.html">
+                      <i class="fa fa-arrow-left tx-16 valign-textbottom mg-r-10"></i>Geri dön
+                    </a>
+                    <div class="wd-30p tx-12 tx-color-03 aligned-right ys-truncate w-auto">
+                      Son&nbsp;Giriş:&nbsp;13&nbsp;Haz,&nbsp;2021&nbsp;-&nbsp;18:50</div>
+                  </div>
+                </div>
+                <div class="card-body pd-0">
+                  <div class="d-flex ht-100p">
+                    <div class="wd-60p pd-20">
+                      <div class="clearfix mg-b-25">
+                        <div class="pos-relative float-left">
+                          <div class="avatar avatar-xl avatar-online">
+                            <span class="avatar-initial  rounded-circle bg-gray-700 tx-normal">SÜ</span>
+                          </div>
+
+                        </div>
+                      </div>
+                      <h5 class="tx-18 mg-b-5">Selim Ünüvar</h5>
+                      <p class="tx-13 tx-color-03 mg-b-5">Genel Müdür - Ritma Teknoloji Ltd.</p>
+                      <p class="tx-13 tx-secondary mg-b-5">sunuvar@ritma.com.tr</p>
+                    </div>
+                    <div class="wd-40p pd-20 bd-l bd-gray-200">
+                      <label
+                        class="tx-10 tx-medium tx-spacing-1 tx-color-03 tx-uppercase tx-sans mg-b-15">İşlemler</label>
+                      <nav class="nav flex-column contact-content-nav">
+                        <a href="#modal_kullanicibilgileri" data-toggle="modal" class="nav-link">
+                          <i class="far fa-pen"></i> Bilgilerini Düzenle
+                        </a>
+                        <a href="#" class="nav-link">
+                          <i class="far fa-paper-plane"></i> Erişim Bilgilerini Gönder
+                        </a>
+                        <a href="#modal_erisimkısıtla" data-toggle="modal" class="nav-link">
+                          <i class="far fa-hourglass-start"></i> Erişim Kısıtla
+                        </a>
+                        <a href="#modal_erisimengeli" data-toggle="modal" class="nav-link">
+                          <i class="far fa-ban"></i> Erişim Engelle
+                        </a>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="card mg-t-10">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="tx-16 tx-semibold mg-b-0">Yetkilendirme</div>
+                    <a class="text-primary" data-toggle="modal" href="#modal_yetkilendirme"><i
+                        class="far fa-pen mg-r-6"></i>Düzenle</a>
+                  </div>
+                </div>
+                <div class="card-body pd-25">
+                  <div class="row mg-b-15">
+                    <div class="col-lg-4"><span class="text-muted">Departman</span></div>
+                    <div class="col-lg-8"><span class="tx-bold">Yönetim Kurulu</span></div>
+                  </div>
+                  <div class="row mg-b-15">
+                    <div class="col-lg-4"><span class="text-muted">Kullanıcı Rolü</span></div>
+                    <div class="col-lg-8"><span class="tx-bold">Yönetici</span></div>
+                  </div>
+                  <div class="row mg-b-0">
+                    <div class="col-lg-4"><span class="text-muted">Kullanıcı Yetkisi</span></div>
+                    <div class="col-lg-8 d-flex"><span class="tx-bold tx-danger mg-r-6">Özelleştirilmiş </span>
+                      <div
+                        class="tx-12 bd rounded pd-x-4 pd-y-2 mg-l-6 bd-light bg-success-light tx-dark cursor-pointer d-flex align-items-center justify-content-center"
+                        data-toggle="modal" data-tooltip="" href="#modal_extrapermissions" title="İlave Yetkiler">
+                        <i class="far fa-user-plus mg-r-6"></i> 3
+                      </div>
+                      <div
+                        class="tx-12 bd rounded pd-x-4 pd-y-2 mg-l-6 bd-light bg-warning-light tx-dark cursor-pointer d-flex align-items-center justify-content-center"
+                        data-toggle="modal" data-tooltip="" href="#modal_outpermissions" title="Hariç Yetkiler">
+                        <i class="far fa-user-minus  mg-r-6"></i> 1
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body pd-0 bd-t">
+                  <div class="row mg-x-0-f">
+                    <div class="col-4 pd-20" id="yetkilendirmeler_tab">
+
+                      <div id="yetkilendirme-tab-genel"
+                        class="cursor-pointer d-flex align-items-center pd-8 tx-primary bg-primary-light rounded mg-t-0">
+                        <div class="wd-25 lh-0 tx-center"><i class="far fa-cog tx-16"></i></div>
+                        <div class="mg-l-5">Genel</div>
+                      </div>
+                      <div id="yetkilendirme-tab-kontak"
+                        class="cursor-pointer d-flex align-items-center pd-8 tx-secondary bg-ui-01 rounded mg-t-5">
+                        <div class="wd-25 lh-0 tx-center"><i class="far fa-address-card tx-16"></i></div>
+                        <div class="mg-l-5">Kontak</div>
+                      </div>
+                      <div id="yetkilendirme-tab-teklif"
+                        class="cursor-pointer d-flex align-items-center pd-8 tx-secondary bg-ui-01 rounded mg-t-5">
+                        <div class="wd-25 lh-0 tx-center"><i class="far fa-shopping-cart tx-16"></i></div>
+                        <div class="mg-l-5">Teklif</div>
+                      </div>
+                      <div id="yetkilendirme-tab-urunler"
+                        class="cursor-pointer d-flex align-items-center pd-8 tx-secondary bg-ui-01 rounded mg-t-5">
+                        <div class="wd-25 lh-0 tx-center"><i class="far fa-hand-holding-box tx-16"></i></div>
+                        <div class="mg-l-5">Ürünler</div>
+                      </div>
+
+                    </div>
+                    <div class="col-8 pd-0 bd-l" id="yetkilendirmeler_icerik">
+                      <div id="yetkilendirme-icerik-genel" class="d-block">
+                        <h5 class="tx-16 pd-x-20 pd-t-20 mg-b-0">Genel</h5>
+                        <div class="pd-20">
+                          <div class="d-flex align-items-center justify-content-between hover-primary">
+                            <div class="wd-20 lh-0 tx-secondary tx-center"><i class="fal fa-address-card fa-1x"></i>
+                            </div>
+                            <div class="wd-60p pd-l-5">Kontak</div>
+                            <div class="wd-20p aligned-right tx-secondary">Yetkisi Var</div>
+                            <div class="wd-15p aligned-right">
+                              <div class="custom-control custom-switch float-right r-10">
+                                <input type="checkbox" class="custom-control-input" id="genel_ozelislem1" checked>
+                                <label class="d-flex custom-control-label" for="genel_ozelislem1"></label>
+                              </div>
+                            </div>
+                          </div>
+                          <hr class="mg-y-8" />
+                          <div class="d-flex align-items-center justify-content-between hover-primary">
+                            <div class="wd-20 lh-0 tx-secondary tx-center"><i class="fal fa-bomb fa-1x"></i></div>
+                            <div class="wd-60p pd-l-5">Fırsat</div>
+                            <div class="wd-20p aligned-right tx-gray-300">Yetkisi Yok</div>
+                            <div class="wd-15p aligned-right">
+                              <div class="custom-control custom-switch float-right r-10">
+                                <input type="checkbox" class="custom-control-input" id="genel_ozelislem2">
+                                <label class="d-flex custom-control-label" for="genel_ozelislem2"></label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <hr class="mg-y-8" />
+
+                          <div class="d-flex align-items-center justify-content-between hover-primary">
+                            <div class="wd-20 lh-0 tx-secondary tx-center"><i class="fal fa-shopping-cart fa-1x"></i>
+                            </div>
+                            <div class="wd-60p pd-l-5">Teklif</div>
+                            <div class="wd-20p aligned-right tx-secondary">Yetkisi Var</div>
+                            <div class="wd-15p aligned-right">
+                              <div class="custom-control custom-switch float-right r-10">
+                                <input type="checkbox" class="custom-control-input" id="genel_ozelislem3" checked>
+                                <label class="d-flex custom-control-label" for="genel_ozelislem3"></label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <hr class="mg-y-8" />
+
+                          <div class="d-flex align-items-center justify-content-between hover-primary">
+                            <div class="wd-20 lh-0 tx-secondary tx-center"><i class="fal fa-chart-line fa-1x"></i></div>
+                            <div class="wd-60p pd-l-5">Satış</div>
+                            <div class="wd-20p aligned-right tx-gray-300">Yetkisi Yok</div>
+                            <div class="wd-15p aligned-right">
+                              <div class="custom-control custom-switch float-right r-10">
+                                <input type="checkbox" class="custom-control-input" id="genel_ozelislem4">
+                                <label class="d-flex custom-control-label" for="genel_ozelislem4"></label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <hr class="mg-y-8" />
+
+                          <div class="d-flex align-items-center justify-content-between hover-primary">
+                            <div class="wd-20 lh-0 tx-secondary tx-center"><i class="fal fa-users fa-1x"></i></div>
+                            <div class="wd-60p pd-l-5">Görüşmeler</div>
+                            <div class="wd-20p aligned-right tx-gray-300">Yetkisi Yok</div>
+                            <div class="wd-15p aligned-right">
+                              <div class="custom-control custom-switch float-right r-10">
+                                <input type="checkbox" class="custom-control-input" id="genel_ozelislem5">
+                                <label class="d-flex custom-control-label" for="genel_ozelislem5"></label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <hr class="mg-y-8" />
+
+                          <div class="d-flex align-items-center justify-content-between hover-primary">
+                            <div class="wd-20 lh-0 tx-secondary tx-center"><i class="fal fa-ticket fa-1x"></i></div>
+                            <div class="wd-60p pd-l-5">Ticket</div>
+                            <div class="wd-20p aligned-right tx-gray-300">Yetkisi Yok</div>
+                            <div class="wd-15p aligned-right">
+                              <div class="custom-control custom-switch float-right r-10">
+                                <input type="checkbox" class="custom-control-input" id="genel_ozelislem6">
+                                <label class="d-flex custom-control-label" for="genel_ozelislem6"></label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <hr class="mg-y-8" />
+
+                          <div class="d-flex align-items-center justify-content-between hover-primary">
+                            <div class="wd-20 lh-0 tx-secondary tx-center"><i class="fal fa-hand-holding-box fa-1x"></i>
+                            </div>
+                            <div class="wd-60p pd-l-5">Ürünler</div>
+                            <div class="wd-20p aligned-right tx-secondary">Yetkisi Var</div>
+                            <div class="wd-15p aligned-right">
+                              <div class="custom-control custom-switch float-right r-10">
+                                <input type="checkbox" class="custom-control-input" id="genel_ozelislem7" checked>
+                                <label class="d-flex custom-control-label" for="genel_ozelislem7"></label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <hr class="mg-y-8" />
+
+                          <div class="d-flex align-items-center justify-content-between hover-primary">
+                            <div class="wd-20 lh-0 tx-secondary tx-center"><i class="fal fa-boxes fa-1x"></i></div>
+                            <div class="wd-60p pd-l-5">Stok</div>
+                            <div class="wd-20p aligned-right tx-gray-300">Yetkisi Yok</div>
+                            <div class="wd-15p aligned-right">
+                              <div class="custom-control custom-switch float-right r-10">
+                                <input type="checkbox" class="custom-control-input" id="genel_ozelislem8">
+                                <label class="d-flex custom-control-label" for="genel_ozelislem8"></label>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <div id="yetkilendirme-icerik-kontak" class="d-none">
+
+                        <h5 class="tx-16 pd-x-20 pd-t-25 mg-b-0">Kontak</h5>
+
+                        <div class="pd-20">
+
+                          <div class="d-flex align-items-center justify-content-between hover-primary">
+                            <div class="wd-40p">Görüntüleme</div>
+                            <div class="wd-30p tx-secondary">Tüm Kayıtlar</div>
+                            <div class="wd-30p aligned-right">
+                              <div class="d-inline-flex align-items-center">
+                                <button href="#modal_modul_izinler" data-toggle="modal" data-tooltip title="İzinler"
+                                  class="btn btn-xs btn-icon btn-outline-secondary lh-0 mg-l-6">
+                                  <i class="far fa-users"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <hr class="mg-y-5" />
+
+                          <div class="d-flex align-items-center justify-content-between hover-primary">
+                            <div class="wd-40p">Kayıt & Güncelleme</div>
+                            <div class="wd-30p tx-secondary">Kendi, Diğerleri</div>
+                            <div class="wd-30p aligned-right">
+                              <div class="d-inline-flex align-items-center">
+                                <button href="#modal_modul_izinler" data-toggle="modal" data-tooltip title="İzinler"
+                                  class="btn btn-xs btn-icon btn-outline-secondary lh-0 mg-l-6">
+                                  <i class="far fa-users"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <hr class="mg-y-5" />
+
+                          <div class="d-flex align-items-center justify-content-between hover-primary">
+                            <div class="wd-40p">Silme</div>
+                            <div class="wd-30p tx-secondary">Kendi, Diğerleri</div>
+                            <div class="wd-30p aligned-right">
+                              <div class="d-inline-flex align-items-center">
+                                <button href="#modal_modul_izinler" data-toggle="modal" data-tooltip title="İzinler"
+                                  class="btn btn-xs btn-icon btn-outline-secondary lh-0 mg-l-6">
+                                  <i class="far fa-users"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          <hr class="mg-y-5" />
+
+                          <div class="d-flex align-items-center justify-content-between hover-primary">
+                            <div class="wd-40p">Durum & Aşama</div>
+                            <div class="wd-30p tx-secondary">Kendi, Diğerleri</div>
+                            <div class="wd-30p aligned-right">
+                              <div class="d-inline-flex align-items-center">
+                                <button href="#modal_modul_izinler" data-toggle="modal" data-tooltip title="İzinler"
+                                  class="btn btn-xs btn-icon btn-outline-secondary lh-0 mg-l-6">
+                                  <i class="far fa-users"></i>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="tx-13 tx-secondary tx-uppercase tx-normal bg-ui-01 pd-y-8 pd-x-25">Özel İşlem
+                          Yetkileri
+                        </div>
+
+                        <div class="pd-25">
+
+                          <div class="d-flex align-items-center justify-content-between hover-primary">
+                            <div class="wd-70p">Kayıt Kilitleme</div>
+                            <div class="wd-30p aligned-right">
+                              <div class="custom-control custom-switch float-right r-10">
+                                <input type="checkbox" class="custom-control-input" id="kontak_ozelislem1">
+                                <label class="d-flex custom-control-label" for="kontak_ozelislem1"></label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <hr class="mg-y-5" />
+
+                          <div class="d-flex tx-secondary align-items-center justify-content-between hover-primary">
+                            <div class="wd-70p">Falanca kayıt altındaki filanca özelliğe erişim.</div>
+                            <div class="wd-30p aligned-right">
+                              <div class="custom-control custom-switch float-right r-10">
+                                <input type="checkbox" class="custom-control-input" id="kontak_ozelislem2">
+                                <label class="d-flex custom-control-label" for="kontak_ozelislem2"></label>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <div id="yetkilendirme-icerik-teklif" class="d-none">Benzer</div>
+
+                      <div id="yetkilendirme-icerik-urunler" class="d-none">Benzer</div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- chat-content-body -->
+    </div>
+    <!-- chat-content -->
+  </div>
+  <!-- chat-wrapper -->
+  <!-- Modals -->
+  <div id="modal_kullanicibilgileri" class="modal fade effect-scale" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content tx-14">
+        <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+          <div class="media align-items-center">
+            <span class="tx-36 tx-color-03 d-none d-sm-block">
+              <i class="far fa-user"></i>
+            </span>
+            <div class="media-body mg-sm-l-20">
+              <h4 class="tx-18 tx-sm-20 mg-b-2">Kullanıcı Bilgileri</h4>
+              <p class="tx-13 tx-color-03 mg-b-0">Bilgileri buradan düzenleyebilirsiniz.</p>
+            </div>
+          </div>
+          <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+            <i class="far fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body pd-30 pos-relative overflow-hidden">
+
+
+
+
+          <div class="d-flex align-items-center mg-b-15">
+            <div class="wd-35p tx-color-03">Kullanıcı Rolü</div>
+            <div class="wd-65p">
+              <div class="form-group mg-b-0">
+                <select class="custom-select select2" data-placeholder="Seçiniz">
+                  <option selected></option>
+                  <option value="Satınalma Personeli">Satınalma Personeli</option>
+                  <option value="Pazarlama Personeli">Pazarlama Personeli</option>
+                  <option value="Finans Personeli">Finans Personeli</option>
+                  <option value="İnsan Kaynakları Personeli">İnsan Kaynakları Personeli</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mg-b-15">
+            <div class="wd-35p tx-color-03">Departman</div>
+            <div class="wd-65p">
+              <div class="form-group mg-b-0">
+                <select class="custom-select select2" data-placeholder="Seçiniz">
+                  <option selected></option>
+                  <option value="Satınalma">Satınalma</option>
+                  <option value="Pazarlama">Pazarlama</option>
+                  <option value="Finans">Finans</option>
+                  <option value="İnsan Kaynakları">İnsan Kaynakları</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mg-b-15">
+            <div class="wd-35p tx-color-03">E-posta adresi</div>
+            <div class="wd-65p">
+              <div class="form-group mg-b-0">
+                <input type="text" class="form-control" placeholder="E-Posta Adresi Giriniz">
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mg-b-0">
+            <div class="wd-35p tx-color-03">Şifre</div>
+            <div class="wd-65p">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Şifre Giriniz">
+                <div class="input-group-append">
+                  <button class="btn btn-light">Oluştur</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer pd-x-30">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+          <button type="button" class="btn btn-sm btn-primary">
+            <i class="far fa-save valign-middle mg-r-6"></i>Kaydet </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal_erisimengeli" class="modal fade effect-scale" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-body pd-30 pos-relative"> Kullanıcının erişimini engellemek istediğinize emin misiniz? </div>
+        <div class="modal-footer pd-x-30">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">İptal</button>
+          <button type="button" class="btn btn-sm btn-primary">
+            <i class="far fa-ban valign-middle mg-r-6"></i>Engelle </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal_erisimkısıtla" class="modal fade effect-scale" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a href="" role="button" class="close pos-absolute t-15 r-15" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </a>
+          <div class="media align-items-center">
+            <span class="tx-color-03 d-none  d-sm-block">
+              <i class="far fa-shield-check wd-60-f ht-60-f"></i>
+            </span>
+            <div class="media-body mg-sm-l-20">
+              <h4 class="tx-18 tx-sm-20 mg-b-2">Erişimi Kısıtla</h4>
+              <p class="tx-13 tx-color-03 mg-b-0">İlgili Personelin Sadece Seçtiğiniz Zamanlarda ve Seçtiğiniz IP
+                Adresinden Girmesini Ayarlayabilirsiniz</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body pd-xl-30 pd-md-10 pd-lg-15 pos-relative">
+          <div class="row">
+            <div class="col-2 col-md-4 col-lg-4 col-xl-2">
+              <h6 class="mg-t-10 pd-md-l-35 pd-lg-l-35 pd-xl-0">Gün ve Saat Kısıtlaması</h6>
+            </div>
+            <div class="col-md-8 col-lg-8 col-xl-6">
+              <div class="restrict-zone">
+                <div class="row">
+                  <div class="col-1 d-md-block d-lg-none d-xl-block"></div>
+                  <div class="col-5 pd-x-5 pd-xl-r-15">
+                    <select class="custom-select form-control select2Multi" multiple="multiple"
+                      aria-placeholder="deneme">
+                      <option value="none">Hergün</option>
+                      <option value="pzt">Pazartesi</option>
+                      <option value="slı">Salı</option>
+                      <option value="çrş">Çarşamba</option>
+                      <option value="prs">Perşembe</option>
+                      <option value="cum">Cuma</option>
+                      <option value="cmt">Cumartesi</option>
+                      <option value="pzr">Pazartesi</option>
+                    </select>
+                  </div>
+                  <div class="col-2 pd-x-5">
+                    <input type="text" class="form-control" placeholder="00:00">
+                  </div>
+                  <div class="col-2 pd-x-5">
+                    <input type="text" class="form-control" placeholder="00:00">
+                  </div>
+                  <div class="col-2 pd-l-0">
+                    <button type="button" class="btn btn-outline-secondary">
+                      <i class="far fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row pd-l-50 pd-lg-l-5 pd-xl-l-25 pd-l-5 pd-t-10 pd-xl-l-50">
+                <button type="button" class="btn mg-xl-l-2 btn-outline-primary">Ekle</button>
+              </div>
+            </div>
+            <div class="col-xl-4 d-md-none d-lg-none d-xl-block pd-r-0">
+              <p>İlgili Kullanıcının Seçtiğiniz Zamanların dışında Sistemi Kullanamayacağını Unutmayın.Sistemin
+                kullanıcı için aktif olmasını istediğiniz zamanları seçmeyi unutmayın! </p>
+            </div>
+          </div>
+          <div class="row mg-t-30">
+            <div class="col-2 col-md-4 col-lg-4 col-xl-2"">
+              <h6 class=" mg-t-10 pd-md-l-35 pd-lg-l-35 pd-xl-0">IP Adresine Göre Kısıtla</h6>
+            </div>
+            <div class="col-md-8 col-lg-8 col-xl-6">
+              <div class="restrict-zone">
+                <div class="row">
+                  <div class="col-1 d-md-block d-lg-none d-xl-block"></div>
+                  <div class="col-9 pd-x-5 pd-l-15">
+                    <div class="row mg-t-15">
+                      <div class="col-8">
+                        <div class="row">
+                          <div class="col-12 pd-x-5">
+                            <input type="text" disabled class="form-control" value="176">
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="col-4 pd-l-5">
+                        <input type="text" class="form-control" disabled value="Kartal Ofis">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-1 col-md-2 col-lg-1 pd-x-0 pd-t-15 pd-md-r-25 pd-lg-r-0">
+                    <button type="button" class="btn btn-outline-secondary float-right">
+                      <i class="far fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-1 d-md-block d-lg-none d-xl-block"></div>
+                  <div class="col-9 pd-x-5 pd-l-15">
+                    <div class="row mg-t-15">
+                      <div class="col-8">
+                        <div class="row">
+                          <div class="col-12 pd-x-5">
+                            <input type="text" class="form-control" value="176">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-4 pd-l-5">
+                        <input type="text" class="form-control" placeholder="Adresin İsmi">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-1 col-md-2 col-lg-1 pd-x-0 pd-t-15 pd-md-r-25 pd-lg-r-0">
+                    <button type="button" class="btn btn-outline-secondary float-right">
+                      <i class="far fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row pd-l-50 pd-lg-l-5 pd-l-5 pd-t-10 pd-xl-l-50">
+                <button type="button" class="btn mg-xl-l-2 btn-outline-primary">Ekle</button>
+              </div>
+            </div>
+            <div class="col-xl-4 d-md-none d-lg-none d-xl-block pd-r-0">
+              <p>İlgili Kullanıcının Seçtiğiniz IP Adresi üzerinden Sistemi kullanabileceğini ve bunun dışında Sistemi
+                Kullanamayacağını Unutmayın.Sistemin kullanıcı için aktif olmasını istediğiniz IP adreslerini girmeyi
+                unutmayın!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer pd-x-30">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">İptal</button>
+          <button type="button" class="btn btn-sm btn-primary">
+            <i class="far fa-ban valign-middle mg-r-6"></i>Kısıtla </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal_modul_izinler" class="modal fade effect-scale" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content tx-14">
+        <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+          <div class="media align-items-center">
+            <span class="tx-36 tx-color-03 d-none d-sm-block">
+              <i class="far fa-users"></i>
+            </span>
+            <div class="media-body mg-sm-l-20">
+              <h4 class="tx-18 tx-sm-20 mg-b-2">İzinler</h4>
+              <p class="tx-13 tx-color-03 mg-b-0">Modüle ait izinleri buradan düzenleyebilirsiniz..</p>
+            </div>
+          </div>
+          <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+            <i class="far fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body pd-30 pos-relative overflow-hidden">
+
+          <div class="form-group mg-b-15">
+            <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+              Erişim Yetki Kapsamı </div>
+            <select class="custom-select select2" id="permselect">
+              <option value="0" selected>Tüm Kayıtlar</option>
+              <option value="1">Sadece Kendi Kayıtları</option>
+              <option value="2">Belli Kriterdeki Kayıtlar</option>
+              <option value="3">Engelle</option>
+            </select>
+          </div>
+          <div class="allperms" style="display: block;">
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Personel</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-success"><i class="far fa-check mg-r-6"></i> Tüm
+                  Kayıtlar</span>
+              </div>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Departman</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-success"><i class="far fa-check mg-r-6"></i> Tüm
+                  Kayıtlar</span>
+              </div>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Şube</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-success"><i class="far fa-check mg-r-6"></i> Tüm
+                  Kayıtlar</span>
+              </div>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Bayi</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-success"><i class="far fa-check mg-r-6"></i> Tüm
+                  Kayıtlar</span>
+              </div>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Yetkili Servis</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-success"><i class="far fa-check mg-r-6"></i> Tüm
+                  Kayıtlar</span>
+              </div>
+            </div>
+          </div>
+          <div class="blockperms" style="display: none;">
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Personel</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-danger"><i class="far fa-ban mg-r-6"></i>
+                  Personel Engellendi</span>
+              </div>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Departman</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-danger"><i class="far fa-ban mg-r-6"></i>
+                  Departman Engellendi</span>
+              </div>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Şube</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-danger"><i class="far fa-ban mg-r-6"></i>
+                  Şube Engellendi</span>
+              </div>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Bayi</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-danger"><i class="far fa-ban mg-r-6"></i>
+                  Bayi Engellendi</span>
+              </div>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Yetkili Servis</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-danger"><i class="far fa-ban mg-r-6"></i>
+                  Yetkili Servis Engellendi</span>
+              </div>
+            </div>
+          </div>
+          <div class="onlyperms" style="display: none;">
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Personel</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-primary"><i class="far fa-user-edit mg-r-6"></i> Sadece Kendi
+                  Kayıtları</span>
+              </div>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Departman</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-primary"><i class="far fa-user-edit mg-r-6"></i> Sadece Kendi
+                  Kayıtları</span>
+              </div>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Şube</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-primary"><i class="far fa-user-edit mg-r-6"></i> Sadece Kendi
+                  Kayıtları</span>
+              </div>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Bayi</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-primary"><i class="far fa-user-edit mg-r-6"></i> Sadece Kendi
+                  Kayıtları</span>
+              </div>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Yetkili Servis</div>
+              <div class="bd rounded bd-ui-03 pd-10">
+                <span class="badge badge-primary"><i class="far fa-user-edit mg-r-6"></i> Sadece Kendi
+                  Kayıtları</span>
+              </div>
+            </div>
+          </div>
+          <div class="perms" style="display: none;">
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Personel</div>
+              <select class="form-control select2 permcontent" disabled multiple="multiple">
+                <option value="0" selected>Tüm Kayıtlar</option>
+                <option value="1">Sadece Kendi kayıtları</option>
+                <option value="Selim Ünüvar">Selim Ünüvar</option>
+                <option value="Uğur Büyükalkan">Uğur Büyükalkan</option>
+                <option value="Burak Altun">Burak Altun</option>
+              </select>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Departman </div>
+              <select class="form-control select2 permcontent" disabled multiple="multiple">
+                <option value="0" selected>Tüm Kayıtlar</option>
+                <option value="1">Sadece Kendi kayıtları</option>
+                <option>İnsan Kaynakları</option>
+                <option>Koordinasyon Departmanı</option>
+                <option>Medya ve İletişim Departmanı</option>
+                <option>Organizasyon Departmanı</option>
+              </select>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Şube </div>
+              <select class="form-control select2 permcontent" disabled multiple="multiple">
+                <option value="0" selected>Tüm Kayıtlar</option>
+                <option value="1">Sadece Kendi kayıtları</option>
+                <option>Orhanlı Şube</option>
+                <option>Pendik/Kurtköy Şube</option>
+                <option>Altunizade Şube</option>
+              </select>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Bayi </div>
+              <select class="form-control select2 permcontent" disabled multiple="multiple">
+                <option value="0" selected>Tüm Kayıtlar</option>
+                <option value="1">Sadece Kendi kayıtları</option>
+                <option>Yenişehir Bayisi</option>
+                <option>Muallimköy Bayis</option>
+                <option>Baltun Bayisi</option>
+              </select>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Yetkili Servis</div>
+              <select class="form-control select2 permcontent" disabled multiple="multiple">
+                <option value="0" selected>Tüm Kayıtlar</option>
+                <option value="1">Sadece Kendi kayıtları</option>
+                <option>Tekelli Birim Yetkili Servis</option>
+                <option>Sabiha Gökçen Yetkili Servis</option>
+                <option>Kocaeli Yeniköy Yetkili Servis</option>
+              </select>
+            </div>
+            <div class="form-group mg-b-15">
+              <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0">
+                Firma</div>
+              <div class="input-group mg-b-15">
+                <select class="form-control select2 permcontent" disabled multiple="multiple">
+                  <option value="0" selected>Tüm Kayıtlar</option>
+                  <option value="1">Sadece Kendi kayıtları</option>
+                  <option>Tekelli Birim Yetkili Servis</option>
+                  <option>Sabiha Gökçen Yetkili Servis</option>
+                  <option>Kocaeli Yeniköy Yetkili Servis</option>
+                </select>
+
+              </div>
+            </div>
+
+          </div>
+
+
+          <small class="d-block text-muted permcontent" style="display: none;">Seçim yapmadığınızda hepsi için
+            geçerlidir.</small>
+        </div>
+        <div class="modal-footer pd-x-30">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+          <button type="button" class="btn btn-sm btn-primary">
+            <i class="far fa-save valign-middle mg-r-6"></i>Kaydet </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal_extrapermissions" class="modal fade effect-scale" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered max-wd-800" role="document">
+      <div class="modal-content tx-14">
+        <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+          <div class="media align-items-center">
+            <span class="tx-36 tx-color-03 d-none d-sm-block"><i class="fas fa-user-plus"></i></span>
+            <div class="media-body mg-sm-l-20">
+              <h4 class="tx-18 tx-sm-20 mg-b-2">İlave Yetkiler</h4>
+              <p class="tx-13 tx-color-03 mg-b-0">Mevcut role ek ilave yetkilerinizi burdan düzenleyebilirsiniz.
+              </p>
+            </div>
+          </div>
+          <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30"><i
+              class="far fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <div class="row mg-x-0-f">
+            <div class="col-4 pd-20">
+
+              <a class="cursor-pointer d-flex align-items-center pd-8 tx-secondary bg-ui-01 rounded mg-t-5"
+                data-toggle="tab" href="#ex-first">
+                <div class="wd-25 lh-0 tx-center"><i class="far fa-address-card tx-16"></i></div>
+                <div class="mg-l-5">Kontak</div>
+              </a>
+              <a class="cursor-pointer d-flex align-items-center pd-8 tx-secondary bg-ui-01 rounded mg-t-5"
+                data-toggle="tab" href="#ex-second">
+                <div class="wd-25 lh-0 tx-center"><i class="far fa-shopping-cart tx-16"></i></div>
+                <div class="mg-l-5">Teklif</div>
+              </a>
+              <a class="cursor-pointer d-flex align-items-center pd-8 tx-secondary bg-ui-01 rounded mg-t-5"
+                data-toggle="tab" href="#ex-third">
+                <div class="wd-25 lh-0 tx-center"><i class="far fa-hand-holding-box tx-16"></i></div>
+                <div class="mg-l-5">Ürünler</div>
+              </a>
+
+            </div>
+            <div class="col-8 pd-0 bd-l">
+
+              <div class="tab-content bd-t-0 pd-20" id="myTabContent">
+                <div class="tab-pane fade show active" id="ex-first" role="tabpanel" aria-labelledby="home-tab">
+                  <div class="pd-20">
+
+                    <div class="d-flex align-items-center justify-content-between hover-primary">
+                      <div class="wd-40p">Görüntüleme</div>
+                      <div class="wd-30p tx-success">Tüm Kayıtlar</div>
+
+                    </div>
+
+
+
+
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="ex-second" role="tabpanel" aria-labelledby="profile-tab">
+                  <div class="pd-20">
+
+                    <div class="d-flex align-items-center justify-content-between hover-primary">
+                      <div class="wd-40p">Görüntüleme</div>
+                      <div class="wd-30p tx-success">Tüm Kayıtlar</div>
+
+                    </div>
+
+                    <hr class="mg-y-5">
+
+
+
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="ex-third" role="tabpanel" aria-labelledby="contact-tab">
+                  <div class="pd-20">
+
+                    <div class="d-flex align-items-center justify-content-between hover-primary">
+                      <div class="wd-40p">Görüntüleme</div>
+                      <div class="wd-30p tx-success">Tüm Kayıtlar</div>
+
+                    </div>
+
+                    <hr class="mg-y-5">
+
+                    <div class="d-flex align-items-center justify-content-between hover-primary">
+                      <div class="wd-40p">Kayıt &amp; Güncelleme</div>
+                      <div class="wd-30p tx-success">Kendi, Diğerleri</div>
+
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer pd-x-30">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal_outpermissions" class="modal fade effect-scale" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered max-wd-800" role="document">
+      <div class="modal-content tx-14">
+        <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+          <div class="media align-items-center">
+            <span class="tx-36 tx-color-03 d-none d-sm-block"><i class="fas fa-user-minus"></i></span>
+            <div class="media-body mg-sm-l-20">
+              <h4 class="tx-18 tx-sm-20 mg-b-2">Hariç Yetkiler</h4>
+              <p class="tx-13 tx-color-03 mg-b-0">Mevcut role ek ilave yetkilerinizi burdan düzenleyebilirsiniz.
+              </p>
+            </div>
+          </div>
+          <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+            <i class="far fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row mg-x-0-f">
+            <div class="col-4 pd-20">
+
+              <a class="cursor-pointer d-flex align-items-center pd-8 tx-secondary bg-ui-01 rounded mg-t-5"
+                data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                <div class="wd-25 lh-0 tx-center"><i class="far fa-address-card tx-16"></i></div>
+                <div class="mg-l-5">Kontak</div>
+              </a>
+              <a class="cursor-pointer d-flex align-items-center pd-8 tx-secondary bg-ui-01 rounded mg-t-5"
+                data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                <div class="wd-25 lh-0 tx-center"><i class="far fa-shopping-cart tx-16"></i></div>
+                <div class="mg-l-5">Teklif</div>
+              </a>
+              <a class="cursor-pointer d-flex align-items-center pd-8 tx-secondary bg-ui-01 rounded mg-t-5"
+                data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                <div class="wd-25 lh-0 tx-center"><i class="far fa-hand-holding-box tx-16"></i></div>
+                <div class="mg-l-5">Ürünler</div>
+              </a>
+
+            </div>
+            <div class="col-8 pd-0 bd-l">
+
+              <div class="tab-content bd-t-0 pd-20" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home5-tab">
+                  <div class="pd-20">
+
+
+
+                    <div class="d-flex align-items-center justify-content-between hover-primary">
+                      <div class="wd-40p">Kayıt &amp; Güncelleme</div>
+                      <div class="wd-30p tx-secondary">Kendi, <span class="tx-danger">Diğerleri</span></div>
+
+                    </div>
+
+
+
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <div class="pd-20">
+
+                    <div class="d-flex align-items-center justify-content-between hover-primary">
+                      <div class="wd-40p">Görüntüleme</div>
+                      <div class="wd-30p tx-secondary">Tüm Kayıtlar</div>
+
+                    </div>
+                    <hr class="mg-y-5">
+
+
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                  <div class="pd-20">
+
+                    <div class="d-flex align-items-center justify-content-between hover-primary">
+                      <div class="wd-40p">Görüntüleme</div>
+                      <div class="wd-30p tx-danger">Tüm Kayıtlar</div>
+
+                    </div>
+
+                    <hr class="mg-y-5">
+
+                    <div class="d-flex align-items-center justify-content-between hover-primary">
+                      <div class="wd-40p">Kayıt &amp; Güncelleme</div>
+                      <div class="wd-30p tx-danger">Kendi, Diğerleri</div>
+
+                    </div>
+
+                    <hr class="mg-y-5">
+
+                    <div class="d-flex align-items-center justify-content-between hover-primary">
+                      <div class="wd-40p">Silme</div>
+                      <div class="wd-30p tx-danger">Kendi, Diğerleri</div>
+
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer pd-x-30">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal_modul_zamanlama" class="modal fade effect-scale" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content tx-14">
+        <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+          <div class="media align-items-center">
+            <span class="tx-36 tx-color-03 d-none d-sm-block">
+              <i class="far fa-stopwatch"></i>
+            </span>
+            <div class="media-body mg-sm-l-20">
+              <h4 class="tx-18 tx-sm-20 mg-b-2">Süreli Erişim</h4>
+              <p class="tx-13 tx-color-03 mg-b-0">Modüle ait izinleri buradan düzenleyebilirsiniz..</p>
+            </div>
+          </div>
+          <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+            <i class="far fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body pd-30 pos-relative overflow-hidden">
+          <div class="d-inline-flex mg-b-15">
+            <input type="text" class="form-control wd-100-f rounded-right-0">
+            <select class="custom-select rounded-left-0 bd-l-0-f">
+              <option value="1">dakika sonra</option>
+              <option value="1">saat sonra</option>
+              <option value="1">gün sonra</option>
+              <option value="1">ay sonra</option>
+              <option value="1">yıl sonra</option>
+            </select>
+          </div>
+          <small class="d-block text-muted mg-b-0">Belirlediğiniz sürenin dışına çıktığında işlem yetkisini
+            kaldırır.</small>
+        </div>
+        <div class="modal-footer pd-x-30">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+          <button type="button" class="btn btn-sm btn-primary">
+            <i class="far fa-save valign-middle mg-r-6"></i>Kaydet </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal_modul_orgsemasi" class="modal fade effect-scale" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+          <div class="media align-items-center">
+            <span class="tx-36 tx-color-03 d-none d-sm-block">
+              <i class="far fa-sitemap"></i>
+            </span>
+            <div class="media-body mg-sm-l-20">
+              <h4 class="tx-18 tx-sm-20 mg-b-2">Organizasyon Şeması</h4>
+              <p class="tx-13 tx-color-03 mg-b-0">Modüle ait izinleri buradan düzenleyebilirsiniz..</p>
+            </div>
+          </div>
+          <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+            <i class="far fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body pd-30 pos-relative overflow-hidden">
+          <div class="form-group mg-b-10">
+            <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0"> İzinli
+              Olduğu Departmanlar</div>
+            <select class="form-control select2" multiple="multiple">
+              <option value="Satınalma">Satınalma</option>
+              <option value="Pazarlama">Pazarlama</option>
+              <option value="Finans">Finans</option>
+              <option value="İnsan Kaynakları">İnsan Kaynakları</option>
+            </select>
+          </div>
+          <small class="d-block text-muted mg-b-0">Sadece seçtiğiniz organizasyon şemasındaki personellerin dosyalarına
+            erişebilir.</small>
+        </div>
+        <div class="modal-footer pd-x-30">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+          <button type="button" class="btn btn-sm btn-primary">
+            <i class="far fa-save valign-middle mg-r-6"></i>Kaydet </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal left fade" id="modal-settings-menu" tabindex="" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="sidebar-body pd-x-15 pd-y-20">
+            <label
+              class="tx-uppercase tx-11 tx-medium tx-spacing-2 tx-color-03 mg-t-10 mg-b-20 mg-l-15">MODÜLLER</label>
+            <div class="ritmalist1">
+              <div class="media align-items-center tx-secondary bg-primary-light rounded pd-0-f">
+                <div class="avatar avatar-sm mg-l-5">
+                  <span class="avatar-initial bg-transparent text-primary lh-0">
+                    <i class="far fa-cog tx-16"></i>
+                  </span>
+                </div>
+                <div class="media-body mg-l-5">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="ayarlar-genel.html" class="tx-primary tx-14 tx-semibold">Genel</a>
+                  </div>
+                </div>
+              </div>
+              <div class="media align-items-center tx-secondary bg-white rounded pd-0-f">
+                <div class="avatar avatar-sm mg-l-5">
+                  <span class="avatar-initial bg-transparent text-secondary lh-0">
+                    <i class="far fa-address-card tx-16"></i>
+                  </span>
+                </div>
+                <div class="media-body mg-l-5">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="ayarlar-profiller.html" class="tx-secondary tx-14">Kontaklar</a>
+                  </div>
+                </div>
+              </div>
+              <div class="media align-items-center tx-secondary bg-white rounded pd-0-f">
+                <div class="avatar avatar-sm mg-l-5">
+                  <span class="avatar-initial bg-transparent text-secondary lh-0">
+                    <i class="far fa-bomb tx-16"></i>
+                  </span>
+                </div>
+                <div class="media-body mg-l-5">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="tx-secondary tx-14">Fırsat</a>
+                  </div>
+                </div>
+              </div>
+              <div class="media align-items-center tx-secondary bg-white rounded pd-0-f">
+                <div class="avatar avatar-sm mg-l-5">
+                  <span class="avatar-initial bg-transparent text-secondary lh-0">
+                    <i class="far fa-shopping-cart tx-16"></i>
+                  </span>
+                </div>
+                <div class="media-body mg-l-5">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="ayarlar-teklifler.html" class="tx-secondary tx-14">Teklif</a>
+                  </div>
+                </div>
+              </div>
+              <div class="media align-items-center tx-secondary bg-white rounded pd-0-f">
+                <div class="avatar avatar-sm mg-l-5">
+                  <span class="avatar-initial bg-transparent text-secondary lh-0">
+                    <i class="far fa-shopping-cart tx-16"></i>
+                  </span>
+                </div>
+                <div class="media-body mg-l-5">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="tx-secondary tx-14">Sipariş</a>
+                  </div>
+                </div>
+              </div>
+              <div class="media align-items-center tx-secondary bg-white rounded pd-0-f">
+                <div class="avatar avatar-sm mg-l-5">
+                  <span class="avatar-initial bg-transparent text-secondary lh-0">
+                    <i class="far fa-chart-line tx-16"></i>
+                  </span>
+                </div>
+                <div class="media-body mg-l-5">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="tx-secondary tx-14">Satış</a>
+                  </div>
+                </div>
+              </div>
+              <div class="media align-items-center tx-secondary bg-white rounded pd-0-f">
+                <div class="avatar avatar-sm mg-l-5">
+                  <span class="avatar-initial bg-transparent text-secondary lh-0">
+                    <i class="far fa-users tx-16"></i>
+                  </span>
+                </div>
+                <div class="media-body mg-l-5">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="tx-secondary tx-14">Görüşmeler</a>
+                  </div>
+                </div>
+              </div>
+              <div class="media align-items-center tx-secondary bg-white rounded pd-0-f">
+                <div class="avatar avatar-sm mg-l-5">
+                  <span class="avatar-initial bg-transparent text-secondary lh-0">
+                    <i class="far fa-sticky-note tx-16"></i>
+                  </span>
+                </div>
+                <div class="media-body mg-l-5">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="#" class="tx-secondary tx-14">Ticket</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal_ritmafirma" class="modal fade effect-scale" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content tx-14">
+        <div class="modal-header bg-ui-01 pd-x-30 pd-y-15">
+          <a href="" role="button" class="close pos-absolute tx-18 t-15 r-30" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </a>
+          <div class="media align-items-center">
+            <span class="tx-34 tx-color-03 d-none d-sm-block">
+              <i class="far fa-building"></i>
+            </span>
+            <div class="media-body mg-sm-l-20">
+              <h4 class="tx-16 mg-b-2">Bölge Müd. & Bayiler</h4>
+              <p class="tx-13 tx-color-03 mg-b-0">Seçim yaparak sadece seçili kayıtlara ulaşabilirsiniz. </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex w-100 ht-50 bd-b pd-x-30 pd-l-50 align-items-center pos-relative">
+          <i data-feather="search" class="pos-absolute wd-20 ht-20 l-30"></i>
+          <input type="text" class="form-control tx-14 bd-0 shadow-none" placeholder="Kelime arayabilirsiniz">
+          <select class="custom-select custom-select-sm wd-100">
+            <option value="1">Türler</option>
+            <option value="1">Bölge Müd.</option>
+            <option value="1">Bayi</option>
+          </select>
+          <select class="custom-select custom-select-sm wd-md-auto mg-l-6">
+            <option value="1">Bölgeler</option>
+            <option value="1">İstanbul</option>
+            <option value="1">Ankara</option>
+            <option value="1">Kahramanmaraş</option>
+          </select>
+        </div>
+        <div class="modal-body tx-14 pd-0 pos-relative">
+          <div class="pd-30">
+            <div class="table-responsive bd rounded">
+              <table class="table table-hover table-ritma1 mg-b-0 bd-b">
+                <thead class="table-borderless bg-gray-200">
+                  <tr>
+                    <th class="wd-20p">Tür</th>
+                    <th class="wd-30p">Bölge</th>
+                    <th>Firma</th>
+                    <th class="wd-1 tx-center">Seç</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tx-nowrap">Bölge Müd.</td>
+                    <td class="tx-nowrap">Ankara</td>
+                    <td class="tx-color-03">Merkez Ltd. Şti.</td>
+                    <td class="tx-center">
+                      <button class="btn btn-sm btn-outline-secondary pd-y-5 pd-x-10" data-tooltip title="Seç">
+                        <i data-feather="check" class="wd-20 ht-20 tx-24"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tx-nowrap">Bayi</td>
+                    <td class="tx-nowrap">Ankara / Nevşehir</td>
+                    <td class="tx-color-03">Ali Veli Ltd. Şti.</td>
+                    <td class="tx-center">
+                      <button class="btn btn-sm btn-outline-secondary pd-y-5 pd-x-10" data-tooltip title="Seç">
+                        <i data-feather="check" class="wd-20 ht-20 tx-24"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="tx-nowrap">Bayi</td>
+                    <td class="tx-nowrap">Ankara / Çorum</td>
+                    <td class="tx-color-03">Özgür Traktör Ltd. Şti.</td>
+                    <td class="tx-center">
+                      <button class="btn btn-sm btn-success pd-y-5 pd-x-10" data-tooltip title="Seç">
+                        <i data-feather="check" class="wd-20 ht-20 tx-24"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer pd-x-30">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+          <button type="button" class="btn btn-sm btn-primary">
+            <i class="far fa-plus valign-middle mg-r-6"></i>Seç </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalnewuser">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width:530px;">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+          <div class="media align-items-center">
+            <span class="tx-36 tx-color-03 d-none d-sm-block">
+              <i class="far fa-user"></i>
+            </span>
+            <div class="media-body mg-sm-l-20">
+              <h4 class="tx-18 tx-sm-20 mg-b-2">Hesap Oluştur</h4>
+              <p class="tx-13 tx-color-03 mg-b-0">Personel veya Bayi Bazlı hesap oluşturma</p>
+            </div>
+          </div>
+          <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+            <i class="far fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-header bg-white d-flex align-items-center justify-content-between pd-x-30 pd-y-15">
+          <ul class="steps">
+            <li class="step-item active item-first">
+              <a href="#" class="step-link">
+                <span class="step-number">1</span>
+                <span class="step-title">Hesap Türü</span>
+              </a>
+            </li>
+            <li class="step-item item-bussiness" style="display: none;">
+              <a href="#" class="step-link">
+                <span class="step-number">2</span>
+                <span class="step-title">Firma Seç</span>
+              </a>
+            </li>
+            <li class="step-item item-end">
+              <a href="#" class="step-link">
+                <span class="step-number">3</span>
+                <span class="step-title">Hesabı Oluştur</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-body pd-0 scroll-for-flex">
+          <span class="select-type-for-account pd-35" style="display: inline-block;">
+            <div class="custom-control custom-radio">
+              <input type="radio" id="ac1" name="accounttype" checked class="custom-control-input">
+              <label class="custom-control-label" for="ac1">Personel </label>
+            </div>
+            <small class="mg-b-15 mg-l-25 d-block text-muted"> Kurum içi çalışanların sistem erişimi için hesap
+              oluşturun. </small>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="ac2" name="accounttype" class="custom-control-input">
+              <label class="custom-control-label" for="ac2">Yetkili Servis</label>
+            </div>
+            <small class="mg-b-15 mg-l-25 d-block text-muted"> Servis Ağınıza bağlı birimler ve burdaki personele
+              erişim açın. </small>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="ac3" name="accounttype" class="custom-control-input">
+              <label class="custom-control-label" for="ac3">Bayi</label>
+            </div>
+            <small class="mg-b-15 mg-l-25 d-block text-muted"> Bayileriniz için genel veya personel bazında
+              kullanıcılar oluşturun. </small>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="ac4" name="accounttype" class="custom-control-input">
+              <label class="custom-control-label" for="ac4">Tedarikçi</label>
+            </div>
+            <small class="mg-b-15 mg-l-25 d-block text-muted"> Tedarik Zincirinizde yer alan bağlantılarınıza erişim
+              hesapları oluşturun. </small>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="ac4" name="accounttype" class="custom-control-input">
+              <label class="custom-control-label" for="ac4">Müşteri</label>
+            </div>
+            <small class="mg-b-15 mg-l-25 d-block text-muted"> Müşteri girişi ile yapılacak işlemler için müşterilere
+              özel hesaplar oluşturun. </small>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="ac6" name="accounttype" class="custom-control-input">
+              <label class="custom-control-label" for="ac6">Bölge Müdürlüğü</label>
+            </div>
+            <small class="mg-b-15 mg-l-25 d-block text-muted"> Hiyerarşinize göre organizasyon birimindeki
+              kullanıcıları tanımlayın. </small>
+          </span>
+          <span class="select-type-for-bussiness" style="display: none;">
+            <div class="wd-100p">
+              <div class="d-flex wd-100p ht-50 pd-x-25 align-items-center pos-relative bd-b">
+                <i class="far fa-search tx-16 pos-absolute wd-20 ht-20 l-25 mg-l-2"></i>
+                <input type="text" class="form-control mg-l-20 tx-14 bd-0 shadow-none"
+                  placeholder="Kelime arayabilirsiniz">
+
+              </div>
+              <div class="pd-25">
+                <div class="table-responsive bd rounded">
+                  <table class="table table-hover table-ritma1 mg-b-0 bd-b">
+                    <tbody>
+                      <tr>
+                        <td class="wd-30 tx-nowrap">
+                          <div class="avatar">
+                            <span class="avatar-initial rounded" style="background-color: lightgreen;">MA</span>
+                          </div>
+                        </td>
+                        <td class="tx-nowrap">
+                          <h6 class="tx-14 mg-b-2">Mehmet Özdemir</h6>
+                          <span class="d-block mg-t-6">
+                            <span class="badge mg-r-3 badge-light">
+                              <i class="fas fa-map-marker-alt mg-r-3"></i> 2 Adres </span>
+                            <span class="badge mg-r-3 badge-success">
+                              <i class="fas fa-check-square mg-r-3"></i> eFatura </span>
+                          </span>
+                        </td>
+
+                        <td class="wd-30 tx-center">
+                          <button class="btn btn-sm btn-outline-secondary pd-y-5 pd-x-10" data-tooltip title="Seç">
+                            <i class="far fa-check"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="wd-30 tx-nowrap">
+                          <div class="avatar">
+                            <span class="avatar-initial rounded" style="background-color: forestgreen;">MT</span>
+                          </div>
+                        </td>
+                        <td class="tx-nowrap">
+                          <h6 class="tx-14 mg-b-2">Ali Osman Yıldırım</h6>
+                          <span class="d-block mg-t-6">
+                            <span class="badge mg-r-3 badge-light">
+                              <i class="fas fa-map-marker-alt mg-r-3"></i> Etimesgut / Ankara </span>
+                            <span class="badge mg-r-3 badge-warning">
+                              <i class="fas fa-info mg-r-3"></i> Fatura bilgisi eksik </span>
+                          </span>
+                        </td>
+
+                        <td class="wd-30 tx-center">
+                          <button class="btn btn-sm btn-success pd-y-5 pd-x-10" data-tooltip title="Seç">
+                            <i class="far fa-check"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+
+          </span>
+          <span class="create-account w-100 pd-25">
+            <div class="d-sm-flex">
+              <div class="mg-sm-r-30">
+                <div class="pos-relative d-inline-block mg-b-20">
+                  <div class="avatar avatar-xxl">
+                    <span class="avatar-initial rounded-circle bg-gray-700 tx-normal">
+                      <i class="icon ion-md-person"></i>
+                    </span>
+                  </div>
+                  <a href="" class="contact-edit-photo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-edit-2">
+                      <polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <!-- col -->
+              <div class="flex-fill">
+
+                <div class="form-group">
+                  <select name="departman" id="" class="form-control select2">
+                    <option value="none" selected>Personel Seçiniz</option>
+                    <option value="yusuf">Yusuf Ersoy</option>
+                    <option value="burakalun">Burak Altun</option>
+                    <option value="eyüp">Eyüp Öztürk</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select class="form-control select2" data-placeholder="Departman Seçiniz">
+                    <option></option>
+
+                    <option>Satış</option>
+                    <option>Pazarlama</option>
+                    <option>|--- Ürün Pazarlama</option>
+                    <option>|--- Yedekparça Pazarlama</option>
+                    <option>Finans</option>
+                    <option>İnsan Kaynakları</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select name="departman" id="" class="form-control select2">
+                    <option value="none" selected>Rol Seçiniz</option>
+                    <option value="yusuf">İnsan Kaynakları</option>
+                    <option value="burakalun">Muhasebe</option>
+                    <option value="eyüp">Temsilci</option>
+                    <option value="eyüp">Bayi</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" value="yersoy232@icloud.com">
+                </div>
+                <div class="row">
+                  <div class="col-md-12 pd-r-15">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Şifre Giriniz">
+                      <div class="input-group-append">
+                        <button class="btn btn-light">Oluştur</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+              <!-- col -->
+            </div>
+          </span>
+
+
+        </div>
+        <div class="modal-footer pd-x-30">
+          <button type="button"
+            class="btn btn-sm btn-outline-secondary account-back-button pos-absolute l-25">Geri</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+          <button type="button" class="btn btn-sm btn-primary account-next-button">İleri</button>
+        </div>
+        <!-- modal-body -->
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <div class="modal fade" id="modalseeall">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+          <div class="media align-items-center">
+            <span class="tx-36 tx-color-03 d-none d-sm-block">
+              <i class="far fa-eye"></i>
+            </span>
+            <div class="media-body mg-sm-l-20">
+              <h4 class="tx-18 tx-sm-20 mg-b-2">Görüntüleme</h4>
+              <p class="tx-13 tx-color-03 mg-b-0">Modul Bazında Görüntüleme iznini verebilirsiniz.</p>
+            </div>
+          </div>
+          <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+            <i class="far fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body pd-30">
+          <div class="table-responsive mx-ht-230">
+            <table class="table tx-12 table-bordered table-ritma5 mg-b-0">
+              <thead class="bg-ui-01">
+                <tr>
+                  <th width="30px" class="text-center">Seç</th>
+                  <th>Modül</th>
+                </tr>
+              </thead>
+              <tbody class="">
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" checked id="customSwitch1">
+                      <label class="custom-success custom-control-label" for="customSwitch1">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Teklif</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" checked id="customSwitch2">
+                      <label class="custom-control-label" for="customSwitch2">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Servis</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                      <label class="custom-control-label" for="customSwitch3">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Demirbaş</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                      <label class="custom-control-label" for="customSwitch3">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Satış</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                      <label class="custom-control-label" for="customSwitch4">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Sipariş</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                      <label class="custom-control-label" for="customSwitch5">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Stock</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                      <label class="custom-control-label" for="customSwitch5">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Stock</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                      <label class="custom-control-label" for="customSwitch5">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Stock</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="form-group mg-b-10 mg-t-25">
+            <select class="custom-select">
+              <option value="1" selected>Sadece Kendi</option>
+              <option value="1">Kendi ve Diğerleri</option>
+              <option value="1">Engelle</option>
+            </select>
+          </div>
+          <small class="d-block text-muted mg-b-20">Görüntüleyebileceği departman/bölüm/organizasyon türlerini de
+            ""Organizasyon Şeması"" bölümünden düzenleyebilisiniz.</small>
+          <div class="form-group mg-b-10">
+            <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0"> Diğer
+              Personeller ve Departmanlar </div>
+            <select class="form-control select2" multiple="multiple">
+              <optgroup label="Diğer Personeller">
+                <option value="Selim Ünüvar">Selim Ünüvar</option>
+                <option value="Uğur Büyükalkan">Uğur Büyükalkan</option>
+                <option value="Burak Altun">Burak Altun</option>
+              </optgroup>
+              <optgroup label="Departmanlar">
+                <option value="Satınalma">Satınalma</option>
+                <option value="Pazarlama">Pazarlama</option>
+                <option value="Finans">Finans</option>
+                <option value="İnsan Kaynakları">İnsan Kaynakları</option>
+              </optgroup>
+            </select>
+          </div>
+          <small class="d-block text-muted">Seçim yapmadığınızda hepsi için geçerlidir.</small>
+        </div>
+        <div class="modal-footer pd-x-30">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+          <button type="button" class="btn btn-sm btn-primary account-next-button">Kaydet</button>
+        </div>
+        <!-- modal-body -->
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <div class="modal fade" id="modalupdateall">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+          <div class="media align-items-center">
+            <span class="tx-36 tx-color-03 d-none d-sm-block">
+              <i class="far fa-save"></i>
+            </span>
+            <div class="media-body mg-sm-l-20">
+              <h4 class="tx-18 tx-sm-20 mg-b-2">Kaydetme & Güncelleme</h4>
+              <p class="tx-13 tx-color-03 mg-b-0">Modul Bazında Kaydetme ve Güncelleme iznini verebilirsiniz.</p>
+            </div>
+          </div>
+          <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+            <i class="far fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body pd-30">
+          <div class="table-responsive mx-ht-230">
+            <table class="table tx-12 table-bordered table-ritma5 mg-b-0">
+              <thead class="bg-ui-01">
+                <tr>
+                  <th width="30px" class="text-center">Seç</th>
+                  <th>Modül</th>
+                </tr>
+              </thead>
+              <tbody class="">
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" checked id="customSwitch1">
+                      <label class="custom-success custom-control-label" for="customSwitch1">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Teklif</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" checked id="customSwitch2">
+                      <label class="custom-control-label" for="customSwitch2">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Servis</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                      <label class="custom-control-label" for="customSwitch3">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Demirbaş</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                      <label class="custom-control-label" for="customSwitch3">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Satış</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                      <label class="custom-control-label" for="customSwitch4">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Sipariş</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                      <label class="custom-control-label" for="customSwitch5">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Stock</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                      <label class="custom-control-label" for="customSwitch5">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Stock</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                      <label class="custom-control-label" for="customSwitch5">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Stock</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="form-group mg-b-10 mg-t-25">
+            <select class="custom-select">
+              <option value="1" selected>Sadece Kendi</option>
+              <option value="1">Kendi ve Diğerleri</option>
+              <option value="1">Engelle</option>
+            </select>
+          </div>
+          <small class="d-block text-muted mg-b-20">Görüntüleyebileceği departman/bölüm/organizasyon türlerini de
+            ""Organizasyon Şeması"" bölümünden düzenleyebilisiniz.</small>
+          <div class="form-group mg-b-10">
+            <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0"> Diğer
+              Personeller ve Departmanlar </div>
+            <select class="form-control select2" multiple="multiple">
+              <optgroup label="Diğer Personeller">
+                <option value="Selim Ünüvar">Selim Ünüvar</option>
+                <option value="Uğur Büyükalkan">Uğur Büyükalkan</option>
+                <option value="Burak Altun">Burak Altun</option>
+              </optgroup>
+              <optgroup label="Departmanlar">
+                <option value="Satınalma">Satınalma</option>
+                <option value="Pazarlama">Pazarlama</option>
+                <option value="Finans">Finans</option>
+                <option value="İnsan Kaynakları">İnsan Kaynakları</option>
+              </optgroup>
+            </select>
+          </div>
+          <small class="d-block text-muted">Seçim yapmadığınızda hepsi için geçerlidir.</small>
+        </div>
+        <div class="modal-footer pd-x-30">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+          <button type="button" class="btn btn-sm btn-primary account-next-button">Kaydet</button>
+        </div>
+        <!-- modal-body -->
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <div class="modal fade" id="modaldeleteall">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+          <div class="media align-items-center">
+            <span class="tx-36 tx-color-03 d-none d-sm-block">
+              <i class="far fa-trash"></i>
+            </span>
+            <div class="media-body mg-sm-l-20">
+              <h4 class="tx-18 tx-sm-20 mg-b-2">Silme</h4>
+              <p class="tx-13 tx-color-03 mg-b-0">Modul Bazında Silme iznini verebilirsiniz.</p>
+            </div>
+          </div>
+          <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+            <i class="far fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body pd-30">
+          <div class="table-responsive mx-ht-230">
+            <table class="table tx-12 table-bordered table-ritma5 mg-b-0">
+              <thead class="bg-ui-01">
+                <tr>
+                  <th width="30px" class="text-center">Seç</th>
+                  <th>Modül</th>
+                </tr>
+              </thead>
+              <tbody class="">
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" checked id="customSwitch1">
+                      <label class="custom-success custom-control-label" for="customSwitch1">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Teklif</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" checked id="customSwitch2">
+                      <label class="custom-control-label" for="customSwitch2">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Servis</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                      <label class="custom-control-label" for="customSwitch3">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Demirbaş</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                      <label class="custom-control-label" for="customSwitch3">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Satış</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                      <label class="custom-control-label" for="customSwitch4">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Sipariş</td>
+                </tr>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                      <label class="custom-control-label" for="customSwitch5">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Stock</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                      <label class="custom-control-label" for="customSwitch5">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Stock</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="custom-control custom-switch mg-l-10">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                      <label class="custom-control-label" for="customSwitch5">&nbsp;</label>
+                    </div>
+                  </td>
+                  <td>Stock</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="form-group mg-b-10 mg-t-25">
+            <select class="custom-select">
+              <option value="1" selected>Sadece Kendi</option>
+              <option value="1">Kendi ve Diğerleri</option>
+              <option value="1">Engelle</option>
+            </select>
+          </div>
+          <small class="d-block text-muted mg-b-20">Görüntüleyebileceği departman/bölüm/organizasyon türlerini de
+            ""Organizasyon Şeması"" bölümünden düzenleyebilisiniz.</small>
+          <div class="form-group mg-b-10">
+            <div class="tx-13 pd-x-10 pd-y-6 tx-color-03 bg-ui-01 bd bd-ui-03 bd-b-0-f rounded rounded-bottom-0"> Diğer
+              Personeller ve Departmanlar </div>
+            <select class="form-control select2" multiple="multiple">
+              <optgroup label="Diğer Personeller">
+                <option value="Selim Ünüvar">Selim Ünüvar</option>
+                <option value="Uğur Büyükalkan">Uğur Büyükalkan</option>
+                <option value="Burak Altun">Burak Altun</option>
+              </optgroup>
+              <optgroup label="Departmanlar">
+                <option value="Satınalma">Satınalma</option>
+                <option value="Pazarlama">Pazarlama</option>
+                <option value="Finans">Finans</option>
+                <option value="İnsan Kaynakları">İnsan Kaynakları</option>
+              </optgroup>
+            </select>
+          </div>
+          <small class="d-block text-muted">Seçim yapmadığınızda hepsi için geçerlidir.</small>
+        </div>
+        <div class="modal-footer pd-x-30">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+          <button type="button" class="btn btn-sm btn-primary account-next-button">Kaydet</button>
+        </div>
+        <!-- modal-body -->
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <div id="modal_yetkilendirme" class="modal fade effect-scale" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content tx-14">
+        <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+          <div class="media align-items-center">
+            <span class="tx-36 tx-color-03 d-none d-sm-block"><i class="far fa-pen"></i></span>
+            <div class="media-body mg-sm-l-20">
+              <h4 class="tx-18 tx-sm-20 mg-b-2">Yetkilendirme</h4>
+              <p class="tx-13 tx-color-03 mg-b-0">Yetkileriniz buradan düzenleyebilirsiniz.</p>
+            </div>
+          </div>
+          <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30"><i
+              class="far fa-times"></i></button>
+        </div>
+        <div class="modal-body pd-30 pos-relative overflow-hidden">
+          <div class="d-flex mg-b-15 align-items-center">
+            <div class="wd-35p tx-color-03">Bağlı Departman</div>
+            <div class="wd-65p">
+              <div class="form-group mg-b-0">
+                <select class="form-control select2" data-placeholder="Seçiniz">
+                  <option></option>
+
+                  <option>Satış</option>
+                  <option>Pazarlama</option>
+                  <option>|--- Ürün Pazarlama</option>
+                  <option>|--- Yedekparça Pazarlama</option>
+                  <option>Finans</option>
+                  <option>İnsan Kaynakları</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mg-b-0">
+            <div class="wd-35p tx-color-03">Kullanıcı Rolü</div>
+            <div class="wd-65p">
+              <div class="form-group mg-b-0">
+                <select class="form-control select2" data-placeholder="Seçiniz">
+                  <option></option>
+
+                  <option>İnsan Kaynakları</option>
+                  <option>Muhasebe</option>
+                  <option>Temsilci</option>
+                  <option>Bayi</option>
+                  <option>Yönetim Kurulu Üyesi</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer pd-x-30">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+          <button type="button" class="btn btn-sm btn-primary"><i
+              class="far fa-save valign-middle mg-r-6"></i>Kaydet</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/jquery/jquery.min.js"></script>
+  <script src="assets/js/jquery/jquery-ui.min.js"></script>
+  <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery/jquery.steps.min.js"></script>
+  <script src="assets/js/feather-icons/feather.min.js"></script>
+  <script src="assets/js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  <script src="assets/js/prismjs/prism.js"></script>
+  <script src="assets/js/quill/quill.core.js"></script>
+  <script src="assets/js/quill/quill.min.js"></script>
+  <script src="assets/js/select2/select2.min.js"></script>
+  <script src="assets/js/select2/select2.addons.js"></script>
+  <script src="assets/js/select2/i18n/tr.js"></script>
+  <script src="assets/js/chart.js/Chart.bundle.min.js"></script>
+  <script src="assets/js/dashforge.js"></script>
+  <script src="assets/js-customs/ortak.js"></script>
+  <script src="assets/js-customs/ayarlar.js"></script>
+  <script src="assets/js/sweetalert/sweetalert.js"></script>
+
+  <script>
+    var ornektab = $("#yetkilendirmeler_icerik #yetkilendirme-icerik-kontak").html();
+
+    var teklificerik = ornektab.replaceAll("kontak_", "teklif_").replaceAll("Kontak", "Teklif");
+    var urunlericerik = ornektab.replaceAll("kontak_", "urunler_").replaceAll("Kontak", "Ürünler");
+
+    $("#yetkilendirmeler_icerik #yetkilendirme-icerik-teklif").html(teklificerik);
+    $("#yetkilendirmeler_icerik #yetkilendirme-icerik-urunler").html(urunlericerik);
+
+    $("#yetkilendirmeler_tab .cursor-pointer").click(function () {
+
+      var idtam = $(this).attr("id");
+      var id = idtam.replace("yetkilendirme-tab-", "");
+
+      $("#yetkilendirmeler_tab .cursor-pointer.tx-primary").each(function () {
+        $(this).removeClass("tx-primary").addClass("tx-secondary");
+        $(this).removeClass("bg-primary-light").addClass("bg-ui-01");
+      });
+
+      $("#yetkilendirmeler_icerik .d-block").each(function () {
+        $(this).removeClass("d-block").addClass("d-none");
+      });
+
+      $(this).addClass("tx-primary").removeClass("tx-secondary");
+      $(this).addClass("bg-primary-light").removeClass("bg-ui-01");
+
+      $("#yetkilendirmeler_icerik #yetkilendirme-icerik-" + id).removeClass("d-none").addClass("d-block");
+
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      // new account modal wizard created by ysf
+      $("#permselect").change(function () {
+        if ($(this).val() == 0) {
+          $(".allperms").css("display", "block");
+          $(".perms").css("display", "none");
+          $(".onlyperms").css("display", "none");
+          $(".blockperms").css("display", "none");
+        } else if ($(this).val() == 1) {
+          $(".allperms").css("display", "none");
+          $(".perms").css("display", "none");
+          $(".onlyperms").css("display", "block");
+          $(".blockperms").css("display", "none");
+
+        } else if ($(this).val() == 3) {
+          $(".allperms").css("display", "none");
+          $(".perms").css("display", "none");
+          $(".onlyperms").css("display", "none");
+          $(".blockperms").css("display", "block");
+        } else {
+          $(".allperms").css("display", "none");
+          $(".perms").css("display", "block");
+          $(".onlyperms").css("display", "none");
+          $(".blockperms").css("display", "none");
+
+          $(".permcontent").val('').trigger('change');
+          $(".permcontent").removeAttr("disabled");
+        }
+      });
+      $(".create-account").hide();
+      var selectpage = 1;
+      var createaccountbussines = false;
+      $('input:radio[name="accounttype"]').change(
+        function () {
+          if ($(this).attr('id') != 'ac1') {
+            createaccountbussines = true;
+            $(".item-bussiness").css("display", "block");
+          } else {
+            createaccountbussines = false;
+            $(".item-bussiness").css("display", "none");
+          }
+        });
+      $(".account-next-button").click(function () {
+        if (selectpage == 1) {
+
+          if (createaccountbussines) {
+            $(".select-type-for-account").css("display", "none");
+            $(".create-account").css("display", "none");
+            $(".select-type-for-bussiness").css("display", "contents");
+            // var activeli = $("#modalnewuser").find(".step-item.active");
+            // var pasiveli = $("#modalnewuser").find(".step-item:not(.active)");
+            $(".item-bussiness").addClass("active");
+            $(".item-first").removeClass("active");
+            selectpage = 2;
+          } else {
+            $(".select-type-for-account").css("display", "none");
+            $(".create-account").css("display", "inline-block");
+            $(".item-end").addClass("active");
+            $(".item-first").removeClass("active");
+            selectpage = 2;
+
+
+          }
+        } else if (selectpage == 2) {
+          $(this).html("Hesabı Oluştur <i class='fa fa-check mg-x-6'></i > "); $(".item - bussiness").removeClass("active"); $(".item - end").addClass("active"); $(".create - account").css("display", "inline - block"); $(".select - type -for-bussiness").css("display", "none");
+        } else if (selectpage
+          == 3) { $('#modalnewuser').modal('toggle'); Swal.fire({ title: 'Başarılı', text: 'Yeni Hesabınız Başarıyla Oluşturuldu', icon: 'success', confirmButtonText: ' <i class="fa fa-thumbs-up"> </i> Harika!', }); }
+      }); $(".account-back-button").click(function
+        () {
+        if (selectpage == 2) {
+          selectpage = 1; $(".account-next-button").html("İleri"); $(".select-type-for-account").css("display", "inline-block"); $(".create-account").css("display", "none"); $(".select-type-for-bussiness").css("display",
+            "none"); $(".item-bussiness").removeClass("active"); $(".item-end").removeClass("active"); $(".item-first").addClass("active");
+        } if (selectpage == 3) {
+          selectpage = 2; $(".account-next-button").html("İleri"); $(".select-type-for-account").css("display",
+            "none"); $(".create-account").css("display", "none"); $(".select-type-for-bussiness").css("display", "contents"); $(".item-bussiness").addClass("active"); $(".item-end").removeClass("active"); $(".item-first").removeClass("active");
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

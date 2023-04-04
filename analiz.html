@@ -1,0 +1,3041 @@
+﻿<!DOCTYPE html>
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Ritma Flex İş Yönetim Platformu</title>
+    <link href="assets/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="assets/css/ionicons.min.css" rel="stylesheet" />
+    <link href="assets/css/jqvmap.min.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.snow.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.core.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.bubble.css" rel="stylesheet" />
+    <link href="assets/js/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.profile.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.filemgr.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.mail.css" rel="stylesheet" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+    <link href="assets/css/skin.light.css" rel="stylesheet" />
+    <link href="assets/css/customs.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <style>
+      /*
+ * Dashforge Dashboard Pages
+ *
+ * This style is use in dashboard pages.
+ *
+ */
+      .bd-rounded-71px {
+        border-radius: 71px !important;
+      }
+
+      .bg-df-1 {
+        background-color: #0168fa;
+      }
+
+      .bg-df-2 {
+        background-color: #69b2f8;
+      }
+
+      .bg-df-3 {
+        background-color: #d1e6fa;
+      }
+
+      .bg-litecoin {
+        background-color: #325a98;
+      }
+
+      .stroke-wd-3 {
+        stroke-width: 3px;
+      }
+
+      .wd-12 {
+        width: 12px;
+      }
+
+      .ht-12 {
+        height: 12px;
+      }
+
+      .chart-one {
+        position: relative;
+        overflow: hidden;
+        margin: 0 15px 15px;
+        padding-top: 80px;
+        border-bottom-right-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+      }
+
+      @media (min-width: 576px) {
+        .chart-one {
+          margin: 0 20px 15px;
+          padding-top: 0;
+          overflow: visible;
+        }
+      }
+
+      .chart-one .flot-x-axis {
+        display: none;
+      }
+
+      @media (min-width: 576px) {
+        .chart-one .flot-x-axis {
+          display: block;
+        }
+      }
+
+      .chart-one .flot-x-axis .flot-tick-label {
+        transform: translateY(2px);
+        text-transform: uppercase;
+        font-size: 9px;
+        font-weight: 500;
+        font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+        letter-spacing: .5px;
+        color: #8392a5;
+      }
+
+      .chart-one .flot-chart {
+        margin-left: -24px;
+        margin-right: -24px;
+        height: 350px;
+      }
+
+      .chart-two .flot-x-axis>div {
+        transform: translateY(3px);
+        text-transform: uppercase;
+        font-size: 9px;
+        font-weight: 500;
+        font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+        letter-spacing: .5px;
+        color: #8392a5;
+      }
+
+      .chart-two .flot-x-axis>div:first-child {
+        margin-left: 15px;
+      }
+
+      .chart-two .flot-chart {
+        height: 150px;
+        margin-left: -15px;
+        margin-right: -13px;
+      }
+
+      @media (min-width: 576px) {
+        .chart-two .flot-chart {
+          height: 210px;
+        }
+      }
+
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        .chart-two .flot-chart {
+          height: 155px;
+        }
+      }
+
+      .chart-three .flot-chart {
+        margin-left: -7px;
+        margin-right: -8px;
+        margin-bottom: -5px;
+      }
+
+      .chart-four .flot-chart {
+        margin-right: -8px;
+        margin-bottom: -5px;
+      }
+
+      .chart-five>div {
+        position: relative;
+        margin-left: -10px;
+        height: 225px;
+      }
+
+      .table-dashboard {
+        font-size: 13px;
+      }
+
+      .table-dashboard thead th,
+      .table-dashboard tbody td {
+        border-color: #e5e9f2;
+        white-space: nowrap;
+      }
+
+      .table-dashboard thead th:first-child,
+      .table-dashboard tbody td:first-child {
+        padding-left: 20px;
+      }
+
+      .table-dashboard thead th:last-child,
+      .table-dashboard tbody td:last-child {
+        padding-right: 20px;
+      }
+
+      .table-dashboard thead th {
+        font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        color: #8392a5;
+      }
+
+      .table-dashboard-one tbody td {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      /* -------------- dashboard-two.html ----------------- */
+      .chart-six {
+        margin-left: -5px;
+        height: 150px;
+      }
+
+      @media (min-width: 576px) {
+        .chart-six {
+          height: 200px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .chart-six {
+          height: 250px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .chart-six {
+          height: 300px;
+        }
+      }
+
+      .chart-seven {
+        height: 150px;
+      }
+
+      @media (min-width: 992px) {
+        .chart-seven {
+          height: 205px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .chart-seven {
+          height: 188px;
+        }
+      }
+
+      .chart-eight .flot-chart {
+        margin-left: -26px;
+        margin-right: -26px;
+        margin-bottom: -26px;
+        height: 126px;
+      }
+
+      @media (min-width: 768px) {
+        .chart-eight .flot-chart {
+          height: 167px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .chart-eight .flot-chart {
+          margin-left: -30px;
+          margin-right: -30px;
+          margin-bottom: -30px;
+          height: 126px;
+        }
+      }
+
+      .chart-nine .flot-chart {
+        height: 142px;
+        margin-left: -5px;
+        margin-right: -5px;
+      }
+
+      .chart-nine .flot-y-axis .flot-tick-label,
+      .chart-nine .flot-x-axis .flot-tick-label {
+        font-size: 9px;
+        font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+        font-weight: 500;
+        color: #8392a5;
+      }
+
+      .chart-nine .flot-y-axis .flot-tick-label {
+        margin-left: -10px;
+      }
+
+      .chart-nine .flot-y-axis .flot-tick-label:first-child {
+        display: none;
+      }
+
+      .chart-nine .flot-x-axis .flot-tick-label {
+        transform: translateY(3px);
+      }
+
+      .chart-nine .flot-x-axis .flot-tick-label:last-child {
+        margin-left: -5px;
+      }
+
+      .chart-ten .flot-chart {
+        height: 95px;
+        margin-left: -8px;
+        margin-right: -12px;
+      }
+
+      .card-dashboard-table .table th,
+      .card-dashboard-table .table td {
+        border-color: rgba(72, 94, 144, 0.16);
+        padding: 10px 15px;
+        font-size: 13px;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .card-dashboard-table .table thead tr th:first-child {
+        border-left-width: 0;
+      }
+
+      .card-dashboard-table .table thead tr th:last-child {
+        border-right-width: 0;
+      }
+
+      .card-dashboard-table .table thead tr:first-child th {
+        border-top-width: 0;
+        font-size: 13px;
+        background-color: #f5f6fa;
+        text-align: left;
+      }
+
+      .card-dashboard-table .table thead tr:last-child th {
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        padding: 8px 15px;
+        color: #8392a5;
+      }
+
+      .card-dashboard-table .table thead tr th:first-child,
+      .card-dashboard-table .table tbody tr td:first-child {
+        text-align: left;
+      }
+
+      .card-dashboard-table .table strong {
+        font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+        font-weight: 500;
+      }
+
+      /* ---------- dashboard-three.html ------------ */
+      .card-crypto .nav-line {
+        border-bottom-width: 0;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 10px;
+        letter-spacing: .5px;
+      }
+
+      .card-crypto .nav-line .nav-link+.nav-link {
+        margin-left: 10px;
+      }
+
+      .card-crypto .nav-line .nav-link.active::after {
+        height: 3px;
+        bottom: -10px;
+        border-radius: 0.25rem;
+        display: none;
+      }
+
+      @media (min-width: 576px) {
+        .card-crypto .nav-line .nav-link.active::after {
+          display: block;
+        }
+      }
+
+      .chart-eleven .flot-chart {
+        height: 160px;
+      }
+
+      @media (min-width: 576px) {
+        .chart-eleven .flot-chart {
+          height: 220px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .chart-eleven .flot-chart {
+          height: 250px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .chart-eleven .flot-chart {
+          height: 284px;
+        }
+      }
+
+      .chart-eleven .flot-x-axis>div:first-child,
+      .chart-eleven .flot-y-axis>div:first-child {
+        display: none;
+      }
+
+      .crypto {
+        position: relative;
+        padding: 20px;
+      }
+
+      .crypto-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 20px;
+      }
+
+      .crypto-icon-sm {
+        height: 35px;
+        width: 35px;
+        font-size: 16px;
+      }
+
+      .crypto-bitcoin-cash {
+        line-height: 0;
+        transform: rotate(-40deg);
+      }
+
+      .chart-twelve .flot-chart {
+        height: 80px;
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+
+      .list-label {
+        padding: 6px 20px;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 10px;
+        font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+        background-color: #f5f6fa;
+        color: #8392a5;
+        letter-spacing: 1px;
+        border-top: 1px solid #e5e9f2;
+      }
+
+      .list-label:first-of-type {
+        border-top-width: 0;
+      }
+
+      .list-item {
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #e5e9f2;
+      }
+
+      .chart-thirteen {
+        height: 220px;
+      }
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        .chart-thirteen {
+          height: 143px;
+        }
+      }
+
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        .chart-thirteen {
+          height: 160px;
+        }
+      }
+
+      .chart-fourteen {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .chart-fourteen .flot-chart {
+        height: 200px;
+        margin-top: -10px;
+        margin-left: -30px;
+        margin-right: -28px;
+      }
+
+      .chart-fourteen .flot-x-axis .flot-tick-label {
+        font-size: 9px;
+        font-weight: 500;
+        font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+        color: #8392a5;
+        text-transform: uppercase;
+        letter-spacing: -.2px;
+      }
+
+      .chart-fifteen {
+        overflow: hidden;
+      }
+
+      .chart-fifteen .flot-chart {
+        height: 200px;
+        margin-right: -18px;
+      }
+
+      .chart-fifteen .flot-y-axis .flot-tick-label,
+      .chart-fifteen .flot-x-axis .flot-tick-label {
+        font-size: 9px;
+        font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+        font-weight: 500;
+        color: #67788e;
+      }
+
+      .chart-fifteen .flot-y-axis .flot-tick-label:first-child {
+        display: none;
+      }
+
+      .chart-fifteen .flot-x-axis .flot-tick-label {
+        text-transform: uppercase;
+        font-size: 8px;
+        font-weight: 600;
+      }
+
+      .chart-sixteen {
+        overflow: hidden;
+      }
+
+      .chart-sixteen .flot-chart {
+        height: 180px;
+        margin-left: -8px;
+        margin-right: -8px;
+        margin-bottom: -8px;
+      }
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        .chart-sixteen .flot-chart {
+          height: 274px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .chart-sixteen .flot-chart {
+          height: 186px;
+        }
+      }
+
+      .chart-sixteen .flot-x-axis .flot-tick-label {
+        font-size: 9px;
+        font-weight: 600;
+        font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif;
+        margin-top: -25px;
+        margin-left: -25px;
+      }
+
+      .chart-sixteen .flot-x-axis .flot-tick-label:first-child {
+        display: none;
+      }
+
+      .chart-seventeen {
+        height: 260px;
+      }
+
+      .table-dashboard-two {
+        width: 100%;
+        font-size: 13px;
+      }
+
+      .table-dashboard-two tr+tr td {
+        border-top: 1px solid #e5e9f2;
+      }
+
+      .table-dashboard-two td {
+        vertical-align: top;
+        line-height: 1;
+        padding: 8px 0;
+      }
+
+      .table-dashboard-two td:first-child {
+        padding-left: 0;
+      }
+
+      .table-dashboard-two td:first-child div {
+        opacity: .7;
+      }
+
+      .table-dashboard-two td:nth-child(3),
+      .table-dashboard-two td:last-child {
+        font-family: "Rubik", sans-serif;
+      }
+
+      .table-dashboard-two td:last-child {
+        color: #8392a5;
+      }
+
+      .filter-input {
+        height: 30px;
+        background: transparent;
+        color: #1b2e4b;
+        border-top-right-radius: 0.25rem !important;
+        border-bottom-right-radius: 0.25rem !important;
+      }
+
+      .blr {
+        border-top-left-radius: 0.25rem !important;
+        border-bottom-left-radius: 0.25rem !important;
+      }
+
+      .w-165px {
+        width: 165px;
+      }
+
+      /* .ys-card-tab{
+        display: flex !important;
+    height: 87px !important;
+    border-bottom: 1px solid #cdd4e0 !important;
+    align-items: center !important;
+    flex-direction: row !important;
+    justify-content: start !important;
+    border-radius: 4px !important;
+} */
+      .ys-tab-card {
+        cursor: pointer;
+      }
+
+      .ys-tab-card.active .title {
+        color: #0168fa !important;
+      }
+      .ys-tab-card.active .card{
+        border-bottom: 2px solid #0269fa;
+      }
+    </style>
+  </head>
+  <body class="df-roboto">
+    <header class="navbar navbar-header navbar-header-fixed">
+      <div class="d-none align-items-center pos-fixed t-0 z-index-50 w-100 ht-40 tx-white tx-12 justify-content-center bg-dark pd-y-5 pd-x-20 alert-dismissible" role="alert">
+        <i class="far fa-info-circle mg-r-6"></i>Aylık aboneliğinizin bitimine 3 gün kaldı. Yenilemek için <button type="button" class="btn btn-xs btn-warning lh--9 mg-l-10">Yenile</button>
+        <button type="button" class="close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <a href="" id="mainMenuOpen" class="burger-menu">
+        <i data-feather="menu"></i>
+      </a>
+      <div class="navbar-brand wd-sm-auto-f">
+        <a href="index.html" class="df-logo">
+          <img src="assets/logo_ritmaflex.svg" class="ht-25" />
+        </a>
+        <div class="dropdown tx-12 mg-l-40">
+          <button class="btn btn-xs btn-outline-light dropdown-toggle pd-x-3 pd-y-3" type="button" id="companies" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="d-inline-flex align-items-center justify-content-start">
+              <div class="wd-35">
+                <div class="avatar avatar-xs">
+                  <img src="http://via.placeholder.com/30" class="rounded" alt="">
+                </div>
+              </div>
+              <div class="tx-left lh-0 pd-r-10">ZY Elektrikli Traktör</div>
+            </div>
+          </button>
+          <div class="dropdown-menu mn-wd-100p tx-12" aria-labelledby="companies">
+            <a class="dropdown-item" href="#">ZY Elektrikli Traktör</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item tx-primary" href="#modal_ritmafirma" data-toggle="modal">Bölge Müdürlüğü</a>
+            <a class="dropdown-item tx-primary" href="#modal_ritmafirma" data-toggle="modal">Bayii</a>
+          </div>
+        </div>
+      </div>
+      <div id="navbarMenu" class="navbar-menu-wrapper">
+        <div class="navbar-menu-header">
+          <a href="index.html" class="df-logo">
+            <img src="assets/logo_ritmaflex.svg" class="ht-25" />
+          </a>
+          <a id="mainMenuClose" href="#">
+            <i data-feather="x"></i>
+          </a>
+        </div>
+        <ul class="nav navbar-menu">
+          <li class="nav-label pd-l-20 pd-lg-l-25 d-lg-none">Menü</li>
+          <li class="nav-item with-sub">
+            <a href="" class="nav-link">Kontaklar</a>
+            <div class="navbar-menu-sub">
+              <div class="d-lg-flex">
+                <ul>
+                  <li class="nav-label">Kontak Türleri</li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html" class="nav-sub-link">Müşteri</a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html" class="nav-sub-link">Tedarikçi</a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html" class="nav-sub-link">Bölge Müdürlüğü</a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html" class="nav-sub-link">Bayii</a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html" class="nav-sub-link">Rakip</a>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="nav-label">Yeni</li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html#yeni1" class="nav-sub-link">
+                      <i class="far fa-plus"></i>Yeni Müşteri </a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html#yeni2" class="nav-sub-link">
+                      <i class="far fa-plus"></i>Yeni Tedarikçi </a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html#yeni3" class="nav-sub-link">
+                      <i class="far fa-plus"></i>Yeni Bölge Müdürlüğü </a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html#yeni4" class="nav-sub-link">
+                      <i class="far fa-plus"></i>Yeni Bayi </a>
+                  </li>
+                  <li class="nav-sub-item">
+                    <a href="profiller.html#yeni5" class="nav-sub-link">
+                      <i class="far fa-plus"></i>Yeni Rakip </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="urunler.html" class="nav-link">Ürünler</a>
+          </li>
+          <li class="nav-item">
+            <a href="servisler.html" class="nav-link">Servisler</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-right">
+        <a id="navbarSearch" href="" class="search-link d-flex">
+          <i data-feather="search"></i>
+        </a>
+        <div class="dropdown dropdown-message">
+          <a href="agenda.html" class="dropdown-link new-indicator d-flex" data-tooltip data-placement="bottom" title="Ajanda">
+            <i data-feather="calendar"></i>
+          </a>
+        </div>
+        <div class="dropdown dropdown-message">
+          <a href="" class="dropdown-link new-indicator d-flex" data-toggle="dropdown">
+            <i data-feather="message-square"></i>
+            <span>5</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-header">Mesajlar</div>
+            <a href="" class="dropdown-item">
+              <div class="media">
+                <div class="avatar avatar-sm avatar-online">
+                  <img src="http://via.placeholder.com/350" class="rounded-circle" alt="">
+                </div>
+                <div class="media-body mg-l-15">
+                  <strong>Socrates Itumay</strong>
+                  <p>nam libero tempore cum so...</p>
+                  <span>Mar 15 12:32pm</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-footer">
+              <a href="">Hepsini listeleyin</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown dropdown-notification">
+          <a href="" class="dropdown-link new-indicator d-flex" data-toggle="dropdown">
+            <i data-feather="bell"></i>
+            <span>2</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-header">Bildirimler</div>
+            <a href="" class="dropdown-item">
+              <div class="media">
+                <div class="avatar avatar-sm avatar-online">
+                  <img src="http://via.placeholder.com/350" class="rounded-circle" alt="">
+                </div>
+                <div class="media-body mg-l-15">
+                  <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries </p>
+                  <span>Mar 15 12:32pm</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-footer">
+              <a href="">Hepsini listeleyin</a>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown dropdown-profile">
+          <a href="#" class="dropdown-link" data-toggle="dropdown" data-display="static">
+            <div class="avatar avatar-sm">
+              <img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg" />
+            </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right tx-13">
+            <div class="avatar avatar-lg mg-b-15">
+              <img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg" />
+            </div>
+            <h6 class="tx-semibold mg-b-5">Uğur Büyükalkan</h6>
+            <p class="mg-b-25 tx-12 tx-color-03">Müşteri Temsilcisi</p>
+            <a href="#" class="dropdown-item">
+              <i data-feather="user"></i>Kontak </a>
+            <a href="#" class="dropdown-item">
+              <i data-feather="life-buoy"></i> Yardım </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i data-feather="settings"></i> Hesap Ayaları </a>
+            <a href="#" class="dropdown-item">
+              <i data-feather="settings"></i> Sistem Ayarları </a>
+            <div class="dropdown-divider"></div>
+            <a href="login.html" class="dropdown-item">
+              <i data-feather="log-out"></i> Çıkış yap </a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-search">
+        <div class="navbar-search-header">
+          <input type="search" class="form-control" placeholder="Aramalarınızı buradan yapabilirsiniz...">
+          <button class="btn">
+            <i data-feather="search"></i>
+          </button>
+          <a id="navbarSearchClose" href="" class="link-03 mg-l-5 mg-lg-l-10">
+            <i data-feather="x"></i>
+          </a>
+        </div>
+        <div class="navbar-search-body">
+          <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Son Aramalarınız</label>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">İstaç İstanbul Çevre Yönetimi</a>
+            </li>
+            <li>
+              <a href="#">Nsc Bilişim Hizmetleri Ticaret A.Ş.</a>
+            </li>
+            <li>
+              <a href="#">Abp Gıda Ölç. Kont. Sis. İth. Paz.</a>
+            </li>
+          </ul>
+          <hr class="mg-y-30 bd-0">
+          <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Yeni Eklenenler</label>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Karel Elektronik San. ve Tic. A.Ş</a>
+            </li>
+            <li>
+              <a href="#">Bdh Bilişim Destek Hizmetleri San. Tic. A.Ş.</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="content content-fixed pd-20 pd-b-0-f mg-b-20">
+      <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0">
+        <div class="row row-xs mg-y-25">
+          <div class="col-md-12">
+            <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+              <div>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                    <li class="breadcrumb-item">
+                      <a href="#">Dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Firma Analizi</li>
+                  </ol>
+                </nav>
+                <h4 class="mg-b-0 tx-spacing--1">Analiz ve Raporlar </h4>
+              </div>
+              <div class="d-none d-md-block">
+                <button class="btn btn-sm pd-x-15 btn-white btn-uppercase">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail wd-10 mg-r-5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg> Mail Gönder </button>
+                <button class="btn btn-sm pd-x-15 btn-white btn-uppercase mg-l-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-printer wd-10 mg-r-5">
+                    <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                    <rect x="6" y="14" width="12" height="8"></rect>
+                  </svg> Yazdır </button>
+                <button class="btn btn-sm pd-x-15 btn-primary btn-uppercase mg-l-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file wd-10 mg-r-5">
+                    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                    <polyline points="13 2 13 9 20 9"></polyline>
+                  </svg> Rapor Oluştur </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 ys-tab-card active">
+            <div class="card card-body animated fadeIn">
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Genel Görünüm</h6>
+              <h2 class=" tx-bold tx-22 tx-spacing--2 lh-1 mg-b-0">
+                <small class="tx-color-03">₺</small>
+                <span class="title">22.500</span>
+                <small class="d-inline-flex justify-content-end align-items-baseline tx-12 tx-gray-600 tx-spacing-1 mg-l-4">(4 ad)</small>
+              </h2>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-sm-6 col-lg-3 mg-t-10 mg-sm-t-0 ys-tab-card">
+            <div class="card card-body bg-ui-02 animated fadeIn">
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Kasa ve Banka</h6>
+              <h2 class="tx-bold tx-22 tx-spacing--2 lh-1 mg-b-0">
+                <small class="tx-color-03">₺</small>
+                <span class="title">7.300</span>
+                <small class="d-inline-flex justify-content-end align-items-baseline tx-12 tx-gray-600 tx-spacing-1 mg-l-4">(5 ad)</small>
+              </h2>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-sm-6 col-lg-3 mg-t-10 mg-lg-t-0 ys-tab-card">
+            <div class="card card-body bg-ui-02 animated fadeIn">
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Raporlar</h6>
+              <h2 class="tx-bold tx-22 tx-spacing--2 lh-1 mg-b-0">
+                <small class="tx-color-03">%</small>
+                <span class="title">36</span>
+                <small class="d-inline-flex justify-content-end align-items-baseline tx-12 tx-gray-600 tx-spacing-1 mg-l-4">(5 ad)</small>
+              </h2>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-sm-6 col-lg-3 mg-t-10 mg-lg-t-0 ys-tab-card">
+            <div class="card card-body bg-ui-02 animated fadeIn">
+              <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-8">Personel Performansı</h6>
+              <h2 class="tx-bold tx-22 tx-spacing--2 lh-1 mg-b-0">
+                <small class="tx-color-03">%</small>
+                <span class="title">98</span>
+                <small class="d-inline-flex justify-content-end align-items-baseline tx-12 tx-gray-600 tx-spacing-1 mg-l-4">(5 ad)</small>
+              </h2>
+            </div>
+          </div>
+          <!-- col -->
+          <div class="col-md-12 mg-y-15">
+            <div class="card animated fadeIn">
+              <div class="card-header pd-y-20 d-md-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center justify-content-between mg-b-0 wd-100p">
+                  <ul class="list-inline d-flex mg-t-20 mg-sm-t-10 mg-md-t-0 mg-b-0">
+                    <li class="list-inline-item d-flex align-items-center">
+                      <span class="d-block wd-10 ht-10 bg-df-1 rounded mg-r-5"></span>
+                      <span class="tx-sans tx-uppercase tx-10 tx-medium tx-color-03">2021</span>
+                    </li>
+                    <li class="list-inline-item d-flex align-items-center mg-l-5">
+                      <span class="d-block wd-10 ht-10 bg-df-2 rounded mg-r-5"></span>
+                      <span class="tx-sans tx-uppercase tx-10 tx-medium tx-color-03">2020</span>
+                    </li>
+                    <li class="list-inline-item d-flex align-items-center mg-l-5">
+                      <span class="d-block wd-10 ht-10 bg-df-3 rounded mg-r-5"></span>
+                      <span class="tx-sans tx-uppercase tx-10 tx-medium tx-color-03">Hedeflenen</span>
+                    </li>
+                  </ul>
+                  <div class="d-inline-flex">
+                    <div class="btn-group">
+                      <button class="btn btn-xs btn-white btn-uppercase active">Bu Ay</button>
+                      <button class="btn btn-xs btn-white btn-uppercase">Geçen Ay</button>
+                      <button class="btn btn-xs btn-white btn-uppercase">Son 6 Ay</button>
+                      <button class="btn btn-xs btn-white btn-uppercase">Son 1 Yıl</button>
+                    </div>
+                    <div class="dropdown mg-l-5">
+                      <button class="btn btn-xs btn-icon btn-white" data-toggle="dropdown">
+                        <svg class="svg-inline--fa fa-ellipsis-v fa-w-4 tx-20" aria-hidden="true" focusable="false" data-prefix="far" data-icon="ellipsis-v" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512" data-fa-i2svg="">
+                          <path fill="currentColor" d="M64 208c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48 21.5-48 48-48zM16 104c0 26.5 21.5 48 48 48s48-21.5 48-48-21.5-48-48-48-48 21.5-48 48zm0 304c0 26.5 21.5 48 48 48s48-21.5 48-48-21.5-48-48-48-48 21.5-48 48z"></path>
+                        </svg>
+                        <!-- <i class="far fa-ellipsis-v tx-20"></i> -->
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-right tx-13">
+                        <a class="dropdown-item pd-x-10-f" href="#">
+                          <svg class="svg-inline--fa fa-address-card fa-w-18 wd-20-f tx-secondary mg-r-8 valign-middle" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="address-card" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+                            <path fill="currentColor" d="M528 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-352 96c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 19.2-22.4 19.2H86.4C74 384 64 375.4 64 364.8v-19.2c0-31.8 30.1-57.6 67.2-57.6h5c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h5c37.1 0 67.2 25.8 67.2 57.6v19.2zM512 312c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-64c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16zm0-64c0 4.4-3.6 8-8 8H360c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h144c4.4 0 8 3.6 8 8v16z"></path>
+                          </svg>
+                          <!-- <i class="wd-20-f tx-secondary fas fa-address-card mg-r-8 valign-middle"></i> -->Kontaklar </a>
+                        <a class="dropdown-item pd-x-10-f" href="#">
+                          <svg class="svg-inline--fa fa-bomb fa-w-16 wd-20-f tx-secondary mg-r-8 valign-middle" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bomb" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                            <path fill="currentColor" d="M440.5 88.5l-52 52L415 167c9.4 9.4 9.4 24.6 0 33.9l-17.4 17.4c11.8 26.1 18.4 55.1 18.4 85.6 0 114.9-93.1 208-208 208S0 418.9 0 304 93.1 96 208 96c30.5 0 59.5 6.6 85.6 18.4L311 97c9.4-9.4 24.6-9.4 33.9 0l26.5 26.5 52-52 17.1 17zM500 60h-24c-6.6 0-12 5.4-12 12s5.4 12 12 12h24c6.6 0 12-5.4 12-12s-5.4-12-12-12zM440 0c-6.6 0-12 5.4-12 12v24c0 6.6 5.4 12 12 12s12-5.4 12-12V12c0-6.6-5.4-12-12-12zm33.9 55l17-17c4.7-4.7 4.7-12.3 0-17-4.7-4.7-12.3-4.7-17 0l-17 17c-4.7 4.7-4.7 12.3 0 17 4.8 4.7 12.4 4.7 17 0zm-67.8 0c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17zm67.8 34c-4.7-4.7-12.3-4.7-17 0-4.7 4.7-4.7 12.3 0 17l17 17c4.7 4.7 12.3 4.7 17 0 4.7-4.7 4.7-12.3 0-17l-17-17zM112 272c0-35.3 28.7-64 64-64 8.8 0 16-7.2 16-16s-7.2-16-16-16c-52.9 0-96 43.1-96 96 0 8.8 7.2 16 16 16s16-7.2 16-16z"></path>
+                          </svg>
+                          <!-- <i class="wd-20-f tx-secondary fas fa-bomb mg-r-8 valign-middle"></i> -->Fırsat </a>
+                        <a class="dropdown-item pd-x-10-f" href="#">
+                          <svg class="svg-inline--fa fa-clock fa-w-16 wd-20-f tx-secondary mg-r-8 valign-middle" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="clock" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                            <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm57.1 350.1L224.9 294c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v137.7l63.5 46.2c5.4 3.9 6.5 11.4 2.6 16.8l-28.2 38.8c-3.9 5.3-11.4 6.5-16.8 2.6z"></path>
+                          </svg>
+                          <!-- <i class="wd-20-f tx-secondary fas fa-clock mg-r-8 valign-middle"></i> -->Teklif </a>
+                        <a class="dropdown-item pd-x-10-f" href="#">
+                          <svg class="svg-inline--fa fa-shopping-cart fa-w-18 wd-20-f tx-secondary mg-r-8 valign-middle" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+                            <path fill="currentColor" d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"></path>
+                          </svg>
+                          <!-- <i class="wd-20-f tx-secondary fas fa-shopping-cart mg-r-8 valign-middle"></i> -->Sipariş </a>
+                        <a class="dropdown-item pd-x-10-f" href="#">
+                          <svg class="svg-inline--fa fa-chart-line fa-w-16 wd-20-f tx-secondary mg-r-8 valign-middle" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chart-line" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                            <path fill="currentColor" d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z"></path>
+                          </svg>
+                          <!-- <i class="wd-20-f tx-secondary fas fa-chart-line mg-r-8 valign-middle"></i> -->Satış </a>
+                        <a class="dropdown-item pd-x-10-f" href="#">
+                          <svg class="svg-inline--fa fa-users fa-w-20 wd-20-f tx-secondary mg-r-8 valign-middle" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="users" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg="">
+                            <path fill="currentColor" d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z"></path>
+                          </svg>
+                          <!-- <i class="wd-20-f tx-secondary fas fa-users mg-r-8 valign-middle"></i> -->Görüşmeler </a>
+                        <a class="dropdown-item pd-x-10-f" href="#">
+                          <svg class="svg-inline--fa fa-phone fa-w-16 wd-20-f tx-secondary mg-r-8 valign-middle" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                            <path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
+                          </svg>
+                          <!-- <i class="wd-20-f tx-secondary fas fa-phone mg-r-8 valign-middle"></i> -->Ticket </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body pos-relative pd-0">
+                <div class="pos-absolute t-20 l-20 wd-xl-100p z-index-10">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h3 class="tx-normal tx-rubik tx-spacing--2 mg-b-5 d-flex align-items-center">
+                        <small>
+                          <i class="far fa-lira-sign tx-color-03 mg-r-6"></i>
+                        </small> 620,076
+                      </h3>
+                      <h6 class="tx-uppercase tx-11 tx-spacing-1 tx-color-02 tx-semibold mg-b-10">Dönemsel Satışlar</h6>
+                      <p class="mg-b-0 tx-12 tx-color-03">Yıllar ve Aylara Göre İlerlemenizi Görebilirsiniz <a href=""> Daha Fazla</a>
+                      </p>
+                    </div>
+                    <!-- col -->
+                  </div>
+                  <!-- row -->
+                </div>
+                <div class="chart-one mg-0-f mg-b-15-f">
+                  <div id="flotChart" class="flot-chart"></div>
+                </div>
+                <!-- chart-one -->
+              </div>
+            </div>
+          </div>
+          
+      
+          <div class="col-md-12 mg-y-15 animated fadeIn">
+            <div class="card">
+              <div class="card-header pd-y-20 d-md-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center justify-content-between mg-b-0 wd-100p">
+                  <div class="d-flex align-items-center  mg-l-10">
+                    <button type="button" class="btn btn-xs btn-light bg-primary-light tx-primary tx-medium rounded-right">Ürün Gurubu</button>
+                    <button type="button" class="btn btn-xs  btn-light mg-l-15 bg-light tx-medium rounded-right">Şehir</button>
+                    <button type="button" class="btn btn-xs  btn-light mg-l-15 mg-l-15 bg-light tx-medium rounded-right">Personel</button>
+                    <button type="button" class="btn btn-xs  btn-light mg-l-15 bg-light tx-medium rounded-right">Sektör </button>
+                    <button type="button" class="btn btn-xs  btn-light mg-l-15 bg-light tx-medium rounded-right">Marka </button>
+                    <div class="mg-l-15 w-165px">
+                      <div class="input-group mg-b-0 ">
+                        <div class="input-group-prepend filter-input ">
+                          <span class="input-group-text blr">
+                            <i class="far fa-calendar"></i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control datepicker filter-input" placeholder="Başlangıç">
+                      </div>
+                    </div>
+                    <div class="mg-l-15 w-165px">
+                      <div class="input-group mg-b-0 ">
+                        <div class="input-group-prepend filter-input ">
+                          <span class="input-group-text blr">
+                            <i class="far fa-calendar"></i>
+                          </span>
+                        </div>
+                        <input type="text" class="form-control datepicker filter-input" placeholder="Bitiş">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body pd-0">
+         
+                <div class="card-body pd-30">
+                  <div class="d-sm-flex">
+                    <div class="media">
+                      <div class="wd-40 wd-md-50 ht-40 ht-md-50 bg-teal tx-white mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded op-6">
+                        <i data-feather="bar-chart-2"></i>
+                      </div>
+                      <div class="media-body">
+                        <h6 class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold tx-nowrap mg-b-5 mg-md-b-8">Toplam Harcama</h6>
+                        <h4 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0">₺1.676.789</h4>
+                      </div>
+                    </div>
+                    <div class="media mg-t-20 mg-sm-t-0 mg-sm-l-15 mg-md-l-40">
+                      <div class="wd-40 wd-md-50 ht-40 ht-md-50 bg-pink tx-white mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded op-5">
+                        <i data-feather="bar-chart-2"></i>
+                      </div>
+                      <div class="media-body">
+                        <h6 class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold mg-b-5 mg-md-b-8">Brüt Harcamalar</h6>
+                        <h4 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0">₺234.769 <small>.50</small>
+                        </h4>
+                      </div>
+                    </div>
+                    <div class="media mg-t-20 mg-sm-t-0 mg-sm-l-15 mg-md-l-40">
+                      <div class="wd-40 wd-md-50 ht-40 ht-md-50 bg-primary tx-white mg-r-10 mg-md-r-10 d-flex align-items-center justify-content-center rounded op-4">
+                        <i data-feather="bar-chart-2"></i>
+                      </div>
+                      <div class="media-body">
+                        <h6 class="tx-sans tx-uppercase tx-10 tx-spacing-1 tx-color-03 tx-semibold mg-b-5 mg-md-b-8">Aylık Ortalama</h6>
+                        <h4 class="tx-20 tx-sm-18 tx-md-24 tx-normal tx-rubik mg-b-0">₺147.500 <small>.50</small>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-responsive bg-white">
+                  <table class="table table-striped table-ritma3 rounded mg-b-0">
+                    <thead>
+                      <tr>
+                        <th class="tx-left"></th>
+                        <th class="tx-center tx-sans tx-spacing-1   tx-color-03">Q1</th>
+                        <th class="tx-center  tx-sans  tx-spacing-1   tx-color-03">Q2</th>
+                        <th class="tx-center  tx-sans  tx-spacing-1   tx-color-03">Q3</th>
+                        <th class="tx-center  tx-sans tx-spacing-1   tx-color-03">Q4</th>
+                        <th class="tx-right tx-sans  tx-spacing-1   tx-color-03" width="130">Ortalama</th>
+                        <th class="tx-right  tx-sans tx-spacing-1   tx-color-03" width="130">Toplam</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="pd-l-25">
+                          <h6 class="tx-sans tx-uppercase  mg-l-15 tx-10 tx-spacing-1 tx-semibold tx-nowrap mg-b-5 mg-y-8">Laptop Masrafları</h6>
+                        </td>
+                        <td class="text-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-right">
+                          <span class="tx-16">
+                            <small class="tx-color-03">₺</small> 20.800 </span>
+                        </td>
+                        <td class="tx-right ">
+                          <span class="tx-1">
+                            <small class="tx-color-03">₺</small> 20.800 </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pd-l-25">
+                          <h6 class="tx-sans tx-uppercase  mg-l-15 tx-10 tx-spacing-1 tx-semibold tx-nowrap mg-b-5 mg-y-8">Laptop Masrafları</h6>
+                        </td>
+                        <td class="text-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-right">
+                          <span class="tx-16">
+                            <small class="tx-color-03">₺</small> 20.800 </span>
+                        </td>
+                        <td class="tx-right ">
+                          <span class="tx-1">
+                            <small class="tx-color-03">₺</small> 20.800 </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pd-l-25">
+                          <h6 class="tx-sans tx-uppercase  mg-l-15 tx-10 tx-spacing-1 tx-semibold tx-nowrap mg-b-5 mg-y-8">Laptop Masrafları</h6>
+                        </td>
+                        <td class="text-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-right">
+                          <span class="tx-16">
+                            <small class="tx-color-03">₺</small> 20.800 </span>
+                        </td>
+                        <td class="tx-right ">
+                          <span class="tx-1">
+                            <small class="tx-color-03">₺</small> 20.800 </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="pd-l-25">
+                          <h6 class="tx-sans tx-uppercase  mg-l-15 tx-10 tx-spacing-1 tx-semibold tx-nowrap mg-b-5 mg-y-8">Laptop Masrafları</h6>
+                        </td>
+                        <td class="text-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-center">
+                          <div class="d-inline-flex tx-nowrap bd rounded pd-x-10 pd-y-3 bd-ui-03 bg-white tx-dark align-items-center"> ₺ 14,950 </div>
+                        </td>
+                        <td class="tx-right">
+                          <span class="tx-16">
+                            <small class="tx-color-03">₺</small> 20.800 </span>
+                        </td>
+                        <td class="tx-right ">
+                          <span class="tx-1">
+                            <small class="tx-color-03">₺</small> 20.800 </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modals -->
+      <div id="modal_profiles" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content tx-14">
+            <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-10">
+              <div class="media align-items-center">
+                <span class="tx-36 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-address-card"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-18 tx-sm-20 mg-b-0">İlgiliKontak </h4>
+                </div>
+              </div>
+              <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                <i class="far fa-times"></i>
+              </button>
+            </div>
+            <div class="d-flex wd-100p ht-50 bd-b pd-x-50 align-items-center pos-relative">
+              <i class="far fa-search tx-16 pos-absolute wd-20 ht-20 l-30"></i>
+              <input type="text" class="form-control tx-14 bd-0 shadow-none" placeholder="Kelime arayabilirsiniz">
+              <div class="btn-group pos-absolute t-6 r-30">
+                <button class="btn btn-xs btn-primary" type="button">Ara</button>
+                <div class="dropdown">
+                  <button class="btn btn-xs btn-secondary rounded-left-0 pd-x-10 pd-t-8" type="button" id="filters_list" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="far fa-arrow-down"></i>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="filters_list">
+                    <a class="dropdown-item" href="#" id="filters_person">
+                      <i class="far fa-user tx-secondary mg-r-6"></i>İlgili kişi </a>
+                    <a class="dropdown-item" href="#" id="filters_zones">
+                      <i class="far fa-map-marker-alt tx-secondary mg-r-6"></i>İl/İlçe </a>
+                    <a class="dropdown-item" href="#" id="filters_areas">
+                      <i class="far fa-columns tx-secondary mg-r-6"></i>Özel Alan </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="filters_contents" class="d-none wd-100p bd-b pd-x-30 pos-relative bg-ui-01">
+              <div class="d-inline-flex pd-y-10">
+                <div id="filters_person_content" class="d-none mn-wd-200 mg-r-10">
+                  <select class="form-control select2" data-placeholder="İlgili seçiniz">
+                    <option></option>
+                    <option value="Selim Ünüvar">Selim Ünüvar</option>
+                    <option value="Uğur Büyükalkan">Uğur Büyükalkan</option>
+                    <option value="Burak Altun">Burak Altun</option>
+                  </select>
+                </div>
+                <div id="filters_zones_content" class="d-none mn-wd-200 mg-r-10">
+                  <select class="form-control select2" data-placeholder="İl/ilçe seçiniz">
+                    <option></option>
+                    <optgroup label="İstanbul">
+                      <option value="İstanbul">İstanbul (Genel)</option>
+                      <option value="Kartal">Kartal</option>
+                      <option value="Maltepe">Maltepe</option>
+                    </optgroup>
+                    <optgroup label="Ankara">
+                      <option value="Ankara">Ankara (Genel)</option>
+                      <option value="Etimesgut">Etimesgut</option>
+                      <option value="Malkara">Malkara</option>
+                    </optgroup>
+                    <optgroup label="İzmir">
+                      <option value="İzmir">İzmir (Genel)</option>
+                      <option value="Bornova">Bornova</option>
+                      <option value="Aliağa">Aliağa</option>
+                    </optgroup>
+                    <optgroup label="Adana">
+                      <option value="Adana">Adana (Genel)</option>
+                      <option value="Ceyhan">Ceyhan</option>
+                      <option value="Çukurova">Çukurova</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div id="filters_areas_content" class="d-none input-group wd-300-f mg-r-10">
+                  <input type="text" class="form-control" placeholder="1. Özel Alan">
+                  <input type="text" class="form-control" placeholder="2. Özel Alan">
+                  <input type="text" class="form-control" placeholder="3. Özel Alan">
+                </div>
+              </div>
+            </div>
+            <div class="modal-body mx-ht-500 pd-30 rounded ritma-scrollbar3 overflow-hidden">
+              <div class="table-responsive bd rounded">
+                <table class="table table-hover table-ritma1 mg-b-0 bd-b">
+                  <tbody>
+                    <tr>
+                      <td class="wd-30 tx-nowrap">
+                        <div class="avatar">
+                          <span class="avatar-initial rounded" style="background-color: lightgreen;">MA</span>
+                        </div>
+                      </td>
+                      <td class="tx-nowrap">
+                        <h6 class="tx-14 mg-b-2">Mehmet Özdemir</h6>
+                        <span class="d-block mg-t-6">
+                          <span class="badge mg-r-3 badge-light">
+                            <i class="fas fa-map-marker-alt mg-r-3"></i> 2 Adres </span>
+                          <span class="badge mg-r-3 badge-success">
+                            <i class="fas fa-check-square mg-r-3"></i> eFatura </span>
+                        </span>
+                      </td>
+                      <td class="tx-color-03">Mehmet Özdemir</td>
+                      <td class="tx-color-03">0 216 693 26 00</td>
+                      <td class="wd-30 tx-center">
+                        <button class="btn btn-sm btn-outline-secondary pd-y-5 pd-x-10" data-tooltip title="Seç">
+                          <i class="far fa-check"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="wd-30 tx-nowrap">
+                        <div class="avatar">
+                          <span class="avatar-initial rounded" style="background-color: forestgreen;">MT</span>
+                        </div>
+                      </td>
+                      <td class="tx-nowrap">
+                        <h6 class="tx-14 mg-b-2">Ali Osman Yıldırım</h6>
+                        <span class="d-block mg-t-6">
+                          <span class="badge mg-r-3 badge-light">
+                            <i class="fas fa-map-marker-alt mg-r-3"></i> Etimesgut / Ankara </span>
+                          <span class="badge mg-r-3 badge-warning">
+                            <i class="fas fa-info mg-r-3"></i> Fatura bilgisi eksik </span>
+                        </span>
+                      </td>
+                      <td class="tx-color-03">Kadir Yıldırım</td>
+                      <td class="tx-color-03">0 216 693 26 00</td>
+                      <td class="wd-30 tx-center">
+                        <button class="btn btn-sm btn-success pd-y-5 pd-x-10" data-tooltip title="Seç">
+                          <i class="far fa-check"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-30">
+              <div class="d-flex wd-100p justify-content-between">
+                <button type="button" class="btn btn-sm btn-outline-primary" href="#modal_profiles_new">
+                  <i class="far fa-plus valign-middle mg-r-6"></i>Yeni Oluştur </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_profiles_new" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered max-wd-600">
+          <div class="modal-content tx-14">
+            <div class="modal-header pd-x-30 pd-y-15">
+              <a href="" role="button" class="close pos-absolute tx-18 t-15 r-30" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </a>
+              <div class="media align-items-center">
+                <span class="tx-34 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-plus"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-16 mg-b-2">Yeni</h4>
+                  <p class="tx-13 tx-color-03 mg-b-0">Oluşturmaya buradan başlayabilirsiniz.</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-body tx-14 pd-0 pos-relative">
+              <div class="pd-x-30 pd-t-30 pd-b-15">
+                <div class="form-group mg-b-15">
+                  <select class="custom-select wd-md-50p">
+                    <option value="0">Tür Seçiniz</option>
+                    <option value="1" selected>Müşteri</option>
+                    <option value="1">Tedarikçi</option>
+                    <option value="1">Bölge Müdürlüğü</option>
+                    <option value="1">Bayii</option>
+                    <option value="1">Rakip</option>
+                  </select>
+                </div>
+                <div class="form-group mg-b-0">
+                  <input type="text" class="form-control" placeholder="Firma / Şahıs kısa adı">
+                </div>
+              </div>
+              <div>
+                <div id="modal1_tabs" class="d-flex pos-relative bd-b justify-content-between">
+                  <ul class="nav nav-line pd-x-30 bd-0">
+                    <li class="nav-item mg-l-0-f">
+                      <a class="nav-link d-flex align-items-center pd-x-15-f pd-y-10-f active" href="#modal1_tab1" data-toggle="tab">
+                        <div class="avatar avatar-xs mg-r-10">
+                          <span class="avatar-initial rounded-circle bd bd-ui-03 bg-gray-100 tx-secondary lh-0">
+                            <i class="fa fa-map-marker-alt"></i>
+                          </span>
+                        </div>
+                        <span class="tx-14">İletişim</span>
+                      </a>
+                    </li>
+                    <li class="nav-item mg-l-0-f">
+                      <a class="nav-link d-flex align-items-center pd-x-15-f pd-y-10-f" href="#modal1_tab2" data-toggle="tab">
+                        <div class="avatar avatar-xs mg-r-10">
+                          <span class="avatar-initial rounded-circle bd bd-ui-03 bg-gray-100 tx-secondary lh-0">
+                            <i class="fa fa-info"></i>
+                          </span>
+                        </div>
+                        <span class="tx-14">Ticari Bilgiler</span>
+                      </a>
+                    </li>
+                    <li class="nav-item mg-l-0-f">
+                      <a class="nav-link d-flex align-items-center pd-x-15-f pd-y-10-f" href="#modal1_tab3" data-toggle="tab">
+                        <div class="avatar avatar-xs mg-r-10">
+                          <span class="avatar-initial rounded-circle bd bd-ui-03 bg-gray-100 tx-secondary lh-0">
+                            <i class="fa fa-check-double"></i>
+                          </span>
+                        </div>
+                        <span class="tx-14">Özellikler</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div id="modal1_tabs_content" class="tab-content bg-ui-01 mn-ht-300 pd-30">
+                  <div id="modal1_tab1" class="tab-pane fade show active">
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">
+                        <i class="far fa-phone-alt wd-20-f mg-r-6"></i>Telefon
+                      </div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">
+                        <i class="far fa-envelope wd-20-f mg-r-6"></i>E-mail
+                      </div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <div class="wd-35p tx-color-03">
+                        <i class="far fa-globe wd-20-f mg-r-6"></i>Web adresi
+                      </div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <h6 class="mg-y-20 bd-b pd-y-5">Adres</h6>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Ülke</div>
+                      <div class="wd-65p">
+                        <select class="form-control select2" data-placeholder="Seçiniz">
+                          <option></option>
+                          <option value="Türkiye" selected>Türkiye</option>
+                          <option value="ABD">ABD</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Şehir</div>
+                      <div class="wd-65p">
+                        <select class="form-control select2" data-placeholder="Seçiniz">
+                          <option></option>
+                          <option value="İstanbul">İstanbul</option>
+                          <option value="Ankara">Ankara</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">İlçe</div>
+                      <div class="wd-65p">
+                        <select class="form-control select2" data-placeholder="Seçiniz">
+                          <option></option>
+                          <option value="Kartal">Kartal</option>
+                          <option value="Maltepe">Maltepe</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <div class="wd-35p tx-color-03">Adres</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <textarea class="form-control ht-70-f" rows="1"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="modal1_tab2" class="tab-pane fade">
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Resmi Ünvanı</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">T.C. Kimlik No</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Vergi Dairesi</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Vergi No</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-0">
+                      <div class="wd-35p tx-color-03">Ticari İzin No</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="modal1_tab3" class="tab-pane fade">
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Grup / Kategori</div>
+                      <div class="wd-65p">
+                        <select class="form-control select2" multiple="multiple">
+                          <option value="Bireysel">Bireysel</option>
+                          <option value="Kurumsal">Kurumsal</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Çocuk Sayısı</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Arazi Büyüklüğü</div>
+                      <div class="wd-65p">
+                        <div class="input-group">
+                          <input type="text" class="form-control">
+                          <div class="input-group-append">
+                            <span class="input-group-text">m2</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Mesleği</div>
+                      <div class="wd-65p">
+                        <select class="form-control select2" data-placeholder="Seçiniz">
+                          <option></option>
+                          <option value="Çiftçilik">Çiftçilik</option>
+                          <option value="İnşaat Mühendisi">İnşaat Mühendisi</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <div class="wd-35p tx-color-03">Müşteri Temsilcisi</div>
+                      <div class="wd-65p">
+                        <select class="form-control select2" data-placeholder="Seçiniz">
+                          <option></option>
+                          <option value="Selim Ünüvar">Selim Ünüvar</option>
+                          <option value="Uğur Büyükalkan">Uğur Büyükalkan</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-30">
+              <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+              <button type="button" class="btn btn-sm btn-primary" onclick="document.location.href='profiller-yeni.html';">
+                <i class="far fa-plus valign-middle mg-r-6"></i>Oluştur </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_profiles_invoiceinfo" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+              <div class="media align-items-center">
+                <span class="tx-36 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-file-alt"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-18 tx-sm-20 mg-b-2">Fatura Bilgileri</h4>
+                  <p class="tx-13 tx-color-03 mg-b-0">Fatura bilgilerini buradan düzenleyebilirsiniz.</p>
+                </div>
+              </div>
+              <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                <i class="far fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body pd-30 pos-relative">
+              <div class="form-group mg-b-15">
+                <input type="text" class="form-control" placeholder="Resmi Ünvan">
+              </div>
+              <div class="row row-xs mg-b-15">
+                <div class="col-6">
+                  <div class="form-group mg-b-0">
+                    <select class="form-control select2" data-placeholder="Vergi Dairesi">
+                      <option></option>
+                      <option value="Kocaeli">Kocaeli</option>
+                      <option value="Yakacık">Yakacık</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group mg-b-0">
+                    <input type="text" class="form-control" placeholder="Vergi No">
+                  </div>
+                </div>
+              </div>
+              <div class="divider-text">Adres Bilgisi</div>
+              <div class="form-group mg-b-8">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Adres arayın">
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-light pd-x-15 lh-0">
+                      <i class="far fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="bd rounded">
+                <div class="d-block bg-white pos-relative mx-ht-200 scrollbar-primary ritma-scrollbar13 bd-b">
+                  <table class="table table-hover table-ritma2 mg-b-0">
+                    <tbody>
+                      <tr>
+                        <td class="tx-bold tx-nowrap">Kocaeli</td>
+                        <td class="tx-color-03">Muallim Mah. Deniz Cad. No:143 Bilişim Vadisi Ofis 66 Gebze / Kocaeli</td>
+                        <td class="wd-50 tx-center">
+                          <button class="btn btn-sm btn-outline-success pd-y-5 pd-x-10" data-tooltip title="Seç">
+                            <i class="far fa-check"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="tx-bold tx-nowrap">İstanbul</td>
+                        <td class="tx-color-03">Kazım Orbay Cad. Elysium Residence D Blok D:5-6 Şişli / İstanbul</td>
+                        <td class="wd-50 tx-center">
+                          <button class="btn btn-sm btn-success pd-y-5 pd-x-10" data-tooltip title="Seçili">
+                            <i class="far fa-check"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <button type="button" class="btn btn-light btn-block tx-13 bd-0 rounded-top-0" id="modal_profiles_invoiceinfo_newaddress1_btn">
+                  <i class="far fa-plus-square mg-r-6"></i>Adres Ekle </button>
+              </div>
+              <div id="modal_profiles_invoiceinfo_newaddress1" class="d-none mg-t-15">
+                <div class="row row-xs mg-b-15">
+                  <div class="col-4">
+                    <div class="form-group mg-b-0">
+                      <select class="form-control select2" data-placeholder="Ülke seçiniz">
+                        <option></option>
+                        <option value="Türkiye">Türkiye</option>
+                        <option value="ABD">ABD</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group mg-b-0">
+                      <select class="form-control select2" data-placeholder="Şehir seçiniz">
+                        <option></option>
+                        <option value="İstanbul">İstanbul</option>
+                        <option value="Ankara">Ankara</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-group mg-b-0">
+                      <select class="form-control select2" data-placeholder="İlçe seçiniz">
+                        <option></option>
+                        <option value="Kartal">Kartal</option>
+                        <option value="Maltepe">Maltepe</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group mg-b-0">
+                  <textarea class="form-control ht-70-f" rows="1" placeholder="Açık Adres"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-30">
+              <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+              <button type="button" class="btn btn-sm btn-primary">
+                <i class="far fa-save valign-middle mg-r-6"></i>Kaydet </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_infos" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+              <div class="media align-items-center">
+                <span class="tx-36 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-info"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-18 tx-sm-20 mg-b-2">Stok Bilgileri</h4>
+                  <p class="tx-13 tx-color-03 mg-b-0">Bilgileri buradan düzenleyin.</p>
+                </div>
+              </div>
+              <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                <i class="far fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body pd-30 tx-14">
+              <div class="d-flex align-items-center mg-b-15">
+                <div class="wd-35p tx-color-03">Giriş Tipi</div>
+                <div class="wd-65p">
+                  <div class="form-group mg-b-0">
+                    <select class="custom-select select2" data-placeholder="Seçiniz">
+                      <option selected></option>
+                      <option value="Satınalma">Satınalma</option>
+                      <option value="Satış İptal/İade">Satış İptal/İade</option>
+                      <option value="Sayım Giriş">Sayım Giriş</option>
+                      <option value="Ürün Aktarım Giriş">Ürün Aktarım Giriş</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mg-b-15">
+                <div class="wd-35p tx-color-03">Fatura/İrsaliye No</div>
+                <div class="wd-65p">
+                  <div class="input-group mg-b-0">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">#</span>
+                    </div>
+                    <input type="text" class="form-control" value="">
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mg-b-15">
+                <div class="wd-35p tx-color-03">İşlem Tarihi</div>
+                <div class="wd-65p">
+                  <div class="form-group mg-b-0">
+                    <input type="text" class="form-control datepicker">
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mg-b-15">
+                <div class="wd-35p tx-color-03">Sevk Tarihi</div>
+                <div class="wd-65p">
+                  <div class="form-group mg-b-0">
+                    <input type="text" class="form-control datepicker">
+                  </div>
+                </div>
+              </div>
+              <h6 class="mg-b-20 bd-b pd-y-5">Bizden İlgili</h6>
+              <div class="d-flex align-items-center mg-b-15">
+                <div class="wd-35p tx-color-03">Tür</div>
+                <div class="wd-65p">
+                  <div class="form-group mg-b-0">
+                    <select class="custom-select" data-placeholder="Seçiniz">
+                      <option>Bayi</option>
+                      <option value="Bölge Müdürlüğü">Bölge Müdürlüğü</option>
+                      <option value="Merkez Personeli">Merkez Personeli</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mg-b-15">
+                <div class="wd-35p tx-color-03">Bayi</div>
+                <div class="wd-65p">
+                  <div class="form-group mg-b-0">
+                    <select class="custom-select select2" data-placeholder="Seçiniz">
+                      <option></option>
+                      <option value="Abdurrahman Kadıoğlu">Abdurrahman Kadıoğlu</option>
+                      <option value="Uğur Traktör Ltd.">Uğur Traktör Ltd.</option>
+                      <option value="Kadıoğlu Tarım Ltd.">Kadıoğlu Tarım Ltd.</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mg-b-0">
+                <div class="wd-35p tx-color-03">Sorumlu</div>
+                <div class="wd-65p">
+                  <div class="form-group mg-b-0">
+                    <select class="custom-select select2" data-placeholder="Seçiniz">
+                      <option selected></option>
+                      <option value="Ali Demirhan">Ali Demirhan</option>
+                      <option value="Uğur Büyükalkan">Uğur Büyükalkan</option>
+                      <option value="Burak Altun">Burak Altun</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-30">
+              <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+              <button type="button" class="btn btn-sm btn-primary">
+                <i class="far fa-save valign-middle mg-r-6"></i>Kaydet </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_locations" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content tx-14">
+            <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+              <div class="media align-items-center">
+                <span class="tx-36 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-map-marker-alt"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-18 tx-sm-20 mg-b-2">Adresler</h4>
+                  <p class="tx-13 tx-color-03 mg-b-0">Firmanın diğer adreslerini buradan düzenleyebilirsiniz.</p>
+                </div>
+              </div>
+              <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                <i class="far fa-times"></i>
+              </button>
+            </div>
+            <div class="d-flex w-100 ht-50 bd-b pd-x-50 align-items-center pos-relative">
+              <i class="far fa-search tx-16 pos-absolute wd-20 ht-20 l-30"></i>
+              <input type="text" class="form-control tx-14 bd-0 shadow-none" placeholder="Kelime arayabilirsiniz">
+              <button class="btn btn-xs btn-primary pos-absolute t-6 r-30" type="button">Ara</button>
+            </div>
+            <div class="modal-body ht-350 pd-30 rounded overflow-hidden">
+              <div class="table-responsive bd rounded">
+                <table class="table table-hover table-ritma2 mg-b-0 bd-b">
+                  <tbody>
+                    <tr>
+                      <td class="tx-bold tx-nowrap">Ankara</td>
+                      <td class="tx-color-03">Muallim Mah. Deniz Cad. No:143 Bilişim Vadisi Ofis 66 Gebze / Kocaeli</td>
+                      <td class="tx-center">
+                        <button class="btn btn-sm btn-outline-secondary pd-y-5 pd-x-10" data-tooltip title="Seç">
+                          <i class="far fa-check"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tx-bold tx-nowrap">İstanbul</td>
+                      <td class="tx-color-03">Kazım Orbay Cad. Elysium Residence D Blok D:5-6 Şişli / İstanbul</td>
+                      <td class="tx-center">
+                        <button class="btn btn-sm btn-success pd-y-5 pd-x-10" data-tooltip title="Seç">
+                          <i class="far fa-check"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-30">
+              <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_currencies" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content tx-14">
+            <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+              <div class="media align-items-center">
+                <span class="tx-36 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-dollar-sign"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-18 tx-sm-20 mg-b-2">Kurlar</h4>
+                  <p class="tx-13 tx-color-03 mg-b-0">Döviz değerlerini buradan güncelleyebilirsiniz.</p>
+                </div>
+              </div>
+              <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                <i class="far fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body pd-30 rounded">
+              <div class="table-responsive bd rounded">
+                <table class="table table-hover table-ritma4 mg-b-0">
+                  <thead class="table-borderless bg-gray-200">
+                    <tr>
+                      <td class="tx-nowrap">
+                        <div class="dropdown">
+                          <button type="button" class="btn btn-secondary" id="currencies_updatetypes" data-toggle="dropdown">
+                            <i class="fas fa-arrow-down"></i>
+                          </button>
+                          <div class="dropdown-menu tx-13 mw-auto" aria-labelledby="currencies_updatetypes">
+                            <a class="dropdown-item" href="#" data-toggle="modal">TCMB Efektif Satış Kuru</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal">TCMB Efektif Alış Kuru</a>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="tx-nowrap">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="0,00">
+                          <div class="input-group-append">
+                            <span class="input-group-text lh-0">USD</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="tx-nowrap">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="0,00">
+                          <div class="input-group-append">
+                            <span class="input-group-text lh-0">EURO</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="tx-nowrap">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="0,00">
+                          <div class="input-group-append">
+                            <span class="input-group-text lh-0">GBP</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="tx-nowrap">
+                        <button type="button" class="btn btn-primary w-100">
+                          <i class="far fa-sync mg-r-6"></i>Güncelle </button>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="tx-center">
+                        <button type="button" class="btn btn-xs btn-outline-light pd-y-2 pd-x-5 mg-l-4 tx-center" data-tooltip title="TCMB Efektif Satış Kuru">
+                          <i class="fa fa-info-circle tx-10 valign-middle"></i>
+                        </button>
+                      </td>
+                      <td class="tx-nowrap">
+                        <p class="d-inline-block mg-b-0">₺ 8,4100</p>
+                        <p class="d-inline-block mg-b-0 tx-medium tx-11 tx-success tx-uppercase lh-1">3.15% <i class="icon ion-md-arrow-up"></i>
+                        </p>
+                      </td>
+                      <td class="tx-nowrap">
+                        <p class="d-inline-block mg-b-0">₺ 9,3702</p>
+                        <p class="d-inline-block mg-b-0 tx-medium tx-11 tx-danger tx-uppercase lh-1">0.22% <i class="icon ion-md-arrow-down"></i>
+                        </p>
+                      </td>
+                      <td class="tx-nowrap">
+                        <p class="d-inline-block mg-b-0">₺ 10,4311</p>
+                        <p class="d-inline-block mg-b-0 tx-medium tx-11 tx-success tx-uppercase lh-1">0.75% <i class="icon ion-md-arrow-up"></i>
+                        </p>
+                      </td>
+                      <td class="tx-nowrap">Bugün</td>
+                    </tr>
+                    <tr>
+                      <td class="tx-center">
+                        <button type="button" class="btn btn-xs btn-outline-light pd-y-2 pd-x-5 mg-l-4 tx-center" data-tooltip title="TCMB Efektif Satış Kuru">
+                          <i class="fa fa-info-circle tx-10 valign-middle"></i>
+                        </button>
+                      </td>
+                      <td class="tx-nowrap">
+                        <p class="d-inline-block mg-b-0">₺ 7,8405</p>
+                      </td>
+                      <td class="tx-nowrap">
+                        <p class="d-inline-block mg-b-0">₺ 9,7085</p>
+                      </td>
+                      <td class="tx-nowrap">
+                        <p class="d-inline-block mg-b-0">₺ 9,5142</p>
+                      </td>
+                      <td class="tx-nowrap valign-middle">17/07/2020</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-30">
+              <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_print" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content tx-14">
+            <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+              <div class="media align-items-center">
+                <span class="tx-36 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-print"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-18 tx-sm-20 mg-b-2">Yazdır</h4>
+                  <p class="tx-13 tx-color-03 mg-b-0">Şablonunuzu seçin, özelliklerini belirleyin ve yazdırın.</p>
+                </div>
+              </div>
+              <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                <i class="far fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body pd-30 tx-14 ht-500 pos-relative overflow-hidden">
+              <div id="modal_print_infos" class="off-canvas off-canvas-right bg-white off-canvas-overlay pos-absolute-f scrollbar-primary z-index-200">
+                <div class="off-canvas-header ht-auto pd-x-20 pd-t-20 bd-0">
+                  <h5 class="tx-primary tx-14 mg-b-0">Şablon Özellikleri</h5>
+                </div>
+                <div class="off-canvas-body ht-80p pos-relative ritma-scrollbar2 scrollbar-dark">
+                  <div class="d-block pd-15 pd-b-0-f">
+                    <div class="pd-x-10 pd-y-8 bd rounded">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="template_feature1">
+                        <label class="custom-control-label text-secondary" for="template_feature1">Ürünler Resimli</label>
+                      </div>
+                    </div>
+                    <div class="pd-x-10 pd-y-8 bd rounded mg-t-10">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="template_feature2">
+                        <label class="custom-control-label text-secondary" for="template_feature2">Açıklamalı</label>
+                      </div>
+                    </div>
+                    <div class="pd-x-10 pd-y-8 bd rounded mg-t-10">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="template_feature3">
+                        <label class="custom-control-label text-secondary" for="template_feature3">Sadece Birim Biyat</label>
+                      </div>
+                    </div>
+                    <div class="pd-x-10 pd-y-8 bd rounded mg-t-10">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="template_feature3">
+                        <label class="custom-control-label text-secondary" for="template_feature3">Dip Toplamlı</label>
+                      </div>
+                    </div>
+                    <select class="custom-select rounded mg-t-10">
+                      <option selected>Logo seçiniz</option>
+                      <option value="1">Kurumsal Logo - Ritma</option>
+                      <option value="2">Netser Grup Logo</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="off-canvas-push pd-15">
+                  <button type="button" class="btn btn-xs btn-block btn-primary">
+                    <i class="far fa-print valign-middle mg-r-6"></i>Yazdır </button>
+                </div>
+              </div>
+              <div class="row row-xs">
+                <div class="col-3">
+                  <div class="card card-file">
+                    <div class="card-file-thumb tx-secondary">
+                      <i class="fal fa-file-invoice"></i>
+                    </div>
+                    <div class="card-body">
+                      <h6>İrsaliye Formu</h6>
+                    </div>
+                    <div class="card-footer">
+                      <button type="button" class="btn btn-xs btn-block btn-primary off-canvas-menu" href="#modal_print_infos">
+                        <i class="far fa-print valign-middle mg-r-6"></i>Seç / Yazdır </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="card card-file">
+                    <div class="card-file-thumb tx-secondary">
+                      <i class="fal fa-file-invoice"></i>
+                    </div>
+                    <div class="card-body">
+                      <h6>Koli Etiketi</h6>
+                    </div>
+                    <div class="card-footer">
+                      <button type="button" class="btn btn-xs btn-block btn-primary off-canvas-menu" href="#modal_print_infos">
+                        <i class="far fa-print valign-middle mg-r-6"></i>Seç / Yazdır </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-30">
+              <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_addwithbarcode" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+              <div class="media align-items-center">
+                <span class="tx-36 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-barcode-read"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-18 tx-sm-20 mg-b-2">Barkod Ürün</h4>
+                  <p class="tx-13 tx-color-03 mg-b-0">Listeye ürün ekleyin.</p>
+                </div>
+              </div>
+              <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                <i class="far fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body pd-0 tx-14">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-12 pd-x-30 pd-y-20">
+                    <div class="pd-x-15 mg-b-20">
+                      <div class="row d-flex align-items-center bg-white rounded bd shadow-base">
+                        <div class="wd-35p pd-10 tx-center">
+                          <img src="http://tr.godsendbattery-fr.com/uploads/201712731/nmc-battery-pack-for-electric-trackless42530235294.jpg" class="mx-wd-100p" style="max-height: 70px;" />
+                        </div>
+                        <div class="wd-65p pd-20 bd-l">
+                          <h6 class="text-muted">#ZY-L-001</h6>
+                          <h4 class="mg-b-0">Traktör Lastiği</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Miktar</div>
+                      <div class="wd-65p">
+                        <div class="input-group mg-b-0">
+                          <input type="text" class="form-control" value="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Depo</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <select class="custom-select select2" data-placeholder="Seçiniz">
+                            <option></option>
+                            <option value="Merkez">Merkez</option>
+                            <option value="Kocaeli">Kocaeli</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Fiyat</div>
+                      <div class="wd-65p">
+                        <div class="input-group mg-b-0">
+                          <input type="text" class="form-control wd-45p-f" value="">
+                          <select class="custom-select">
+                            <option>Seçiniz</option>
+                            <option value="1">TL (₺)</option>
+                            <option value="2">Dolar ($)</option>
+                            <option value="3">Euro (€)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-0">
+                      <div class="wd-35p tx-color-03">KDV</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <select class="custom-select">
+                            <option>KDV Dahil</option>
+                            <option>%0</option>
+                            <option>%8</option>
+                            <option>%18</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-30">
+              <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+              <button type="button" class="btn btn-sm btn-primary">
+                <i class="far fa-plus valign-middle mg-r-6"></i>Listeye Ekle </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_addinorder2" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+              <div class="media align-items-center">
+                <span class="tx-36 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-shopping-cart"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-18 tx-sm-20 mg-b-2">Siparişten Ürün Ekle</h4>
+                  <p class="tx-13 tx-color-03 mg-b-0">"Seri No Takibi" olan ürünü listeye ekleyin.</p>
+                </div>
+              </div>
+              <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                <i class="far fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body pd-0 tx-14">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6 pd-x-30 pd-y-20 pos-relative overflow-hidden ritma-scrollbar1">
+                    <div class="pd-x-15 mg-b-20">
+                      <div class="row d-flex align-items-center bg-white rounded bd shadow-base">
+                        <div class="wd-35p pd-10 tx-center">
+                          <img src="http://tr.godsendbattery-fr.com/uploads/201712731/nmc-battery-pack-for-electric-trackless42530235294.jpg" class="mx-wd-100p" style="max-height: 70px;" />
+                        </div>
+                        <div class="wd-65p pd-20 bd-l">
+                          <h6 class="text-muted">#ZY-L-001</h6>
+                          <h4 class="mg-b-0">Traktör Lastiği</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Miktar</div>
+                      <div class="wd-65p">
+                        <div class="input-group mg-b-0">
+                          <input type="number" class="form-control" value="12" min="1" max="12">
+                          <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">Maks: 12 adet</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Depo</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <select class="custom-select select2" data-placeholder="Seçiniz">
+                            <option></option>
+                            <option value="Merkez">Merkez</option>
+                            <option value="Kocaeli">Kocaeli</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Fiyat</div>
+                      <div class="wd-65p">
+                        <div class="input-group mg-b-0">
+                          <input type="text" class="form-control wd-45p-f" value="">
+                          <select class="custom-select">
+                            <option>Seçiniz</option>
+                            <option value="1">TL (₺)</option>
+                            <option value="2">Dolar ($)</option>
+                            <option value="3">Euro (€)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-0">
+                      <div class="wd-35p tx-color-03">KDV</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <select class="custom-select">
+                            <option>KDV Dahil</option>
+                            <option>%0</option>
+                            <option>%8</option>
+                            <option>%18</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 pd-0 bd-l">
+                    <form class="pd-x-30 pd-y-20">
+                      <div class="input-group">
+                        <input type="text" class="form-control form-control-lg rounded" value="" placeholder="Seri no okutun veya yazın">
+                        <button type="submit" class="btn btn-primary mg-l-10">
+                          <i class="far fa-plus mg-r-6"></i>Ekle </button>
+                      </div>
+                    </form>
+                    <div class="pd-x-30 pd-y-20 ht-300 bd-t pos-relative overflow-hidden ritma-scrollbar2">
+                      <div class="bd rounded">
+                        <table class="table table-hover table-ritma5 mg-b-0 bd-b">
+                          <thead>
+                            <tr class="bg-ui-01 text-muted tx-12">
+                              <td class="tx-left">Seri No</td>
+                              <td class="wd-5p tx-center">Sil</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="tx-left">76576588</td>
+                              <td class="tx-center">
+                                <button class="btn btn-sm btn-outline-danger pd-y-4 pd-x-8" data-tooltip title="Sil">
+                                  <i class="far fa-trash-alt"></i>
+                                </button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="tx-left">99654711</td>
+                              <td class="tx-center">
+                                <button class="btn btn-sm btn-outline-danger pd-y-4 pd-x-8" data-tooltip title="Sil">
+                                  <i class="far fa-trash-alt"></i>
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-30">
+              <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+              <button type="button" class="btn btn-sm btn-primary">
+                <i class="far fa-plus valign-middle mg-r-6"></i>Listeye Ekle </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_addinorder1" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+              <div class="media align-items-center">
+                <span class="tx-36 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-shopping-cart"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-18 tx-sm-20 mg-b-2">Siparişten Ürün Ekle</h4>
+                  <p class="tx-13 tx-color-03 mg-b-0">Listeye ürün ekleyin.</p>
+                </div>
+              </div>
+              <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                <i class="far fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body pd-0 tx-14">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-12 pd-x-30 pd-y-20">
+                    <div class="pd-x-15 mg-b-20">
+                      <div class="row d-flex align-items-center bg-white rounded bd shadow-base">
+                        <div class="wd-35p pd-10 tx-center">
+                          <img src="http://tr.godsendbattery-fr.com/uploads/201712731/nmc-battery-pack-for-electric-trackless42530235294.jpg" class="mx-wd-100p" style="max-height: 70px;" />
+                        </div>
+                        <div class="wd-65p pd-20 bd-l">
+                          <h6 class="text-muted">#ZY-L-001</h6>
+                          <h4 class="mg-b-0">Traktör Lastiği</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Miktar</div>
+                      <div class="wd-65p">
+                        <div class="input-group mg-b-0">
+                          <input type="number" class="form-control" value="2" min="1" max="2">
+                          <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">Maks: 2 adet</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Depo</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <select class="custom-select select2" data-placeholder="Seçiniz">
+                            <option></option>
+                            <option value="Merkez">Merkez</option>
+                            <option value="Kocaeli">Kocaeli</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Fiyat</div>
+                      <div class="wd-65p">
+                        <div class="input-group mg-b-0">
+                          <input type="text" class="form-control wd-45p-f" value="">
+                          <select class="custom-select">
+                            <option>Seçiniz</option>
+                            <option value="1">TL (₺)</option>
+                            <option value="2">Dolar ($)</option>
+                            <option value="3">Euro (€)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-0">
+                      <div class="wd-35p tx-color-03">KDV</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <select class="custom-select">
+                            <option>KDV Dahil</option>
+                            <option>%0</option>
+                            <option>%8</option>
+                            <option>%18</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-30">
+              <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+              <button type="button" class="btn btn-sm btn-primary">
+                <i class="far fa-plus valign-middle mg-r-6"></i>Listeye Ekle </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_addinorder3" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+              <div class="media align-items-center">
+                <span class="tx-36 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-shopping-cart"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-18 tx-sm-20 mg-b-2">Siparişten Ürün Ekle</h4>
+                  <p class="tx-13 tx-color-03 mg-b-0">"Lot Takibi" olan ürünü listeye ekleyin.</p>
+                </div>
+              </div>
+              <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                <i class="far fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body pd-0 tx-14">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6 pd-x-30 pd-y-20 pos-relative overflow-hidden ritma-scrollbar1">
+                    <div class="pd-x-15 mg-b-20">
+                      <div class="row d-flex align-items-center bg-white rounded bd shadow-base">
+                        <div class="wd-35p pd-10 tx-center">
+                          <img src="http://tr.godsendbattery-fr.com/uploads/201712731/nmc-battery-pack-for-electric-trackless42530235294.jpg" class="mx-wd-100p" style="max-height: 70px;" />
+                        </div>
+                        <div class="wd-65p pd-20 bd-l">
+                          <h6 class="text-muted">#ZY-L-001</h6>
+                          <h4 class="mg-b-0">Traktör Lastiği</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Miktar</div>
+                      <div class="wd-65p">
+                        <div class="input-group mg-b-0">
+                          <input type="number" class="form-control" value="1" min="1" max="1">
+                          <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">Maks: 1 adet</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Depo</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <select class="custom-select select2" data-placeholder="Seçiniz">
+                            <option></option>
+                            <option value="Merkez">Merkez</option>
+                            <option value="Kocaeli">Kocaeli</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Fiyat</div>
+                      <div class="wd-65p">
+                        <div class="input-group mg-b-0">
+                          <input type="text" class="form-control wd-45p-f" value="">
+                          <select class="custom-select">
+                            <option>Seçiniz</option>
+                            <option value="1">TL (₺)</option>
+                            <option value="2">Dolar ($)</option>
+                            <option value="3">Euro (€)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-0">
+                      <div class="wd-35p tx-color-03">KDV</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <select class="custom-select">
+                            <option>KDV Dahil</option>
+                            <option>%0</option>
+                            <option>%8</option>
+                            <option>%18</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 pd-0 bd-l">
+                    <form class="d-flex pd-x-30 pd-y-20">
+                      <div class="input-group wd-80p">
+                        <input type="text" class="form-control form-control-lg" value="" placeholder="Lot No">
+                        <input type="text" class="form-control form-control-lg" value="" placeholder="Tarih">
+                      </div>
+                      <div class="input-group wd-20p">
+                        <button type="submit" class="btn btn-block btn-primary mg-l-10">
+                          <i class="far fa-plus mg-r-6"></i>Ekle </button>
+                      </div>
+                    </form>
+                    <div class="pd-x-30 pd-y-20 ht-300 bd-t pos-relative overflow-hidden ritma-scrollbar7">
+                      <div class="bd rounded">
+                        <table class="table table-hover table-ritma5 mg-b-0 bd-b">
+                          <thead>
+                            <tr class="bg-ui-01 text-muted tx-12">
+                              <td class="tx-left">Lot No</td>
+                              <td class="wd-20p tx-left">Miktar</td>
+                              <td class="wd-20p tx-left">Tarih</td>
+                              <td class="wd-5p tx-center">Seç</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="tx-left tx-semibold">#76576588</td>
+                              <td class="tx-left">310</td>
+                              <td class="tx-left">01.10.2021</td>
+                              <td class="tx-center">
+                                <button class="btn btn-sm btn-outline-success pd-y-5 pd-x-10" data-tooltip title="Seç">
+                                  <i class="far fa-check"></i>
+                                </button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="tx-left tx-semibold">#99654711</td>
+                              <td class="tx-left">22</td>
+                              <td class="tx-left">22.09.2021</td>
+                              <td class="tx-center">
+                                <button class="btn btn-sm btn-outline-success pd-y-5 pd-x-10" data-tooltip title="Seç">
+                                  <i class="far fa-check"></i>
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-30">
+              <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+              <button type="button" class="btn btn-sm btn-primary">
+                <i class="far fa-plus valign-middle mg-r-6"></i>Listeye Ekle </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_listitem_edit2" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+              <div class="media align-items-center">
+                <span class="tx-36 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-pen"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-18 tx-sm-20 mg-b-2">Düzenle</h4>
+                  <p class="tx-13 tx-color-03 mg-b-0">Listeye eklediğiniz ürünü düzenleyin.</p>
+                </div>
+              </div>
+              <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                <i class="far fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body pd-0 tx-14">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6 pd-x-30 pd-y-20 pos-relative overflow-hidden ritma-scrollbar1">
+                    <div class="pd-x-15 mg-b-20">
+                      <div class="row d-flex align-items-center bg-white rounded bd shadow-base">
+                        <div class="wd-35p pd-10 tx-center">
+                          <img src="http://tr.godsendbattery-fr.com/uploads/201712731/nmc-battery-pack-for-electric-trackless42530235294.jpg" class="mx-wd-100p" style="max-height: 70px;" />
+                        </div>
+                        <div class="wd-65p pd-20 bd-l">
+                          <h6 class="text-muted">#ZY-L-001</h6>
+                          <h4 class="mg-b-0">Traktör Lastiği</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Miktar</div>
+                      <div class="wd-65p">
+                        <div class="input-group mg-b-0">
+                          <input type="number" class="form-control" value="12" min="1" max="12">
+                          <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">Maks: 12 adet</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Depo</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <select class="custom-select select2" data-placeholder="Seçiniz">
+                            <option></option>
+                            <option value="Merkez">Merkez</option>
+                            <option value="Kocaeli">Kocaeli</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Fiyat</div>
+                      <div class="wd-65p">
+                        <div class="input-group mg-b-0">
+                          <input type="text" class="form-control wd-45p-f" value="">
+                          <select class="custom-select">
+                            <option>Seçiniz</option>
+                            <option value="1">TL (₺)</option>
+                            <option value="2">Dolar ($)</option>
+                            <option value="3">Euro (€)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-0">
+                      <div class="wd-35p tx-color-03">KDV</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <select class="custom-select">
+                            <option>KDV Dahil</option>
+                            <option>%0</option>
+                            <option>%8</option>
+                            <option>%18</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 pd-0 bd-l">
+                    <form class="pd-x-30 pd-y-20">
+                      <div class="input-group">
+                        <input type="text" class="form-control form-control-lg rounded" value="" placeholder="Seri no okutun veya yazın">
+                        <button type="submit" class="btn btn-primary mg-l-10">
+                          <i class="far fa-plus mg-r-6"></i>Ekle </button>
+                      </div>
+                    </form>
+                    <div class="pd-x-30 pd-y-20 ht-300 bd-t pos-relative overflow-hidden ritma-scrollbar2">
+                      <div class="bd rounded">
+                        <table class="table table-hover table-ritma5 mg-b-0 bd-b">
+                          <thead>
+                            <tr class="bg-ui-01 text-muted tx-12">
+                              <td class="tx-left">Seri No</td>
+                              <td class="wd-5p tx-center">Sil</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="tx-left">76576588</td>
+                              <td class="tx-center">
+                                <button class="btn btn-sm btn-outline-danger pd-y-4 pd-x-8" data-tooltip title="Sil">
+                                  <i class="far fa-trash-alt"></i>
+                                </button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="tx-left">99654711</td>
+                              <td class="tx-center">
+                                <button class="btn btn-sm btn-outline-danger pd-y-4 pd-x-8" data-tooltip title="Sil">
+                                  <i class="far fa-trash-alt"></i>
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-30">
+              <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+              <button type="button" class="btn btn-sm btn-primary">
+                <i class="far fa-save valign-middle mg-r-6"></i>Kaydet </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_listitem_edit1" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+              <div class="media align-items-center">
+                <span class="tx-36 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-pen"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-18 tx-sm-20 mg-b-2">Düzenle</h4>
+                  <p class="tx-13 tx-color-03 mg-b-0">Listeye eklediğiniz ürünü düzenleyin.</p>
+                </div>
+              </div>
+              <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                <i class="far fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body pd-0 tx-14">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-12 pd-x-30 pd-y-20">
+                    <div class="pd-x-15 mg-b-20">
+                      <div class="row d-flex align-items-center bg-white rounded bd shadow-base">
+                        <div class="wd-35p pd-10 tx-center">
+                          <img src="http://tr.godsendbattery-fr.com/uploads/201712731/nmc-battery-pack-for-electric-trackless42530235294.jpg" class="mx-wd-100p" style="max-height: 70px;" />
+                        </div>
+                        <div class="wd-65p pd-20 bd-l">
+                          <h6 class="text-muted">#ZY-L-001</h6>
+                          <h4 class="mg-b-0">Traktör Lastiği</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Miktar</div>
+                      <div class="wd-65p">
+                        <div class="input-group mg-b-0">
+                          <input type="number" class="form-control" value="2" min="1" max="2">
+                          <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">Maks: 2 adet</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Depo</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <select class="custom-select select2" data-placeholder="Seçiniz">
+                            <option></option>
+                            <option value="Merkez">Merkez</option>
+                            <option value="Kocaeli">Kocaeli</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Fiyat</div>
+                      <div class="wd-65p">
+                        <div class="input-group mg-b-0">
+                          <input type="text" class="form-control wd-45p-f" value="">
+                          <select class="custom-select">
+                            <option>Seçiniz</option>
+                            <option value="1">TL (₺)</option>
+                            <option value="2">Dolar ($)</option>
+                            <option value="3">Euro (€)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-0">
+                      <div class="wd-35p tx-color-03">KDV</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <select class="custom-select">
+                            <option>KDV Dahil</option>
+                            <option>%0</option>
+                            <option>%8</option>
+                            <option>%18</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-30">
+              <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+              <button type="button" class="btn btn-sm btn-primary">
+                <i class="far fa-save valign-middle mg-r-6"></i>Kaydet </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_listitem_edit3" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content">
+            <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+              <div class="media align-items-center">
+                <span class="tx-36 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-pen"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-18 tx-sm-20 mg-b-2">Düzenle</h4>
+                  <p class="tx-13 tx-color-03 mg-b-0">Listeye eklediğiniz ürünü düzenleyin.</p>
+                </div>
+              </div>
+              <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                <i class="far fa-times"></i>
+              </button>
+            </div>
+            <div class="modal-body pd-0 tx-14">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-6 pd-x-30 pd-y-20 pos-relative overflow-hidden ritma-scrollbar1">
+                    <div class="pd-x-15 mg-b-20">
+                      <div class="row d-flex align-items-center bg-white rounded bd shadow-base">
+                        <div class="wd-35p pd-10 tx-center">
+                          <img src="http://tr.godsendbattery-fr.com/uploads/201712731/nmc-battery-pack-for-electric-trackless42530235294.jpg" class="mx-wd-100p" style="max-height: 70px;" />
+                        </div>
+                        <div class="wd-65p pd-20 bd-l">
+                          <h6 class="text-muted">#ZY-L-001</h6>
+                          <h4 class="mg-b-0">Traktör Lastiği</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Miktar</div>
+                      <div class="wd-65p">
+                        <div class="input-group mg-b-0">
+                          <input type="number" class="form-control" value="1" min="1" max="1">
+                          <div class="input-group-append">
+                            <span class="input-group-text" id="basic-addon2">Maks: 1 adet</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Depo</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <select class="custom-select select2" data-placeholder="Seçiniz">
+                            <option></option>
+                            <option value="Merkez">Merkez</option>
+                            <option value="Kocaeli">Kocaeli</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-15">
+                      <div class="wd-35p tx-color-03">Fiyat</div>
+                      <div class="wd-65p">
+                        <div class="input-group mg-b-0">
+                          <input type="text" class="form-control wd-45p-f" value="">
+                          <select class="custom-select">
+                            <option>Seçiniz</option>
+                            <option value="1">TL (₺)</option>
+                            <option value="2">Dolar ($)</option>
+                            <option value="3">Euro (€)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mg-b-0">
+                      <div class="wd-35p tx-color-03">KDV</div>
+                      <div class="wd-65p">
+                        <div class="form-group mg-b-0">
+                          <select class="custom-select">
+                            <option>KDV Dahil</option>
+                            <option>%0</option>
+                            <option>%8</option>
+                            <option>%18</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 pd-0 bd-l">
+                    <form class="d-flex pd-x-30 pd-y-20">
+                      <div class="input-group wd-80p">
+                        <input type="text" class="form-control form-control-lg" value="" placeholder="Lot No">
+                        <input type="text" class="form-control form-control-lg" value="" placeholder="Tarih">
+                      </div>
+                      <div class="input-group wd-20p">
+                        <button type="submit" class="btn btn-block btn-primary mg-l-10">
+                          <i class="far fa-plus mg-r-6"></i>Ekle </button>
+                      </div>
+                    </form>
+                    <div class="pd-x-30 pd-y-20 ht-300 bd-t pos-relative overflow-hidden ritma-scrollbar7">
+                      <div class="bd rounded">
+                        <table class="table table-hover table-ritma5 mg-b-0 bd-b">
+                          <thead>
+                            <tr class="bg-ui-01 text-muted tx-12">
+                              <td class="tx-left">Lot No</td>
+                              <td class="wd-20p tx-left">Miktar</td>
+                              <td class="wd-20p tx-left">Tarih</td>
+                              <td class="wd-5p tx-center">Seç</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="tx-left tx-semibold">#76576588</td>
+                              <td class="tx-left">310</td>
+                              <td class="tx-left">01.10.2021</td>
+                              <td class="tx-center">
+                                <button class="btn btn-sm btn-outline-success pd-y-5 pd-x-10" data-tooltip title="Seç">
+                                  <i class="far fa-check"></i>
+                                </button>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="tx-left tx-semibold">#99654711</td>
+                              <td class="tx-left">22</td>
+                              <td class="tx-left">22.09.2021</td>
+                              <td class="tx-center">
+                                <button class="btn btn-sm btn-outline-success pd-y-5 pd-x-10" data-tooltip title="Seç">
+                                  <i class="far fa-check"></i>
+                                </button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-30">
+              <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+              <button type="button" class="btn btn-sm btn-primary">
+                <i class="far fa-save valign-middle mg-r-6"></i>Kaydet </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="modal_commends" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content tx-14">
+            <div class="modal-header">
+              <a href="" role="button" class="close pos-absolute t-15 r-15" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </a>
+              <div class="pos-absolute t-30 r-60 pd-x-10 pd-y-5 rounded bg-gray-200 cursor-pointer">
+                <i class="fas fa-comment-medical mg-r-3"></i> Takip Et
+              </div>
+              <div class="media align-items-center">
+                <span class="tx-36 tx-color-03 d-none d-sm-block">
+                  <i class="far fa-comments"></i>
+                </span>
+                <div class="media-body mg-sm-l-20">
+                  <h4 class="tx-18 tx-sm-20 mg-b-2">Yorumlar</h4>
+                  <p class="tx-13 tx-color-03 mg-b-0">Görüş ve önerileri buradan takip edin.</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-body bg-ui-01 pos-relative ht-400 scrollbar-primary ritma-scrollbar5">
+              <div class="d-flex align-items-start mg-b-30">
+                <div class="wd-50">
+                  <div class="avatar avatar-sm avatar-online">
+                    <span class="avatar-initial rounded-circle bg-dark">
+                      <img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg" />
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <h6 class="mg-b-5">Uğur Büyükalkan <small class="tx-color-03">Bugün - 10:45</small>
+                  </h6>
+                  <div>Hello everyone, this is my first message to this channel anybody here?</div>
+                </div>
+              </div>
+              <div class="d-flex align-items-start mg-b-30">
+                <div class="wd-50">
+                  <div class="avatar avatar-sm avatar-online">
+                    <span class="avatar-initial rounded-circle">SÜ</span>
+                  </div>
+                </div>
+                <div>
+                  <h6 class="mg-b-5">Selim Ünüvar <small class="tx-color-03">Salı - 18:20</small>
+                  </h6>
+                  <div>Hello everyone, this is my first message to this channel anybody here?</div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer pd-x-0">
+              <div class="container">
+                <div class="d-flex align-items-center">
+                  <div class="wd-100p justify-content-center pd-r-10">
+                    <input type="text" class="form-control wd-100p bd-0 shadow-none" placeholder="Yorumu buraya yazın">
+                  </div>
+                  <div class="wd-1p">
+                    <button type="button" class="btn btn-primary tx-13 wd-100p-f">Gönder</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="assets/js/jquery/jquery.min.js"></script>
+      <script src="assets/js/jquery/jquery-ui.min.js"></script>
+      <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/feather-icons/feather.min.js"></script>
+      <script src="assets/js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+      <script src="assets/js/prismjs/prism.js"></script>
+      <script src="assets/lib/jquery.flot/jquery.flot.js"></script>
+      <script src="assets/lib/jquery.flot/jquery.flot.stack.js"></script>
+      <script src="assets/lib/jquery.flot/jquery.flot.resize.js"></script>
+      <script src="assets/lib/chart.js/Chart.bundle.min.js"></script>
+      <script src="assets/lib/jqvmap/jquery.vmap.min.js"></script>
+      <script src="assets/lib/jqvmap/maps/jquery.vmap.usa.js"></script>
+      <script src="assets/js/sampledata.js"></script>
+      <script src="assets/js/quill/quill.core.js"></script>
+      <script src="assets/js/quill/quill.min.js"></script>
+      <script src="assets/js/select2/select2.min.js"></script>
+      <script src="assets/js/select2/select2.addons.js"></script>
+      <script src="assets/js/select2/i18n/tr.js"></script>
+      <script src="assets/js/dashforge.js"></script>
+      <script src="assets/js-customs/ortak.js"></script>
+      <script src="assets/js-customs/teklifler.js"></script>
+      <style>
+        input[type=number]::-webkit-inner-spin-button {
+          opacity: 1;
+        }
+
+        .ag-root-wrapper-body.ag-layout-normal {
+          height: auto !important;
+        }
+
+        .ag-theme-material .ag-header-row {
+          height: 45px;
+          background-color: #f5f6fa;
+        }
+
+        .ag-theme-material .ag-header-cell {
+          padding: 3px 13px;
+        }
+
+        .ag-theme-material .ag-row {
+          height: 49px;
+        }
+
+        .ag-theme-material .ag-cell,
+        .ag-theme-material .ag-cell-wrapper {
+          padding: 0 6px;
+        }
+
+        .ag-theme-material .ag-cell-value {
+          display: contents;
+        }
+      </style>
+      <script>
+        var __basePath = './';
+      </script>
+      <script>
+        $(document).ready(function() {
+          $(".ys-tab-card").click(function() {
+            $('.ys-tab-card').each(function(i, obj) {
+              $(this).removeClass("active");
+              $(this).find(".card").addClass("bg-ui-02");
+            });
+            $(this).find(".card").removeClass("bg-ui-02");
+            $(this).addClass("active");
+          });
+        });
+      </script>
+      <script src="https://unpkg.com/@ag-grid-community/all-modules@24.1.0/dist/ag-grid-community.min.js"></script>
+      <script src="https://unpkg.com/@ag-grid-enterprise/all-modules@25.0.0/dist/ag-grid-enterprise.min.js"></script>
+      <script src="assets/js-aggrid/CustomLoadingCellRenderer.js"></script>
+      <script src="data/analiz.js"></script>
+      <script src="https://kit-pro.fontawesome.com/releases/v5.10.1/js/pro.min.js" data-auto-fetch-svg async></script>
+  </body>
+</html>

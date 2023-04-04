@@ -1,0 +1,40 @@
+.ag-row-hover {
+    /* putting in !important so it overrides the theme's styling as it hovers the row also */
+    background-color: #dfdfff !important;
+}
+
+.ag-column-hover {
+    background-color: #dfffdf;
+}
+
+.example-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#myGrid {
+    flex: 1 1 0px;
+    width: 100%;
+}
+
+.example-header {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.company-small {
+    padding: 5px !important;
+}
+
+.breadcrumb-item {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter UI", Roboto, sans-serif !important;
+}

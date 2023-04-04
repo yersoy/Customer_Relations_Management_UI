@@ -1,0 +1,1125 @@
+﻿<!DOCTYPE html>
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ritma Flex İş Yönetim Platformu</title>
+    <link href="assets/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="assets/css/ionicons.min.css" rel="stylesheet" />
+    <link href="assets/css/jqvmap.min.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.snow.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.core.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.bubble.css" rel="stylesheet" />
+    <link href="assets/js/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.profile.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.filemgr.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.mail.css" rel="stylesheet" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+    <link href="assets/css/skin.light.css" rel="stylesheet" />
+    <link href="assets/css/customs.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <script src="https://kit-pro.fontawesome.com/releases/v5.10.1/js/pro.min.js" data-auto-fetch-svg></script>
+</head>
+
+<body class="df-roboto">
+    <!-- YSF -->
+    <header class="navbar navbar-header navbar-header-fixed">
+        <div class="d-none align-items-center pos-fixed t-0 z-index-50 w-100 ht-40 tx-white tx-12 justify-content-center bg-dark pd-y-5 pd-x-20 alert-dismissible" role="alert">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info wd-16 ht-16">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12" y2="8"></line>
+        </svg> Aylık aboneliğinizin bitimine 3 gün kaldı. Yenilemek için <button type="button" class="btn btn-xs btn-warning lh--9 mg-l-10">Yenile</button>
+            <button type="button" class="close">
+          <span aria-hidden="true">×</span>
+        </button>
+        </div>
+        <a href="" id="mainMenuOpen" class="burger-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        </a>
+        <div class="navbar-brand wd-sm-auto-f">
+            <a href="index.html" class="df-logo">
+                <img src="assets/logo_ritmaflex.svg" class="ht-25">
+            </a>
+            <div class="dropdown tx-12 mg-l-40">
+                <button class="btn btn-xs btn-outline-light dropdown-toggle pd-x-3 pd-y-3" type="button" id="companies" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="d-inline-flex align-items-center justify-content-start">
+              <div class="wd-35">
+                <div class="avatar avatar-xs">
+                  <img src="http://via.placeholder.com/30" class="rounded" alt="">
+                </div>
+              </div>
+              <div class="tx-left lh-0 pd-r-10">ZY Elektrikli Traktör</div>
+            </div>
+          </button>
+                <div class="dropdown-menu mn-wd-100p tx-12" aria-labelledby="companies">
+                    <a class="dropdown-item" href="#">ZY Elektrikli Traktör</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item tx-primary" href="#modal_ritmafirma" data-toggle="modal">Bölge Müdürlüğü</a>
+                    <a class="dropdown-item tx-primary" href="#modal_ritmafirma" data-toggle="modal">Bayii</a>
+                </div>
+            </div>
+        </div>
+        <div id="navbarMenu" class="navbar-menu-wrapper">
+            <div class="navbar-menu-header">
+                <a href="index.html" class="df-logo">
+                    <img src="assets/logo_ritmaflex.svg" class="ht-25">
+                </a>
+                <a id="mainMenuClose" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+                </a>
+            </div>
+            <ul class="nav navbar-menu">
+                <li class="nav-label pd-l-20 pd-lg-l-25 d-lg-none">Menü</li>
+                <li class="nav-item with-sub">
+                    <a href="" class="nav-link">Kontaklar</a>
+                    <div class="navbar-menu-sub">
+                        <div class="d-lg-flex">
+                            <ul>
+                                <li class="nav-label">Kontak Türleri</li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html" class="nav-sub-link">Müşteri</a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html" class="nav-sub-link">Tedarikçi</a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html" class="nav-sub-link">Bölge Müdürlüğü</a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html" class="nav-sub-link">Bayii</a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html" class="nav-sub-link">Rakip</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="nav-label">Yeni</li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html#yeni1" class="nav-sub-link">
+                                        <svg class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                        <path fill="currentColor" d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path>
+                      </svg>
+                                        <!-- <i class="far fa-plus"></i> -->Yeni Müşteri </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html#yeni2" class="nav-sub-link">
+                                        <svg class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                        <path fill="currentColor" d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path>
+                      </svg>
+                                        <!-- <i class="far fa-plus"></i> -->Yeni Tedarikçi </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html#yeni3" class="nav-sub-link">
+                                        <svg class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                        <path fill="currentColor" d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path>
+                      </svg>
+                                        <!-- <i class="far fa-plus"></i> -->Yeni Bölge Müdürlüğü </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html#yeni4" class="nav-sub-link">
+                                        <svg class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                        <path fill="currentColor" d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path>
+                      </svg>
+                                        <!-- <i class="far fa-plus"></i> -->Yeni Bayi </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html#yeni5" class="nav-sub-link">
+                                        <svg class="svg-inline--fa fa-plus fa-w-12" aria-hidden="true" focusable="false" data-prefix="far" data-icon="plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                        <path fill="currentColor" d="M368 224H224V80c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h144v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V288h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"></path>
+                      </svg>
+                                        <!-- <i class="far fa-plus"></i> -->Yeni Rakip </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="urunler.html" class="nav-link">Ürünler</a>
+                </li>
+                <li class="nav-item">
+                    <a href="servisler.html" class="nav-link">Servisler</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <a id="navbarSearch" href="" class="search-link d-flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+            </a>
+            <div class="dropdown dropdown-message">
+                <a href="agenda.html" class="dropdown-link new-indicator d-flex" data-tooltip="" data-placement="bottom" title="" data-original-title="Ajanda">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+                </a>
+            </div>
+            <div class="dropdown dropdown-message">
+                <a href="" class="dropdown-link new-indicator d-flex" data-toggle="dropdown">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+                    <span>5</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header">Mesajlar</div>
+                    <a href="" class="dropdown-item">
+                        <div class="media">
+                            <div class="avatar  avatar-online">
+                                <img src="http://via.placeholder.com/350" class="rounded-circle" alt="">
+                            </div>
+                            <div class="media-body mg-l-15">
+                                <strong>Socrates Itumay</strong>
+                                <p>nam libero tempore cum so...</p>
+                                <span>Mar 15 12:32pm</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-footer">
+                        <a>Hepsini listeleyin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown dropdown-notification">
+                <a href="" class="dropdown-link new-indicator d-flex" data-toggle="dropdown">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
+              <path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"></path>
+            </svg>
+                    <span>2</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header">Bildirimler</div>
+                    <a href="" class="dropdown-item">
+                        <div class="media">
+                            <div class="avatar  avatar-online">
+                                <img src="http://via.placeholder.com/350" class="rounded-circle" alt="">
+                            </div>
+                            <div class="media-body mg-l-15">
+                                <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries </p>
+                                <span>Mar 15 12:32pm</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-footer">
+                        <a href="">Hepsini listeleyin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown dropdown-profile">
+                <a href="#" class="dropdown-link" data-toggle="dropdown" data-display="static">
+                    <div class="avatar ">
+                        <img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg">
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right tx-13">
+                    <div class="avatar avatar-lg mg-b-15">
+                        <img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg">
+                    </div>
+                    <h6 class="tx-semibold mg-b-5">Uğur Büyükalkan</h6>
+                    <p class="mg-b-25 tx-12 tx-color-03">Müşteri Temsilcisi</p>
+                    <a href="#" class="dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>Kontak </a>
+                    <a href="#" class="dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-life-buoy">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="4"></circle>
+                <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"></line>
+                <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"></line>
+                <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"></line>
+                <line x1="14.83" y1="9.17" x2="18.36" y2="5.64"></line>
+                <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"></line>
+              </svg> Yardım </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg> Hesap Ayaları </a>
+                    <a href="#" class="dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg> Sistem Ayarları </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="login.html" class="dropdown-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+              </svg> Çıkış yap </a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-search">
+            <div class="navbar-search-header">
+                <input type="search" class="form-control" placeholder="Aramalarınızı buradan yapabilirsiniz...">
+                <button class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+                <a id="navbarSearchClose" href="" class="link-03 mg-l-5 mg-lg-l-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+                </a>
+            </div>
+            <div class="navbar-search-body">
+                <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Son Aramalarınız</label>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">İstaç İstanbul Çevre Yönetimi</a>
+                    </li>
+                    <li>
+                        <a href="#">Nsc Bilişim Hizmetleri Ticaret A.Ş.</a>
+                    </li>
+                    <li>
+                        <a href="#">Abp Gıda Ölç. Kont. Sis. İth. Paz.</a>
+                    </li>
+                </ul>
+                <hr class="mg-y-30 bd-0">
+                <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Yeni Eklenenler</label>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">Karel Elektronik San. ve Tic. A.Ş</a>
+                    </li>
+                    <li>
+                        <a href="#">Bdh Bilişim Destek Hizmetleri San. Tic. A.Ş.</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- YSF -->
+    <div class="content content-fixed">
+        <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0">
+            <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+                <div>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                            <li class="breadcrumb-item">
+                                <a href="#">Dökümentasyon</a>
+                            </li>
+                        </ol>
+                    </nav>
+                    <h4 class="mg-b-0 tx-spacing--1">Standardizasyonu yapılmış yeni komponentler buraya eklencektir. </h4>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Firma Seçim Ekranı</h5>
+                    <button class="btn btn-primary" href="#modal_selectcompany" data-toggle="modal">Firma Seç</button>
+                </div>
+            </div>
+
+            <div class="card mg-t-30">
+                <div class="card-body">
+                    <h5 class="card-title"> Dosyalar Yapısı</h5>
+                    <div class="container-fluid">
+                        <div class="row bd rounded">
+                            <div class="col-2 pd-20 pd-sm-5 mw-700 d-sm-none d-md-none d-lg-none d-xl-block ">
+                                <div class="filemgr-sidebar-header">
+                                    <div class="dropdown dropdown-icon flex-fill d-lg-none d-xl-block d-md-none d-sm-none">
+                                        <button class="btn btn-xs btn-block btn-white no-wrap" data-toggle="dropdown"> Yeni <i data-feather="chevron-down"></i>
+                      </button>
+                                        <div class="dropdown-menu tx-13">
+                                            <a class="dropdown-item" href="">
+                                                <i data-feather="folder"></i>
+                                                <span> Klasör </span>
+                                            </a>
+                                            <a class="dropdown-item" href="">
+                                                <i data-feather="file"></i>
+                                                <span> Not Ekle </span>
+                                            </a>
+                                        </div>
+                                        <!-- dropdown-menu -->
+                                    </div>
+                                    <!-- dropdown -->
+                                    <div class="dropdown dropdown-icon flex-fill mg-l-0 mg-md-l-0 mg-sm-l-0 mg-xl-l-10">
+                                        <label class="ys-file btn btn-xs btn-block btn-primary mg-0 pd-y-4-f">
+                        <input type="file" /> Yükle </label>
+                                    </div>
+                                    <!-- dropdown -->
+                                </div>
+                                <!-- filemgr-sidebar-header -->
+                                <div class="d-block mg-t-50">
+                                    <div class="pd-t-5 pd-b-10 pd-x-10 pd-t-35">
+                                        <label class="tx-sans tx-uppercase tx-medium tx-10 tx-spacing-1 tx-color-03 pd-l-10"> Hareketler </label>
+                                        <nav class="nav nav-sidebar tx-13">
+                                            <a class="nav-link" href="">
+                                                <i class="far fa-upload"></i>
+                                                <span> En Son Yüklenen </span>
+                                            </a>
+                                            <a class="nav-link" href="">
+                                                <i data-feather="star"></i>
+                                                <span> Yıldızlı </span>
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="pd-t-20 pd-b-10 pd-x-10">
+                                        <label class="tx-sans tx-uppercase tx-medium tx-10 tx-spacing-1 tx-color-03 pd-l-10"> Dosyalar </label>
+                                        <nav class="nav nav-sidebar tx-13">
+                                            <a class="nav-link active" href="">
+                                                <i class="far fa-cog"></i>
+                                                <span> Teklif </span>
+                                            </a>
+                                            <a class="nav-link" href="">
+                                                <i class="far fa-building"></i>
+                                                <span> Firma </span>
+                                            </a>
+                                            <a class="nav-link" href="">
+                                                <i class="far fa-user"></i>
+                                                <span> Personel </span>
+                                            </a>
+                                            <a class="nav-link" href="">
+                                                <i class="far fa-chart-line"></i>
+                                                <span> Satış </span>
+                                            </a>
+                                        </nav>
+                                    </div>
+                                    <div class="pd-y-10 pd-x-20">
+                                        <label class="tx-sans tx-uppercase tx-medium tx-10 tx-spacing-1 tx-color-03 mg-b-15"> Depolama Bilgileri </label>
+                                        <div class="media">
+                                            <i class="wd-30 ht-30" data-feather="database"></i>
+                                            <div class="media-body mg-l-10">
+                                                <div class="tx-12 mg-b-4"> 48 GB Boş </div>
+                                                <div class="progress ht-3 mg-b-20">
+                                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="28" class="progress-bar wd-15p" role="progressbar"></div>
+                                                </div>
+                                            </div>
+                                            <!-- media-body -->
+                                        </div>
+                                        <!-- media -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xl-10 col-md-12 bd-l pd-0">
+                                <!-- <ul class="nav nav-pills pd-25 d-xl-none d-md-flex d-lg-flex d-md-flex d-sm-block mg-lg-t-55 mg-md-t55 mg-sm-t-55 mg-xl-t-0"><li class="nav-item"><a class="nav-link active" href="#">
+                                            Teklif
+                                        </a></li><li class="nav-item"><a class="nav-link" href="#">
+                                            Firma
+                                        </a></li><li class="nav-item"><a class="nav-link" href="#">
+                                            Personel
+                                        </a></li><li class="nav-item"><a class="nav-link" href="#">
+                                            Satış
+                                        </a></li></ul> -->
+                                <div class="pd-0">
+                                    <div class="filemgr-content-body overflow-hidden superscroll d-flex justify-content-center mw-700">
+                                        <div class="filemgr-content-header bg-white pd-x-25-f">
+                                            <i data-feather="search"></i>
+                                            <div class="search-form">
+                                                <input class="form-control" placeholder="Dosya ve Klasör Arama.." type="search"></input>
+                                            </div>
+                                            <div class="pos-absolute r-70 wd-150 d-xl-none d-lg-block d-md-block d-sm-block">
+                                                <select class="form-control">
+                            <optgroup label="Hareketler">
+                              <option> En Son Yüklenen </option>
+                              <option> Yıldızlı Dosyalar </option>
+                            </optgroup>
+                            <optgroup label="Seçenekler">
+                              <option selected="selected"> Teklif Dosyaları </option>
+                              <option> Firma Dosyaları </option>
+                              <option> Satış Dosyaları </option>
+                            </optgroup>
+                          </select>
+                                            </div>
+                                            <div class="pos-absolute r-230 wd-150 file-filter-section d-none transition-base">
+                                                <select class="form-control select2">
+                            <optgroup label="Seçenekler">
+                              <option> Teklif </option>
+                              <option> Satış </option>
+                            </optgroup>
+                          </select>
+                                            </div>
+                                            <!-- search-form -->
+                                            <nav class="nav d-none d-sm-flex mg-l-auto">
+                                                <button class="btn btn-light btn-icon btn-md" id="file-filter-button" type="button">
+                            <i class="far fa-filter"></i>
+                          </button>
+                                            </nav>
+                                        </div>
+                                        <!-- filemgr-content-header -->
+                                        <div class="pd-20 pd-lg-25 pd-xl-30 mg-xl-t-75 mg-lg-t-75 mg-md-t-10 mg-sm-t-10">
+                                            <h4 class="mg-b-15 mg-lg-b-25"> Tüm Teklif Dosyaları </h4>
+                                            <label class="d-block tx-medium tx-10 tx-uppercase tx-sans tx-spacing-1 tx-color-03 mg-b-15"> Klasörler </label>
+                                            <div class="row row-xs">
+                                                <div class="col-sm-6 col-lg-4 col-xl-3">
+                                                    <div class="media media-folder">
+                                                        <i data-feather="folder"></i>
+                                                        <div class="media-body">
+                                                            <h6>
+                                                                <a class="link-02" href=""> Proje Taslaklarım </a>
+                                                            </h6>
+                                                            <span> 2 dosya, 14.05mb </span>
+                                                        </div>
+                                                        <!-- media-body -->
+                                                        <div class="dropdown-file">
+                                                            <a class="dropdown-link" data-toggle="dropdown" href="">
+                                                                <i data-feather="more-vertical"></i>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item details" data-toggle="modal" href="#modalViewDetails">
+                                                                    <i data-feather="info"></i> View Details </a>
+                                                                <a class="dropdown-item important" href="">
+                                                                    <i data-feather="star"></i> Mark as Important </a>
+                                                                <a class="dropdown-item share" data-toggle="modal" href="#modalShare">
+                                                                    <i data-feather="share"></i> Share </a>
+                                                                <a class="dropdown-item download" href="">
+                                                                    <i data-feather="download"></i> Download </a>
+                                                                <a class="dropdown-item copy" data-toggle="modal" href="#modalCopy">
+                                                                    <i data-feather="copy"></i> Copy to </a>
+                                                                <a class="dropdown-item move" data-toggle="modal" href="#modalMove">
+                                                                    <i data-feather="folder"></i> Move to </a>
+                                                                <a class="dropdown-item rename" href="#">
+                                                                    <i data-feather="edit"></i> Rename </a>
+                                                                <a class="dropdown-item delete" href="#">
+                                                                    <i data-feather="trash"></i> Delete </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- dropdown -->
+                                                    </div>
+                                                    <!-- media -->
+                                                </div>
+                                                <!-- col -->
+                                                <div class="col-sm-6 col-lg-4 col-xl-3 mg-t-10 mg-sm-t-0">
+                                                    <div class="media media-folder">
+                                                        <i data-feather="folder"></i>
+                                                        <div class="media-body">
+                                                            <h6>
+                                                                <a class="link-02" href=""> Teklif Taslakları </a>
+                                                            </h6>
+                                                            <span> 1 dosya, 76.3kb </span>
+                                                        </div>
+                                                        <!-- media-body -->
+                                                        <div class="dropdown-file">
+                                                            <a class="dropdown-link" data-toggle="dropdown" href="">
+                                                                <i data-feather="more-vertical"></i>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item details" data-toggle="modal" href="#modalViewDetails">
+                                                                    <i data-feather="info"></i> View Details </a>
+                                                                <a class="dropdown-item important" href="">
+                                                                    <i data-feather="star"></i> Mark as Important </a>
+                                                                <a class="dropdown-item share" data-toggle="modal" href="#modalShare">
+                                                                    <i data-feather="share"></i> Share </a>
+                                                                <a class="dropdown-item download" href="">
+                                                                    <i data-feather="download"></i> Download </a>
+                                                                <a class="dropdown-item copy" data-toggle="modal" href="#modalCopy">
+                                                                    <i data-feather="copy"></i> Copy to </a>
+                                                                <a class="dropdown-item move" data-toggle="modal" href="#modalMove">
+                                                                    <i data-feather="folder"></i> Move to </a>
+                                                                <a class="dropdown-item rename" href="#">
+                                                                    <i data-feather="edit"></i> Rename </a>
+                                                                <a class="dropdown-item delete" href="#">
+                                                                    <i data-feather="trash"></i> Delete </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- dropdown -->
+                                                    </div>
+                                                    <!-- media -->
+                                                </div>
+                                                <!-- col -->
+                                                <div class="col-sm-6 col-lg-4 col-xl-3 mg-t-10 mg-lg-t-0">
+                                                    <div class="media media-folder">
+                                                        <i data-feather="folder"></i>
+                                                        <div class="media-body">
+                                                            <h6>
+                                                                <a class="link-02" href=""> Yeni CRM Tasarımı </a>
+                                                            </h6>
+                                                            <span> 5 files, 126.3mb </span>
+                                                        </div>
+                                                        <!-- media-body -->
+                                                        <div class="dropdown-file">
+                                                            <a class="dropdown-link" data-toggle="dropdown" href="">
+                                                                <i data-feather="more-vertical"></i>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item details" data-toggle="modal" href="#modalViewDetails">
+                                                                    <i data-feather="info"></i> View Details </a>
+                                                                <a class="dropdown-item important" href="">
+                                                                    <i data-feather="star"></i> Mark as Important </a>
+                                                                <a class="dropdown-item share" data-toggle="modal" href="#modalShare">
+                                                                    <i data-feather="share"></i> Share </a>
+                                                                <a class="dropdown-item download" href="">
+                                                                    <i data-feather="download"></i> Download </a>
+                                                                <a class="dropdown-item copy" data-toggle="modal" href="#modalCopy">
+                                                                    <i data-feather="copy"></i> Copy to </a>
+                                                                <a class="dropdown-item move" data-toggle="modal" href="#modalMove">
+                                                                    <i data-feather="folder"></i> Move to </a>
+                                                                <a class="dropdown-item rename" href="#">
+                                                                    <i data-feather="edit"></i> Rename </a>
+                                                                <a class="dropdown-item delete" href="#">
+                                                                    <i data-feather="trash"></i> Delete </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- dropdown -->
+                                                    </div>
+                                                    <!-- media -->
+                                                </div>
+                                                <!-- col -->
+                                                <div class="col-sm-6 col-lg-4 col-xl-3 mg-t-10 mg-xl-t-0">
+                                                    <div class="media media-folder">
+                                                        <i data-feather="folder"></i>
+                                                        <div class="media-body">
+                                                            <h6>
+                                                                <a class="link-02" href=""> Recordings </a>
+                                                            </h6>
+                                                            <span> 0 files </span>
+                                                        </div>
+                                                        <!-- media-body -->
+                                                        <div class="dropdown-file">
+                                                            <a class="dropdown-link" data-toggle="dropdown" href="">
+                                                                <i data-feather="more-vertical"></i>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item details" data-toggle="modal" href="#modalViewDetails">
+                                                                    <i data-feather="info"></i> View Details </a>
+                                                                <a class="dropdown-item important" href="">
+                                                                    <i data-feather="star"></i> Mark as Important </a>
+                                                                <a class="dropdown-item share" data-toggle="modal" href="#modalShare">
+                                                                    <i data-feather="share"></i> Share </a>
+                                                                <a class="dropdown-item download" href="">
+                                                                    <i data-feather="download"></i> Download </a>
+                                                                <a class="dropdown-item copy" data-toggle="modal" href="#modalCopy">
+                                                                    <i data-feather="copy"></i> Copy to </a>
+                                                                <a class="dropdown-item move" data-toggle="modal" href="#modalMove">
+                                                                    <i data-feather="folder"></i> Move to </a>
+                                                                <a class="dropdown-item rename" href="#">
+                                                                    <i data-feather="edit"></i> Rename </a>
+                                                                <a class="dropdown-item delete" href="#">
+                                                                    <i data-feather="trash"></i> Delete </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- dropdown -->
+                                                    </div>
+                                                    <!-- media -->
+                                                </div>
+                                                <!-- col -->
+                                                <div class="col-sm-6 col-lg-4 col-xl-3 mg-t-10">
+                                                    <div class="media media-folder">
+                                                        <i data-feather="folder"></i>
+                                                        <div class="media-body">
+                                                            <h6>
+                                                                <a class="link-02" href=""> Support </a>
+                                                            </h6>
+                                                            <span> 1 file, 20mb </span>
+                                                        </div>
+                                                        <!-- media-body -->
+                                                        <div class="dropdown-file">
+                                                            <a class="dropdown-link" data-toggle="dropdown" href="">
+                                                                <i data-feather="more-vertical"></i>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item details" data-toggle="modal" href="#modalViewDetails">
+                                                                    <i data-feather="info"></i> View Details </a>
+                                                                <a class="dropdown-item important" href="">
+                                                                    <i data-feather="star"></i> Mark as Important </a>
+                                                                <a class="dropdown-item share" data-toggle="modal" href="#modalShare">
+                                                                    <i data-feather="share"></i> Share </a>
+                                                                <a class="dropdown-item download" href="">
+                                                                    <i data-feather="download"></i> Download </a>
+                                                                <a class="dropdown-item copy" data-toggle="modal" href="#modalCopy">
+                                                                    <i data-feather="copy"></i> Copy to </a>
+                                                                <a class="dropdown-item move" data-toggle="modal" href="#modalMove">
+                                                                    <i data-feather="folder"></i> Move to </a>
+                                                                <a class="dropdown-item rename" href="#">
+                                                                    <i data-feather="edit"></i> Rename </a>
+                                                                <a class="dropdown-item delete" href="#">
+                                                                    <i data-feather="trash"></i> Delete </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- dropdown -->
+                                                    </div>
+                                                    <!-- media -->
+                                                </div>
+                                                <!-- col -->
+                                            </div>
+                                            <!-- row -->
+                                            <hr class="mg-y-40 bd-0">
+                                            <label class="d-block tx-medium tx-10 tx-uppercase tx-sans tx-spacing-1 tx-color-03 mg-b-15"> Yakında Açılan Dosyalar </label>
+                                            <div class="row row-xs">
+                                                <div class="col-6 col-sm-4 col-md-3 col-xl">
+                                                    <div class="card card-file">
+                                                        <div class="dropdown-file">
+                                                            <a class="dropdown-link" data-toggle="dropdown" href="">
+                                                                <svg class="feather feather-more-vertical" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="12" cy="5" r="1"></circle>
+                                    <circle cx="12" cy="19" r="1"></circle>
+                                  </svg>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item details" data-toggle="modal" href="#modalViewDetails">
+                                                                    <svg class="feather feather-info" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                      <circle cx="12" cy="12" r="10"></circle>
+                                      <line x1="12" x2="12" y1="16" y2="12"></line>
+                                      <line x1="12" x2="12" y1="8" y2="8"></line>
+                                    </svg> View Details </a>
+                                                                <a class="dropdown-item important" href="">
+                                                                    <svg class="feather feather-star" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                    </svg> Mark as Important </a>
+                                                                <a class="dropdown-item share" data-toggle="modal" href="#modalShare">
+                                                                    <svg class="feather feather-share" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                                      <polyline points="16 6 12 2 8 6"></polyline>
+                                      <line x1="12" x2="12" y1="2" y2="15"></line>
+                                    </svg> Share </a>
+                                                                <a class="dropdown-item download" href="">
+                                                                    <svg class="feather feather-download" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                      <polyline points="7 10 12 15 17 10"></polyline>
+                                      <line x1="12" x2="12" y1="15" y2="3"></line>
+                                    </svg> Download </a>
+                                                                <a class="dropdown-item copy" data-toggle="modal" href="#modalCopy">
+                                                                    <svg class="feather feather-copy" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                      <rect height="13" rx="2" ry="2" width="13" x="9" y="9"></rect>
+                                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg> Copy to </a>
+                                                                <a class="dropdown-item move" data-toggle="modal" href="#modalMove">
+                                                                    <svg class="feather feather-folder" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                                    </svg> Move to </a>
+                                                                <a class="dropdown-item rename" href="#">
+                                                                    <svg class="feather feather-edit" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path>
+                                      <polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon>
+                                    </svg> Rename </a>
+                                                                <a class="dropdown-item delete" href="#">
+                                                                    <svg class="feather feather-trash" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                      <polyline points="3 6 5 6 21 6"></polyline>
+                                      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                    </svg> Delete </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- dropdown -->
+                                                        <div class="card-file-thumb tx-indigo bg-img"></div>
+                                                        <div class="card-body">
+                                                            <h6>
+                                                                <a class="link-02" href=""> IMG_063037.jpg </a>
+                                                            </h6>
+                                                            <p> Resim </p>
+                                                            <span> 4.1mb </span>
+                                                        </div>
+                                                        <div class="tx-11 tx-color-04 mg-t-10"> 6 Saat önce </div>
+                                                    </div>
+                                                </div>
+                                                <!-- col -->
+                                                <div class="col-6 col-sm-4 col-md-3 col-xl">
+                                                    <div class="card card-file">
+                                                        <div class="dropdown-file">
+                                                            <a class="dropdown-link" data-toggle="dropdown" href="">
+                                                                <i data-feather="more-vertical"></i>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item details" data-toggle="modal" href="#modalViewDetails">
+                                                                    <i data-feather="info"></i> View Details </a>
+                                                                <a class="dropdown-item important" href="">
+                                                                    <i data-feather="star"></i> Mark as Important </a>
+                                                                <a class="dropdown-item share" data-toggle="modal" href="#modalShare">
+                                                                    <i data-feather="share"></i> Share </a>
+                                                                <a class="dropdown-item download" href="">
+                                                                    <i data-feather="download"></i> Download </a>
+                                                                <a class="dropdown-item copy" data-toggle="modal" href="#modalCopy">
+                                                                    <i data-feather="copy"></i> Copy to </a>
+                                                                <a class="dropdown-item move" data-toggle="modal" href="#modalMove">
+                                                                    <i data-feather="folder"></i> Move to </a>
+                                                                <a class="dropdown-item rename" href="#">
+                                                                    <i data-feather="edit"></i> Rename </a>
+                                                                <a class="dropdown-item delete" href="#">
+                                                                    <i data-feather="trash"></i> Delete </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- dropdown -->
+                                                        <div class="card-file-thumb tx-primary">
+                                                            <i class="far fa-file-word"></i>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h6>
+                                                                <a class="link-02" href=""> Ritma Flex Sözleşme </a>
+                                                            </h6>
+                                                            <p> Word Dosyası </p>
+                                                            <span> 22.67kb </span>
+                                                        </div>
+                                                        <div class="card-footer"> 21 Eylül 2021 </div>
+                                                    </div>
+                                                </div>
+                                                <!-- col -->
+                                                <div class="col-6 col-sm-4 col-md-3 col-xl mg-t-10 mg-sm-t-0">
+                                                    <div class="card card-file">
+                                                        <div class="dropdown-file">
+                                                            <a class="dropdown-link" data-toggle="dropdown" href="">
+                                                                <i data-feather="more-vertical"></i>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item details" data-toggle="modal" href="#modalViewDetails">
+                                                                    <i data-feather="info"></i> View Details </a>
+                                                                <a class="dropdown-item important" href="">
+                                                                    <i data-feather="star"></i> Mark as Important </a>
+                                                                <a class="dropdown-item share" data-toggle="modal" href="#modalShare">
+                                                                    <i data-feather="share"></i> Share </a>
+                                                                <a class="dropdown-item download" href="">
+                                                                    <i data-feather="download"></i> Download </a>
+                                                                <a class="dropdown-item copy" data-toggle="modal" href="#modalCopy">
+                                                                    <i data-feather="copy"></i> Copy to </a>
+                                                                <a class="dropdown-item move" data-toggle="modal" href="#modalMove">
+                                                                    <i data-feather="folder"></i> Move to </a>
+                                                                <a class="dropdown-item rename" href="#">
+                                                                    <i data-feather="edit"></i> Rename </a>
+                                                                <a class="dropdown-item delete" href="#">
+                                                                    <i data-feather="trash"></i> Delete </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- dropdown -->
+                                                        <div class="card-file-thumb tx-danger">
+                                                            <i class="far fa-file-pdf"></i>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h6>
+                                                                <a class="link-02" href=""> Yeni ERP Projesi Taslağı </a>
+                                                            </h6>
+                                                            <p> PDF Dosyası </p>
+                                                            <span> 125kb </span>
+                                                        </div>
+                                                        <div class="tx-11 tx-color-04 mg-t-10"> 16 Haziran 2021 </div>
+                                                    </div>
+                                                </div>
+                                                <!-- col -->
+                                                <div class="col-6 col-sm-4 col-md-3 col-xl mg-t-10 mg-md-t-0">
+                                                    <div class="card card-file">
+                                                        <div class="dropdown-file">
+                                                            <a class="dropdown-link" data-toggle="dropdown" href="">
+                                                                <i data-feather="more-vertical"></i>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item details" data-toggle="modal" href="#modalViewDetails">
+                                                                    <i data-feather="info"></i> View Details </a>
+                                                                <a class="dropdown-item important" href="">
+                                                                    <i data-feather="star"></i> Mark as Important </a>
+                                                                <a class="dropdown-item share" data-toggle="modal" href="#modalShare">
+                                                                    <i data-feather="share"></i> Share </a>
+                                                                <a class="dropdown-item download" href="">
+                                                                    <i data-feather="download"></i> Download </a>
+                                                                <a class="dropdown-item copy" data-toggle="modal" href="#modalCopy">
+                                                                    <i data-feather="copy"></i> Copy to </a>
+                                                                <a class="dropdown-item move" data-toggle="modal" href="#modalMove">
+                                                                    <i data-feather="folder"></i> Move to </a>
+                                                                <a class="dropdown-item rename" href="#">
+                                                                    <i data-feather="edit"></i> Rename </a>
+                                                                <a class="dropdown-item delete" href="#">
+                                                                    <i data-feather="trash"></i> Delete </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- dropdown -->
+                                                        <div class="card-file-thumb tx-success">
+                                                            <i class="far fa-file-excel"></i>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h6>
+                                                                <a class="link-02" href=""> ERP-Projesi-Giderler </a>
+                                                            </h6>
+                                                            <p> Excel Dosyası </p>
+                                                            <span> 22.67kb </span>
+                                                        </div>
+                                                        <div class="card-footer"> 20 Eylül 2021 </div>
+                                                    </div>
+                                                </div>
+                                                <!-- col -->
+                                                <div class="col-6 col-sm-4 col-md-3 col-xl mg-t-10 mg-xl-t-0">
+                                                    <div class="card card-file">
+                                                        <div class="dropdown-file">
+                                                            <a class="dropdown-link" data-toggle="dropdown" href="">
+                                                                <i data-feather="more-vertical"></i>
+                                                            </a>
+                                                            <div class="dropdown-menu dropdown-menu-right">
+                                                                <a class="dropdown-item details" data-toggle="modal" href="#modalViewDetails">
+                                                                    <i data-feather="info"></i> View Details </a>
+                                                                <a class="dropdown-item important" href="">
+                                                                    <i data-feather="star"></i> Mark as Important </a>
+                                                                <a class="dropdown-item share" data-toggle="modal" href="#modalShare">
+                                                                    <i data-feather="share"></i> Share </a>
+                                                                <a class="dropdown-item download" href="">
+                                                                    <i data-feather="download"></i> Download </a>
+                                                                <a class="dropdown-item copy" data-toggle="modal" href="#modalCopy">
+                                                                    <i data-feather="copy"></i> Copy to </a>
+                                                                <a class="dropdown-item move" data-toggle="modal" href="#modalMove">
+                                                                    <i data-feather="folder"></i> Move to </a>
+                                                                <a class="dropdown-item rename" href="#">
+                                                                    <i data-feather="edit"></i> Rename </a>
+                                                                <a class="dropdown-item delete" href="#">
+                                                                    <i data-feather="trash"></i> Delete </a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- dropdown -->
+                                                        <div class="card-file-thumb tx-secondary">
+                                                            <i class="far fa-file-upload"></i>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h6>
+                                                                <a class="link-02" href=""> İmza Sirküsü </a>
+                                                            </h6>
+                                                            <p> PDF & Word </p>
+                                                            <span> 0kb </span>
+                                                        </div>
+                                                        <div class="card-footer"> Yüklenmedi </div>
+                                                    </div>
+                                                </div>
+                                                <!-- col -->
+                                            </div>
+                                            <!-- row -->
+                                            </hr>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal_selectcompany" class="modal fade effect-scale" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content tx-14">
+                <div class="modal-header pd-x-20">
+                    <a href="" role="button" class="close pos-absolute t-15 r-15" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                    <div class="media align-items-center">
+                        <span class="tx-color-03 d-none d-sm-block"><i class="fa fa-building tx-50"></i></span>
+                        <div class="media-body mg-sm-l-20">
+                            <h4 class="tx-18 tx-sm-20 mg-b-2">Firma Seçimi</h4>
+                            <p class="tx-13 tx-color-03 mg-b-0">Çoklu Olarak Firma seçimini bu ekrandan yapabilirsiniz</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body pos-relative bg-ui-01 pd-y-0 rounded overflow-hidden">
+
+                    <div id="modal_selectcompanyproducts" class="off-canvas off-canvas-right wd-90p bg-white off-canvas-overlay pos-absolute-f" style="z-index: 5000;">
+                        <div class="off-canvas-header pd-x-0 pd-y-0 bd-b">
+                            <div class="d-flex w-100 ht-60 pd-x-35 align-items-center pos-relative">
+                                <i class="far fa-search pos-absolute l-15"></i>
+                                <input type="text" class="form-control tx-14 bd-0 shadow-none" placeholder="Kelime arayabilirsiniz">
+                            </div>
+                        </div>
+                        <div class="off-canvas-body ht-90p pos-relative ritma-scrollbar11 pd-20 pd-b-30 scrollbar-dark">
+
+                            <div class="table-responsive overflow-hidden rounded">
+                                <table class="table table-hover table-striped table-ritma2 mg-b-0 bd-b">
+                                    <thead class="table-borderless bg-gray-200">
+                                        <tr>
+                                            <th class="wd-20p">Ürün Kodu</th>
+                                            <th>Ürün Adı</th>
+                                            <th class="wd-5 tx-center">Seç</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tx-nowrap">ZY001</td>
+                                            <td class="tx-nowrap">ZY Traktör V1</td>
+                                            <td class="tx-center">
+                                                <div class="d-inline-flex">
+                                                    <button class="btn btn-sm btn-outline-success pd-y-5 pd-x-10" data-tooltip title="Seç"><i
+                                                          class="far fa-check-circle"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tx-nowrap">ZY-S-15</td>
+                                            <td class="tx-nowrap">ZY Traktör Farı</td>
+                                            <td class="tx-center">
+                                                <div class="d-inline-flex pos-relative z-index-10">
+                                                    <button class="btn btn-sm btn-outline-success pd-y-5 pd-x-10" data-tooltip title="Seç"><i
+                                                          class="far fa-check-circle"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8 pd-20">
+
+
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <div class="table-responsive overflow-hidden rounded">
+                                        <table class="table table-hover table-striped table-ritma2 mg-b-0 bd-b">
+                                            <thead class="table-borderless bg-gray-200">
+                                                <tr>
+                                                    <th class="wd-20p">Ürün Kodu</th>
+                                                    <th>Ürün Adı</th>
+                                                    <th class="wd-5 tx-center">Seç</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="tx-nowrap">ZY001</td>
+                                                    <td class="tx-nowrap">ZY Traktör V1</td>
+                                                    <td class="tx-center">
+                                                        <div class="d-inline-flex">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" checked id="companyselect1">
+                                                                <label class="custom-control-label" for="companyselect1"></label>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="tx-nowrap">ZY-S-15</td>
+                                                    <td class="tx-nowrap">ZY Traktör Farı</td>
+                                                    <td class="tx-center">
+                                                        <div class="d-inline-flex pos-relative z-index-10">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input type="checkbox" class="custom-control-input" checked id="companyselect2">
+                                                                <label class="custom-control-label" for="companyselect2"></label>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pd-20 bd-l">
+
+                            <div class="card mg-b-15">
+                                <div class="card-header pd-x-10 pd-y-4">Firma Seç</div>
+                                <div class="card-body pd-10">
+                                    <div class="form-group mg-b-5">
+                                        <select class="form-control select2" data-placeholder="Firma">
+                                        <option>Firma Seçiniz</option>
+                                        <option>Ritma Teknoloji</option>
+                                        <option>Guru Teknoloji</option>
+                                        <option>Sytark Teknoloji</option>
+                                    </select>
+                                    </div>
+                                    <div class="form-group mg-b-5">
+                                        <select class="form-control select2" data-placeholder="Bayi">
+                                          <option>Bayi Seçiniz</option>
+                                          <option>Merkez</option>
+                                          <option>Bölge Müdürlüğü</option>
+                                          <option>Bayi</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group mg-b-5">
+                                        <select class="form-control select2" data-placeholder="Şube">
+                                          <option>Şube Seçiniz</option>
+                                          <option value="Abdurrahman Kadıoğlu">Abdurrahman Kadıoğlu</option>
+                                          <option value="Uğur Traktör Ltd.">Uğur Traktör Ltd.</option>
+                                          <option value="Demirbaş San. Tic.">Demirbaş San. Tic.</option>
+                                      </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header pd-x-10 pd-y-4">Firma Bilgisi</div>
+                                <div class="card-body pd-10">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar "><img src="https://via.placeholder.com/500" class="rounded" alt=""></div>
+                                        <div class="tx-color-03 mg-l-10"><span class="tx-black">ZY Elektikli</span><br>İstanbul, Kartal</div>
+                                    </div>
+                                    <div class="d-flex align-items-center mg-t-8">
+                                        <div class="avatar d-flex align-items-center justify-content-center"><i class="far fa-hashtag wd-30"></i></div>
+                                        <div class="tx-color-03 mg-l-10"><span class="tx-black">75689</span><br>Firma Kodu</div>
+                                    </div>
+                                    <div class="d-flex align-items-center mg-t-8">
+                                        <div class="avatar d-flex align-items-center justify-content-center"><i class="far fa-users wd-30"></i></div>
+                                        <div class="tx-color-03 mg-l-10">17 Personel</div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="btn btn-xs btn-outline-primary">Firmayı Seç</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary tx-13" data-dismiss="modal">Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class=" footer ">
+        <div> © 2021 RitmaFLEX V1.0.1. Created By RITMA TEKNOLOJI </div>
+        <div>
+            <nav class="nav ">
+                <a href="https://themeforest.net/licenses/standard " class="nav-link ">Lisans</a>
+                <a href="https://discordapp.com/invite/RYqkVuw " class="nav-link ">Yardım Merkezi</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="assets/js/jquery/jquery.min.js "></script>
+    <script src="assets/js/jquery/jquery-ui.min.js "></script>
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js "></script>
+    <script src="assets/js/feather-icons/feather.min.js "></script>
+    <script src="assets/js/perfect-scrollbar/perfect-scrollbar.min.js "></script>
+    <script src="assets/js/prismjs/prism.js "></script>
+    <script src="assets/js/quill/quill.core.js "></script>
+    <script src="assets/js/quill/quill.min.js "></script>
+    <script src="assets/js/select2/select2.min.js "></script>
+    <script src="assets/js/select2/select2.addons.js "></script>
+    <script src="assets/js/select2/i18n/tr.js "></script>
+    <script src="assets/js/chart.js/Chart.bundle.min.js "></script>
+    <script src="assets/js/dashforge.js "></script>
+    <script src="assets/js-customs/ortak.js "></script>
+    <script src="assets/js-customs/ayarlar-profiller.js "></script>
+    <script>
+        $(document).ready(function() {
+            $('#NestedOptGroups').select2({
+                data: [{
+                    text: 'Level_1',
+                    children: [{
+                        id: 'Level1Opt1',
+                        text: 'Main Level option 1'
+                    }, {
+                        text: 'Level_2',
+                        children: [{
+                            id: 'Level2Opt0',
+                            text: 'Sub Option 1'
+                        }, {
+                            id: 'Level2Opt1',
+                            text: 'Sub Option 2'
+                        }]
+                    }, {
+                        id: 'Level1Opt2',
+                        text: 'Main Level option 2'
+                    }]
+                }]
+            });
+        });
+    </script>
+</body>
+
+</html>

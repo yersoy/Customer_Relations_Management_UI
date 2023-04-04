@@ -1,0 +1,147 @@
+body {
+  background-color: #f5f6fa; }
+
+a.hover-ui-1:hover {
+    background-color: #e5e9f2 !important
+}
+
+.card {
+  box-shadow: 0 0 10px rgba(28, 39, 60, 0.05); }
+
+.ql-editor {
+    overflow: visible;
+}
+
+.ql-tooltip {
+    left: 0 !important;
+}
+
+.ql-font .ql-picker-label, .ql-size .ql-picker-label {
+    background-color: #eceff3;
+}
+
+[quill__html] {
+    display: none;
+    width: 100%;
+    margin: 0;
+    background: rgb(84, 88, 97);
+    box-sizing: border-box;
+    color: rgb(204, 204, 204);
+    outline: none;
+    padding: 12px 15px;
+    line-height: 24px;
+    font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border: none;
+}
+
+[quill__html *= '-active-'] {
+    display: initial;
+}
+
+.table-ritma1 {
+}
+    .table-ritma1 th,
+    .table-ritma1 td {
+        vertical-align: middle;
+    }
+    .table-ritma1 th {
+        padding: 8px 15px;
+    }
+    .table-ritma1 td {
+        padding: 12px 15px;
+    }
+
+.table-ritma2 {
+}
+    .table-ritma2 th,
+    .table-ritma2 td {
+        vertical-align: middle;
+    }
+
+.table-ritma3 {
+}
+    .table-ritma3 th,
+    .table-ritma3 td {
+        vertical-align: middle;
+    }
+    .table-ritma3 th {
+        padding: 8px 15px;
+    }
+    .table-ritma3 td {
+        padding: 8px 15px;
+    }
+
+.table-ritma4 {
+}
+    .table-ritma4 th,
+    .table-ritma4 td {
+        vertical-align: middle;
+    }
+    .table-ritma4 th {
+        padding: 8px 12px;
+    }
+        .table-ritma4 th:not(:first-child) {
+            padding-left: 0;
+        }
+    .table-ritma4 td {
+        padding: 12px 12px;
+    }
+    .table-ritma4 td:not(:first-child) {
+        padding-left: 0;
+    }
+
+.table-ritma5 {
+}
+    .table-ritma5 th,
+    .table-ritma5 td {
+        vertical-align: middle;
+    }
+    .table-ritma5 th {
+        padding: 6px 10px;
+    }
+    .table-ritma5 td {
+        padding: 6px 10px;
+    }
+
+.table-ritma6 {
+}
+    .table-ritma6 th,
+    .table-ritma6 td {
+        vertical-align: middle;
+    }
+    .table-ritma6 th {
+        padding: 6px 0;
+    }
+    .table-ritma6 td {
+        padding: 6px 0;
+    }
+
+.table-ritma7 {
+}
+    .table-ritma7 th, .table-ritma7 td {
+        vertical-align: middle;
+    }
+    .table-ritma7 thead th, .table-ritma7 thead td {
+        padding: 12px 4px !important;
+    }
+    .table-ritma7 tbody th, .table-ritma7 tbody td {
+        padding: 8px 4px !important;
+    }
+    .table-ritma7 th:first-child, .table-ritma7 td:first-child {
+        padding-left: 30px !important;
+    }
+    .table-ritma7 th:last-child, .table-ritma7 td:last-child {
+        padding-right: 30px !important;
+    }
+
+.custom-switch > .custom-control-label:before {
+    left: -1.15rem !important;
+}
+
+[role="tablist"] a.d-flex.active {
+    color: #0168fa !important;
+    background-color: rgba(1, 104, 250, 0.15) !important;
+}

@@ -1,0 +1,1091 @@
+﻿<!DOCTYPE html>
+
+<html lang="tr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Ritma Flex İş Yönetim Platformu</title>
+    <link href="assets/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="assets/css/ionicons.min.css" rel="stylesheet" />
+    <link href="assets/css/jqvmap.min.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.snow.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.core.css" rel="stylesheet" />
+    <link href="assets/js/quill/css/quill.bubble.css" rel="stylesheet" />
+    <link href="assets/js/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.profile.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.filemgr.css" rel="stylesheet" />
+    <link href="assets/css/dashforge.mail.css" rel="stylesheet" />
+    <link href="assets/css/animate.min.css" rel="stylesheet" />
+    <link href="assets/css/skin.light.css" rel="stylesheet" />
+    <link href="assets/css/customs.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+</head>
+<body class="df-roboto">
+
+    <header class="navbar navbar-header navbar-header-fixed">
+
+        <div class="d-none align-items-center pos-fixed t-0 z-index-50 w-100 ht-40 tx-white tx-12 justify-content-center bg-dark pd-y-5 pd-x-20 alert-dismissible" role="alert">
+            <i data-feather="info" class="wd-16 ht-16"></i> Aylık aboneliğinizin bitimine 3 gün kaldı. Yenilemek için
+            <button type="button" class="btn btn-xs btn-warning lh--9 mg-l-10">Yenile</button>
+            <button type="button" class="close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+
+        <a href="" id="mainMenuOpen" class="burger-menu"><i data-feather="menu"></i></a>
+
+        <div class="navbar-brand wd-sm-auto-f">
+
+            <a href="index.html" class="df-logo"><img src="assets/logo_ritmaflex.svg" class="ht-25" /></a>
+
+            <div class="dropdown tx-12 mg-l-40">
+                <button class="btn btn-xs btn-outline-light dropdown-toggle pd-x-3 pd-y-3" type="button" id="companies" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="d-inline-flex align-items-center justify-content-start">
+                        <div class="wd-35"><div class="avatar avatar-xs"><img src="http://via.placeholder.com/30" class="rounded" alt=""></div></div>
+                        <div class="tx-left lh-0 pd-r-10">Ritma Teknoloji Ltd.</div>
+                    </div>
+                </button>
+                <div class="dropdown-menu mn-wd-100p tx-12" aria-labelledby="companies">
+                    <a class="dropdown-item" href="#">Ritma Teknoloji Ltd.</a>
+                    <a class="dropdown-item" href="#">Gurutek</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item tx-primary" href="#modal_ritmafirma" data-toggle="modal">Bölge Müd. & Bayi Seç</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu-wrapper">
+            <div class="navbar-menu-header">
+                <a href="index.html" class="df-logo"><img src="assets/logo_ritmaflex.svg" class="ht-25" /></a>
+                <a id="mainMenuClose" href="#"><i data-feather="x"></i></a>
+            </div>
+            <ul class="nav navbar-menu">
+                <li class="nav-label pd-l-20 pd-lg-l-25 d-lg-none">Menü</li>
+                <li class="nav-item with-sub">
+                    <a href="" class="nav-link">Müşteri</a>
+                    <div class="navbar-menu-sub">
+                        <div class="d-lg-flex">
+                            <ul>
+                                <li class="nav-label">Veritabanı Kayıtlar</li>
+                                <li class="nav-sub-item"><a href="#" class="nav-sub-link"><i data-feather="database"></i>Tüm Kayıtlar</a></li>
+                                <li class="nav-sub-item"><a href="#" class="nav-sub-link"><i data-feather="heart"></i>Müşteriler</a></li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round"
+                                             class="feather feather-user-check">
+                                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="8.5" cy="7" r="4"></circle>
+                                            <polyline points="17 11 19 13 23 9"></polyline>
+                                        </svg>Potansiyel Kayıtlar
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                        Kontak Kişiler
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul>
+                                <li class="nav-label">Görünüm</li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                            <polyline points="13 2 13 9 20 9"></polyline>
+                                        </svg>Yeni Kayıt
+                                    </a>
+                                </li>
+
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                            <polyline points="13 2 13 9 20 9"></polyline>
+                                        </svg> Harita Bakışı
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                            <polyline points="13 2 13 9 20 9"></polyline>
+                                        </svg> Müşteri Dağılımı
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                            <polyline points="13 2 13 9 20 9"></polyline>
+                                        </svg> Potansiyel Kayıtlar
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item with-sub">
+                    <a href="" class="nav-link">CRM</a>
+                    <div class="navbar-menu-sub">
+                        <div class="d-lg-flex">
+                            <ul>
+                                <li class="nav-label">Pazarlama</li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                                        Fırsat
+                                    </a>
+                                </li>
+
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                        Görüşme
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-plus"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><line x1="9" y1="15" x2="15" y2="15" /></svg>
+                                        Teklif
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone-incoming"><polyline points="16 2 16 8 22 8"></polyline><line x1="23" y1="1" x2="16" y2="8"></line><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                        Şikayet Yönetimi
+                                    </a>
+                                </li>
+                                <li class="nav-label mg-t-20">Ürün Yönetimi </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <i class="fas fa-barcode mg-r-15"></i>
+                                        Ürünler
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" /><line x1="7" y1="7" x2="7.01" y2="7" /></svg>
+                                        Fiyatlar
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-package"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21" /><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></svg>
+                                        Müşteri Ürünleri
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round"
+                                             class="feather feather-users">
+                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg> Kategoriler
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <ul>
+                                <li class="nav-label">Satış </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                        Sipariş
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        Satış
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                                        Hedef Kota
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pie-chart"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                                        Dashboard
+                                    </a>
+                                </li>
+
+                                <li class="nav-label mg-t-20">Müşteri</li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round"
+                                             class="feather feather-file-text">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                            <polyline points="14 2 14 8 20 8"></polyline>
+                                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                                            <polyline points="10 9 9 9 8 9"></polyline>
+                                        </svg> Kontak Kişiler
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round"
+                                             class="feather feather-file-text">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                            <polyline points="14 2 14 8 20 8"></polyline>
+                                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                                            <polyline points="10 9 9 9 8 9"></polyline>
+                                        </svg> Potansiyel Kayıtlar
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round"
+                                             class="feather feather-file-text">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                            <polyline points="14 2 14 8 20 8"></polyline>
+                                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                                            <polyline points="10 9 9 9 8 9"></polyline>
+                                        </svg> Harita Görünümü
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round"
+                                             class="feather feather-file-text">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                            <polyline points="14 2 14 8 20 8"></polyline>
+                                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                                            <polyline points="10 9 9 9 8 9"></polyline>
+                                        </svg> Müşteri Dağılımı
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item with-sub">
+                    <a href="" class="nav-link">Servis</a>
+                    <ul class="navbar-menu-sub">
+                        <li class="nav-sub-item">
+                            <a href="#" class="nav-sub-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tool"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>
+                                Servis
+                            </a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a href="#" class="nav-sub-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-paperclip"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" /></svg>
+                                Bakım Sözleşmesi
+                            </a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a href="#" class="nav-sub-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                Müşteri Ürünü
+                            </a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a href="#" class="nav-sub-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone-incoming"><polyline points="16 2 16 8 22 8"></polyline><line x1="23" y1="1" x2="16" y2="8"></line><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                Ticket - Müşteri Destek
+                            </a>
+                        </li>
+                        <li class="nav-sub-item">
+                            <a href="#" class="nav-sub-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
+                                Servis Dağılımı
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item with-sub">
+                    <a href="" class="nav-link">Stok</a>
+                    <div class="navbar-menu-sub">
+                        <div class="d-lg-flex">
+                            <ul>
+                                <li class="nav-label">Stok Hareketleri</li>
+                                <li class="nav-sub-item">
+                                    <a href="page-signin.html" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                        Stok Giriş
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="page-signup.html" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-upload"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                                        Stok Çıkış
+                                    </a>
+                                <li class="nav-sub-item">
+                                    <a href="page-verify.html" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-truck"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                                        Depo Transferi
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="nav-label">Kayıtlar</li>
+                                <li class="nav-sub-item">
+                                    <a href="page-500.html" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                            <polyline points="13 2 13 9 20 9"></polyline>
+                                        </svg>Stok Takibi
+                                    </a>
+                                </li>
+
+                                <li class="nav-sub-item">
+                                    <a href="page-404.html" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                            <polyline points="13 2 13 9 20 9"></polyline>
+                                        </svg>Stok Hareketleri
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="page-500.html" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                            <polyline points="13 2 13 9 20 9"></polyline>
+                                        </svg> Ürün Stok Geçmişi
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item with-sub">
+                    <a href="" class="nav-link">Demirbaş</a>
+                    <div class="navbar-menu-sub">
+                        <div class="d-lg-flex">
+                            <ul>
+                                <li class="nav-label">Kurumsal Envanter</li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                        Demirbaş
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-upload"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                                        Zimmet Kaydı
+                                    </a>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                                        Zimmet Teslimi
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-repeat"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+                                        Zimmet Transfer
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="nav-label">Kayıtlar</li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                            <polyline points="13 2 13 9 20 9"></polyline>
+                                        </svg>Demirbaş Envanteri
+                                    </a>
+                                </li>
+
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                            <polyline points="13 2 13 9 20 9"></polyline>
+                                        </svg>Demirbaş Geçmişi
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                            <polyline points="13 2 13 9 20 9"></polyline>
+                                        </svg> Demirbaş Hareket Geçmişi
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item with-sub">
+                    <a href="" class="nav-link">Satınalma</a>
+                    <div class="navbar-menu-sub">
+                        <div class="d-lg-flex">
+                            <ul>
+                                <li class="nav-label">Süreç Takibi</li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                        Ürün Talebi
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                        Satınalma Süreci
+                                    </a>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                        Satınalma Siparişleri
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-flag"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                                        Satınalmalar
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="nav-label">Kayıtlar</li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                            <polyline points="13 2 13 9 20 9"></polyline>
+                                        </svg>Ürün Talep Havuzu
+                                    </a>
+                                </li>
+
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                            <polyline points="13 2 13 9 20 9"></polyline>
+                                        </svg>Tedarikçiler
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                             stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+                                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                                            <polyline points="13 2 13 9 20 9"></polyline>
+                                        </svg> Dashboard
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item with-sub">
+                    <a href="" class="nav-link">Ön Muhasebe</a>
+                    <div class="navbar-menu-sub">
+                        <div class="d-lg-flex">
+                            <ul>
+                                <li class="nav-label">Faturalar</li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-minus"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                                        Alış Faturası
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-plus"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                                        Satış Faturası
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10" /><line x1="15" y1="9" x2="9" y2="15" /><line x1="9" y1="9" x2="15" y2="15" /></svg>
+                                        İade Faturaları
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                        Masraf Merkezi
+                                    </a>
+                                </li>
+                                <li class="nav-label mg-t-20">Finans Takip</li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                        Finans Ajandası
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive"><polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line></svg>
+                                        Çek - Senet
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-anchor"><circle cx="12" cy="5" r="3"></circle><line x1="12" y1="22" x2="12" y2="8"></line><path d="M5 12H2a10 10 0 0 0 20 0h-3"></path></svg>
+                                        Banka - Kasa
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                        Ödeme Görüşmeleri
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                            <ul>
+                                <li class="nav-label">Cari Takip </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                                        Borç Alacak
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-divide"><circle cx="12" cy="6" r="2"></circle><line x1="5" y1="12" x2="19" y2="12"></line><circle cx="12" cy="18" r="2"></circle></svg>
+                                        Ödeme ve Tahsilatlar
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-check"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                                        Personel Ödemeleri
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="#" class="nav-sub-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                        BA - BS Listesi
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <a id="navbarSearch" href="" class="search-link d-flex"><i data-feather="search"></i></a>
+            <div class="dropdown dropdown-message">
+                <a href="agenda.html" class="dropdown-link new-indicator d-flex" data-tooltip data-placement="bottom" title="Ajanda"><i data-feather="calendar"></i></a>
+            </div>
+            <div class="dropdown dropdown-message">
+                <a href="" class="dropdown-link new-indicator d-flex" data-toggle="dropdown">
+                    <i data-feather="message-square"></i>
+                    <span>5</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header">Mesajlar</div>
+                    <a href="" class="dropdown-item">
+                        <div class="media">
+                            <div class="avatar avatar-sm avatar-online"><img src="http://via.placeholder.com/350" class="rounded-circle" alt=""></div>
+                            <div class="media-body mg-l-15">
+                                <strong>Socrates Itumay</strong>
+                                <p>nam libero tempore cum so...</p>
+                                <span>Mar 15 12:32pm</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-footer"><a href="">Hepsini listeleyin</a></div>
+                </div>
+            </div>
+            <div class="dropdown dropdown-notification">
+                <a href="" class="dropdown-link new-indicator d-flex" data-toggle="dropdown">
+                    <i data-feather="bell"></i>
+                    <span>2</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header">Bildirimler</div>
+                    <a href="" class="dropdown-item">
+                        <div class="media">
+                            <div class="avatar avatar-sm avatar-online"><img src="http://via.placeholder.com/350" class="rounded-circle" alt=""></div>
+                            <div class="media-body mg-l-15">
+                                <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                                <span>Mar 15 12:32pm</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-footer"><a href="">Hepsini listeleyin</a></div>
+                </div>
+            </div>
+            <div class="dropdown dropdown-profile">
+                <a href="#" class="dropdown-link" data-toggle="dropdown" data-display="static">
+                    <div class="avatar avatar-sm"><img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg" /></div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right tx-13">
+                    <div class="avatar avatar-lg mg-b-15"><img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg" /></div>
+                    <h6 class="tx-semibold mg-b-5">Uğur Büyükalkan</h6>
+                    <p class="mg-b-25 tx-12 tx-color-03">Müşteri Temsilcisi</p>
+                    <a href="#" class="dropdown-item"><i data-feather="user"></i>Kontak </a>
+                    <a href="#" class="dropdown-item"><i data-feather="life-buoy"></i> Yardım</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item"><i data-feather="settings"></i> Hesap Ayaları</a>
+                    <a href="#" class="dropdown-item"><i data-feather="settings"></i> Sistem Ayarları</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="login.html" class="dropdown-item"><i data-feather="log-out"></i> Çıkış yap</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-search">
+            <div class="navbar-search-header">
+                <input type="search" class="form-control" placeholder="Aramalarınızı buradan yapabilirsiniz...">
+                <button class="btn"><i data-feather="search"></i></button>
+                <a id="navbarSearchClose" href="" class="link-03 mg-l-5 mg-lg-l-10"><i data-feather="x"></i></a>
+            </div>
+            <div class="navbar-search-body">
+                <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Son Aramalarınız</label>
+                <ul class="list-unstyled">
+                    <li><a href="#">İstaç İstanbul Çevre Yönetimi</a></li>
+                    <li><a href="#">Nsc Bilişim Hizmetleri Ticaret A.Ş.</a></li>
+                    <li><a href="#">Abp Gıda Ölç. Kont. Sis. İth. Paz.</a></li>
+                </ul>
+                <hr class="mg-y-30 bd-0">
+                <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Yeni Eklenenler</label>
+                <ul class="list-unstyled">
+                    <li><a href="#">Karel Elektronik San. ve Tic. A.Ş</a></li>
+                    <li><a href="#">Bdh Bilişim Destek Hizmetleri San. Tic. A.Ş.</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="content content-fixed pd-20 pd-b-0-f">
+        <div class="pd-x-0">
+
+            <ul class="nav nav-line nav-line-profile mg-b-20">
+                <li class="nav-item"><a href="#" class="nav-link">Masraflar</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active">#MN021-019</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="pd-x-20">
+        <div class="d-sm-flex align-items-center justify-content-between">
+            <div><h4 class="mg-b-0">Ankara Müşteri Ziyaretleri</h4></div>
+            <div class="mg-t-20 mg-sm-t-0">
+                <button class="btn btn-sm pd-x-15 btn-primary mg-l-5"><i data-feather="save" class="mg-r-5"></i> Kaydet</button>
+                <div class="dropdown btn-group mg-l-5" role="group" aria-label="Second group">
+                    <button class="btn btn-sm pd-x-15 btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        İşlemler
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Kopya oluştur</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i data-feather="check-circle" class="wd-15 ht-15 mg-r-8 align-text-bottom"></i>Onaya gönder</a>
+                        <a class="dropdown-item" href="#"><i data-feather="lock" class="wd-15 ht-15 mg-r-8 align-text-bottom"></i>Kilitle</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item tx-primary" href="#"><i data-feather="printer" class="wd-15 ht-15 mg-r-8 align-text-bottom"></i>Yazdır</a>
+                        <a class="dropdown-item tx-primary" href="#"><i data-feather="mail" class="wd-15 ht-15 mg-r-8 align-text-bottom"></i>E-mail gönder</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item tx-danger" href="#"><i data-feather="trash-2" class="wd-15 ht-15 mg-r-8 align-text-bottom"></i>Kaydı sil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content pd-20">
+        <div class="bg-white rounded bd shadow-base">
+            <div class="row mg-x-0">
+                <div class="col-3 pd-30">
+
+                    <div class="card">
+                        <div class="card-header pd-y-15 pd-x-20 d-flex align-items-center justify-content-between">
+                            <h6 class="tx-uppercase tx-semibold mg-b-0">Hesap</h6>
+                            <nav class="nav nav-with-icon tx-13">
+                                <a href="#" class="nav-link lh-1"><i data-feather="search"></i> Seç</a>
+                            </nav>
+                        </div>
+                        <div class="card-body pd-y-15 pd-x-20">
+                            <h6 class="mg-b-5">Erişçi Elektronik A.Ş.</h6>
+                            <span class="d-block tx-13 tx-color-02">Şişli / İSTANBUL</span>
+                        </div>
+                    </div>
+
+                    <div class="accordion shadow-base mg-t-20" id="accordion">
+                        <h6>İlgili Teklif</h6>
+                        <div>
+                            <div class="d-block mg-b-10">
+                                <h6 class="mg-b-5">Yangın Söndürme Proje Teklifi</h6>
+                                <span class="d-block tx-13 tx-color-02">#TN021420-0198</span>
+                            </div>
+                            <button type="button" class="btn btn-xs btn-primary"><i data-feather="search"></i> Seç</button>
+                        </div>
+                        <h6>İlgili Sipariş</h6>
+                        <div>
+                            <button type="button" class="btn btn-xs btn-primary"><i data-feather="search"></i> Seç</button>
+                        </div>
+                        <h6>İlgili Satış</h6>
+                        <div>
+                            <button type="button" class="btn btn-xs btn-primary"><i data-feather="search"></i> Seç</button>
+                        </div>
+                    </div>
+
+                    <div class="bd rounded mg-t-20">
+                        <div class="tx-color-03 lh-1 pd-y-10 pd-x-20"><i data-feather="message-square" class="wd-15-f ht-15-f mg-r-5"></i> Not / Açıklama</div>
+                        <div>
+                            <div id="editor-not-container" class="pos-relative ht-100p mn-ht-100p bg-gray-100 overflow-hidden">
+                                <div id="editor-not" class="ht-150 tx-13">
+                                    <p>Ödemeler sipariş ile birlikte %50 peşin kalan tutar iş tesliminde peşin olarak ödenecektir.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-9 pd-30 bd-l">
+
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="card ht-lg-250">
+                                <div class="card-header pd-y-15 pd-x-20 d-flex align-items-center justify-content-between">
+                                    <h6 class="tx-uppercase tx-semibold mg-b-0">MASRAF BİLGİLERİ</h6>
+                                    <nav class="nav nav-with-icon tx-13">
+                                        <a href="#modal_infos" data-toggle="modal" class="nav-link lh-1"><i data-feather="edit-3"></i> Düzenle</a>
+                                    </nav>
+                                </div>
+                                <div class="card-body pd-0">
+                                    <div class="row ht-100p mg-0">
+                                        <div class="col-5 pd-x-20 pd-y-15">
+
+                                            <div class="media align-items-center">
+                                                <div class="avatar avatar-sm mg-r-10 avatar-online"><span class="avatar-initial rounded-circle bg-dark"><img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg" /></span></div>
+                                                <div>
+                                                    <h6 class="tx-14 tx-inverse tx-semibold mg-b-0">Uğur Büyükalkan</h6>
+                                                    <span class="d-block tx-12 text-muted">Masrafı Yapan</span>
+                                                </div>
+                                            </div>
+
+                                            <hr class="mg-y-15">
+
+                                            <div class="media align-items-center">
+                                                <div class="avatar avatar-sm mg-r-10"><span class="avatar-initial rounded-circle bg-dark">SÜ</span></div>
+                                                <div>
+                                                    <h6 class="tx-14 tx-inverse tx-semibold mg-b-0">Selim Ünüvar</h6>
+                                                    <span class="d-block tx-12 text-muted">Masrafı Onaylayan Yetkili</span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-7 pd-0 bd-l">
+                                            <div class="wd-100p ht-100p pd-x-20 pd-y-15 pos-absolute scrollbar-primary ritma-scrollbar1">
+
+                                                <ul class="list-unstyled text-muted tx-13">
+                                                    <li>Mayıs 13, 2020 - 16:45</li>
+                                                    <li>Periyodik Masraf (Her ayın 10. günü)</li>
+                                                    <li>Ödeme Bekliyor</li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-gray-50 pd-y-10 pd-x-20 bd-t">
+                                    <span class="badge mg-r-3 badge-primary"><i class="fas fa-redo mg-r-3"></i> Periyodik Masraf</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card ht-lg-250">
+                                <div class="card-header pd-y-15 pd-x-20 d-flex align-items-center justify-content-between">
+                                    <h6 class="tx-uppercase tx-semibold mg-b-0">ÖZET</h6>
+                                    <nav class="nav nav-with-icon tx-13">
+                                        <a href="#" class="nav-link lh-1"><i data-feather="info"></i> Geçmiş</a>
+                                    </nav>
+                                </div>
+                                <div class="card-body pos-relative d-flex align-items-end justify-content-end pd-y-15 pd-x-20">
+
+                                    <div href="#modal_status" data-toggle="modal" class="marker marker-ribbon marker-danger cursor-pointer pos-absolute t-15 l-0">Ödeme Bekliyor</div>
+
+                                    <div class="d-inline-flex align-items-center justify-content-between">
+                                        <div><h2 class=" lh-1 pd-0 mg-b-0">₺ 1.958</h2></div>
+                                        <div class="pd-l-10">
+                                            <a href="#" class="lh-1 tx-center">
+                                                <span class="btn btn-outline-secondary lh-normal rounded pd-y-5 pd-x-7" data-tooltip data-placement="bottom" title="Masraf Analizi"><i class="fas fa-chart-line tx-16 valign-middle"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-gray-50 pd-y-10 pd-x-20 bd-t">
+                                    <ul class="list-unstyled text-muted tx-13 mg-b-0">
+                                        <li class="d-flex justify-content-between">
+                                            <span>USD</span>
+                                            <span>$ 0.00</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between">
+                                            <span>EURO</span>
+                                            <span>€ 0.00</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between">
+                                            <span>KDV</span>
+                                            <span>₺ 280</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-sm-flex align-items-center justify-content-between mg-y-25">
+                        <div class="btn-toolbar">
+                            <button type="button" class="btn btn-sm pd-x-15 btn-secondary mg-r-10" href="#"><i data-feather="plus-square" class="mg-r-5"></i> Masraf Ekle</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive bd rounded">
+                        <table class="table table-bordered mg-b-0">
+                            <thead class="bg-gray-100">
+                                <tr>
+                                    <th class="wd-10p">Tarih</th>
+                                    <th class="wd-20p">Kategori</th>
+                                    <th class="wd-40p d-none d-sm-table-cell">Açıklama</th>
+                                    <th class="tx-right">Tutar</th>
+                                    <th class="tx-right">KDV</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="tx-nowrap tx-color-03">18 Nis, 2020</td>
+                                    <td class="tx-nowrap"><span class="tx-primary">Yemek</span></td>
+                                    <td class="d-none d-sm-table-cell tx-color-03">Sed ut perspiciatis unde omnis iste natus error sit...</td>
+                                    <td class="tx-right">₺ 350</td>
+                                    <td class="tx-right">₺ 40</td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap tx-color-03">18 Nis, 2020</td>
+                                    <td class="tx-nowrap"><span class="tx-primary">Yol</span></td>
+                                    <td class="d-none d-sm-table-cell tx-color-03">Neque porro quisquam est, qui dolorem ipsum...</td>
+                                    <td class="tx-right">₺ 210</td>
+                                    <td class="tx-right">₺ 55</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-block mg-t-20">
+
+                        <div class="bd bg-gray-100 pd-y-15 pd-x-15 mg-b-20 rounded">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFile">
+                                        <label class="custom-file-label" for="customFile" data-browse="Gözat">Fiş veya Makbuz Seç</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="tx-13 mg-t-20 mg-b-0 text-secondary">jpg, png dosyalarını yüklenebilirsiniz. Sistem yüklenebilecek her bir dosyanın boyutu 5MB'ı geçemez.</p>
+                        </div>
+                        <div class="row row-xs">
+                            <div class="col-2">
+                                <div class="card card-file">
+                                    <div class="dropdown-file">
+                                        <a href="" class="dropdown-link" data-toggle="dropdown"><i data-feather="more-vertical"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="" class="dropdown-item important"><i data-feather="star"></i>Önemli olarak işaretle</a>
+                                            <a href="" class="dropdown-item download"><i data-feather="download"></i>Dosyayı indir</a>
+                                            <a href="#" class="dropdown-item delete"><i data-feather="trash"></i>Dosyayı sil</a>
+                                        </div>
+                                    </div>
+                                    <div class="card-file-thumb tx-color-03"><i class="far fa-file-image"></i></div>
+                                    <div class="card-body">
+                                        <h6><a href="" class="link-02">fis.jpg</a></h6>
+                                        <span>22.67kb</span>
+                                    </div>
+                                    <div class="card-footer text-secondary">21 Nisan, 2020 - 18:50</div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="card card-file">
+                                    <div class="dropdown-file">
+                                        <a href="" class="dropdown-link" data-toggle="dropdown"><i data-feather="more-vertical"></i></a>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a href="" class="dropdown-item important"><i data-feather="star"></i>Önemli olarak işaretle</a>
+                                            <a href="" class="dropdown-item download"><i data-feather="download"></i>Dosyayı indir</a>
+                                            <a href="#" class="dropdown-item delete"><i data-feather="trash"></i>Dosyayı sil</a>
+                                        </div>
+                                    </div>
+                                    <div class="card-file-thumb tx-color-03"><i class="far fa-file-image"></i></div>
+                                    <div class="card-body">
+                                        <h6><a href="" class="link-02">makbuz.png</a></h6>
+                                        <span>10.45kb</span>
+                                    </div>
+                                    <div class="card-footer text-secondary">21 Nisan, 2020 - 18:50</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+
+    <div id="modal_ritmafirma" class="modal fade effect-scale" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content tx-14">
+                <div class="modal-header bg-ui-01 pd-x-30 pd-y-15">
+                    <a href="" role="button" class="close pos-absolute tx-18 t-15 r-30" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                    <div class="media align-items-center">
+                        <span class="tx-34 tx-color-03 d-none d-sm-block"><i class="far fa-building"></i></span>
+                        <div class="media-body mg-sm-l-20">
+                            <h4 class="tx-16 mg-b-2">Bölge Müd. & Bayiler</h4>
+                            <p class="tx-13 tx-color-03 mg-b-0">Seçim yaparak sadece seçili kayıtlara ulaşabilirsiniz.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex w-100 ht-50 bd-b pd-x-30 pd-l-50 align-items-center pos-relative">
+                    <i data-feather="search" class="pos-absolute wd-20 ht-20 l-30"></i>
+                    <input type="text" class="form-control tx-14 bd-0 shadow-none" placeholder="Kelime arayabilirsiniz">
+                    <select class="custom-select custom-select-sm wd-100">
+                        <option value="1">Türler</option>
+                        <option value="1">Bölge Müd.</option>
+                        <option value="1">Bayi</option>
+                    </select>
+                    <select class="custom-select custom-select-sm wd-md-auto mg-l-6">
+                        <option value="1">Bölgeler</option>
+                        <option value="1">İstanbul</option>
+                        <option value="1">Ankara</option>
+                        <option value="1">Kahramanmaraş</option>
+                    </select>
+                </div>
+                <div class="modal-body tx-14 pd-0 pos-relative">
+
+                    <div class="pd-30">
+
+                        <div class="table-responsive bd rounded">
+                            <table class="table table-hover table-ritma1 mg-b-0 bd-b">
+                                <thead class="table-borderless bg-gray-200">
+                                    <tr>
+                                        <th class="wd-20p">Tür</th>
+                                        <th class="wd-30p">Bölge</th>
+                                        <th>Firma</th>
+                                        <th class="wd-1 tx-center">Seç</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tx-nowrap">Bölge Müd.</td>
+                                        <td class="tx-nowrap">Ankara</td>
+                                        <td class="tx-color-03">Merkez Ltd. Şti.</td>
+                                        <td class="tx-center"><button class="btn btn-sm btn-outline-secondary pd-y-5 pd-x-10" data-tooltip title="Seç"><i data-feather="check" class="wd-20 ht-20 tx-24"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tx-nowrap">Bayi</td>
+                                        <td class="tx-nowrap">Ankara / Nevşehir</td>
+                                        <td class="tx-color-03">Ali Veli Ltd. Şti.</td>
+                                        <td class="tx-center"><button class="btn btn-sm btn-outline-secondary pd-y-5 pd-x-10" data-tooltip title="Seç"><i data-feather="check" class="wd-20 ht-20 tx-24"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tx-nowrap">Bayi</td>
+                                        <td class="tx-nowrap">Ankara / Çorum</td>
+                                        <td class="tx-color-03">Özgür Traktör Ltd. Şti.</td>
+                                        <td class="tx-center"><button class="btn btn-sm btn-success pd-y-5 pd-x-10" data-tooltip title="Seç"><i data-feather="check" class="wd-20 ht-20 tx-24"></i></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer pd-x-30">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-sm btn-primary"><i class="far fa-plus valign-middle mg-r-6"></i>Seç</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+  <footer class="footer">
+    <div>
+      © 2021 RitmaFLEX V1.0.1. Created By RITMA TEKNOLOJI
+    </div>
+    <div>
+      <nav class="nav">
+        <a href="https://themeforest.net/licenses/standard" class="nav-link">Lisans</a>
+        <a href="https://discordapp.com/invite/RYqkVuw" class="nav-link">Yardım Merkezi</a>
+      </nav>
+    </div>
+  </footer>
+
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <script src="assets/js/jquery/jquery-ui.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/feather-icons/feather.min.js"></script>
+    <script src="assets/js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/prismjs/prism.js"></script>
+    <script src="assets/js/quill/quill.core.js"></script>
+    <script src="assets/js/quill/quill.min.js"></script>
+    <script src="assets/js/select2/select2.min.js"></script>
+    <script src="assets/js/select2/select2.addons.js"></script>
+    <script src="assets/js/select2/i18n/tr.js"></script>
+
+    <script src="assets/js/dashforge.js"></script>
+
+    <script src="assets/js-customs/ortak.js"></script>
+
+    <script src="assets/js-customs/masraflar-yeni.js"></script>
+
+</body>
+</html>

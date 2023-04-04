@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <title>Ritma Flex İş Yönetim Platformu</title>
+    <link href="assets/css/dashforge.filemgr.css" rel="stylesheet" />
+    <!-- vendor css -->
+    <link href="assets/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="assets/css/ionicons.min.css" rel="stylesheet" />
+    <link href="assets/css/quill.core.css" rel="stylesheet" />
+    <link href="assets/css/quill.snow.css" rel="stylesheet" />
+    <!-- DashForge CSS -->
+    <link href="assets/js/select2/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/dashforge.css" />
+    <link rel="stylesheet" href="assets/css/dashforge.mail.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.6/sweetalert2.css" />
+    <link rel="stylesheet" href="assets/css/customs.css" />
+    <style>
+        #mailCompose .select2-container--default .select2-selection--single {
+                border: none !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            #mailCompose .select2-container--default .select2-selection__rendered {
+                border: none !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            .mail-content-body {
+                top: 162px;
+            }
+            .mail-content-header {
+                top: 107px;
+            }
+        </style>
+</head>
+
+<body class="app-mail">
+    <header class="navbar navbar-header navbar-header-fixed">
+        <div class="d-none align-items-center pos-fixed t-0 z-index-50 w-100 ht-40 tx-white tx-12 justify-content-center bg-dark pd-y-5 pd-x-20 alert-dismissible" role="alert">
+            <i data-feather="info" class="wd-16 ht-16"></i>
+            Aylık aboneliğinizin bitimine 3 gün kaldı. Yenilemek için
+            <button type="button" class="btn btn-xs btn-warning lh--9 mg-l-10">
+                Yenile
+            </button>
+            <button type="button" class="close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <a href="" id="mainMenuOpen" class="burger-menu">
+            <i data-feather="menu"></i>
+        </a>
+        <div class="navbar-brand wd-sm-auto-f">
+            <a href="index.html" class="df-logo">
+                <img src="assets/logo_ritmaflex.svg" class="ht-25" />
+            </a>
+            <div class="dropdown tx-12 mg-l-40">
+                <button class="btn btn-xs btn-outline-light dropdown-toggle pd-x-3 pd-y-3" type="button" id="companies" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="d-inline-flex align-items-center justify-content-start">
+                        <div class="wd-35">
+                            <div class="avatar avatar-xs">
+                                <img src="http://via.placeholder.com/30" class="rounded" alt="" />
+                            </div>
+                        </div>
+                        <div class="tx-left lh-0 pd-r-10">ZY Elektrikli Traktör</div>
+                    </div>
+                </button>
+                <div class="dropdown-menu mn-wd-100p tx-12" aria-labelledby="companies">
+                    <a class="dropdown-item" href="#">ZY Elektrikli Traktör</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item tx-primary" href="#modal_ritmafirma" data-toggle="modal">
+                        Bölge Müdürlüğü
+                    </a>
+                    <a class="dropdown-item tx-primary" href="#modal_ritmafirma" data-toggle="modal">
+                        Bayii
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="navbarMenu" class="navbar-menu-wrapper">
+            <div class="navbar-menu-header">
+                <a href="index.html" class="df-logo">
+                    <img src="assets/logo_ritmaflex.svg" class="ht-25" />
+                </a>
+                <a id="mainMenuClose" href="#">
+                    <i data-feather="x"></i>
+                </a>
+            </div>
+            <ul class="nav navbar-menu">
+                <li class="nav-label pd-l-20 pd-lg-l-25 d-lg-none">Menü</li>
+                <li class="nav-item with-sub">
+                    <a href="" class="nav-link">Kontaklar</a>
+                    <div class="navbar-menu-sub">
+                        <div class="d-lg-flex">
+                            <ul>
+                                <li class="nav-label">Kontak Türleri</li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html" class="nav-sub-link">Müşteri</a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html" class="nav-sub-link">Tedarikçi</a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html" class="nav-sub-link">
+                                        Bölge Müdürlüğü
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html" class="nav-sub-link">Bayii</a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html" class="nav-sub-link">Rakip</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="nav-label">Yeni</li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html#yeni1" class="nav-sub-link">
+                                        <i class="far fa-plus"></i>
+                                        Yeni Müşteri
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html#yeni2" class="nav-sub-link">
+                                        <i class="far fa-plus"></i>
+                                        Yeni Tedarikçi
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html#yeni3" class="nav-sub-link">
+                                        <i class="far fa-plus"></i>
+                                        Yeni Bölge Müdürlüğü
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html#yeni4" class="nav-sub-link">
+                                        <i class="far fa-plus"></i>
+                                        Yeni Bayi
+                                    </a>
+                                </li>
+                                <li class="nav-sub-item">
+                                    <a href="profiller.html#yeni5" class="nav-sub-link">
+                                        <i class="far fa-plus"></i>
+                                        Yeni Rakip
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="urunler.html" class="nav-link">Ürünler</a>
+                </li>
+                <li class="nav-item">
+                    <a href="servisler.html" class="nav-link">Servisler</a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <a id="navbarSearch" href="" class="search-link d-flex">
+                <i data-feather="search"></i>
+            </a>
+            <div class="dropdown dropdown-message">
+                <a href="agenda.html" class="dropdown-link new-indicator d-flex" data-tooltip data-placement="bottom" title="Ajanda">
+                    <i data-feather="calendar"></i>
+                </a>
+            </div>
+            <div class="dropdown dropdown-message">
+                <a href="" class="dropdown-link new-indicator d-flex" data-toggle="dropdown">
+                    <i data-feather="message-square"></i>
+                    <span>5</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header">Mesajlar</div>
+                    <a href="" class="dropdown-item">
+                        <div class="media">
+                            <div class="avatar avatar-sm avatar-online">
+                                <img src="http://via.placeholder.com/350" class="rounded-circle" alt="" />
+                            </div>
+                            <div class="media-body mg-l-15">
+                                <p>
+                                    <strong>Ali Osman Yıldırım</strong>
+                                    , ₺ 650 tutarlı servis için onay bekliyor
+                                </p>
+                                <span>Bugün - 10:00</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-footer">
+                        <a href="">Hepsini listeleyin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown dropdown-notification">
+                <a href="" class="dropdown-link new-indicator d-flex" data-toggle="dropdown">
+                    <i data-feather="bell"></i>
+                    <span>2</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header">Bildirimler</div>
+                    <a href="" class="dropdown-item">
+                        <div class="media">
+                            <div class="avatar avatar-sm avatar-online">
+                                <img src="http://via.placeholder.com/350" class="rounded-circle" alt="" />
+                            </div>
+                            <div class="media-body mg-l-15">
+                                <p>
+                                    Serkan Erkut tarafından
+                                    <strong>
+                                        Ertuğrullar Traktör Makina A.Ş
+                                    </strong>
+                                    için yeni servis oluşturdu.
+                                </p>
+                                <span>az önce</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-footer">
+                        <a href="">Hepsini listeleyin</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown dropdown-profile">
+                <a href="#" class="dropdown-link" data-toggle="dropdown" data-display="static">
+                    <div class="avatar avatar-sm">
+                        <img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg" />
+                    </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right tx-13">
+                    <div class="avatar avatar-lg mg-b-15">
+                        <img class="rounded-50" src="http://www.gurutek.com.tr/kaynak/yuklemeler/kurumsal/ekip/309_ubuyukalkan.jpg" />
+                    </div>
+                    <h6 class="tx-semibold mg-b-5">Uğur Büyükalkan</h6>
+                    <p class="mg-b-25 tx-12 tx-color-03">Müşteri Temsilcisi</p>
+                    <a href="#" class="dropdown-item">
+                        <i data-feather="user"></i>
+                        Kontak
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <i data-feather="life-buoy"></i>
+                        Yardım
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                        <i data-feather="settings"></i>
+                        Hesap Ayaları
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <i data-feather="settings"></i>
+                        Sistem Ayarları
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="login.html" class="dropdown-item">
+                        <i data-feather="log-out"></i>
+                        Çıkış yap
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-search">
+            <div class="navbar-search-header">
+                <input type="search" class="form-control" placeholder="Aramalarınızı buradan yapabilirsiniz..." />
+                <button class="btn">
+                    <i data-feather="search"></i>
+                </button>
+                <a id="navbarSearchClose" href="" class="link-03 mg-l-5 mg-lg-l-10">
+                    <i data-feather="x"></i>
+                </a>
+            </div>
+            <div class="navbar-search-body">
+                <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">
+                    Son Aramalarınız
+                </label>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">Mehmet Özdemir</a>
+                    </li>
+                    <li>
+                        <a href="#">Ali Osman Yıldırım</a>
+                    </li>
+                    <li>
+                        <a href="#">Agri Tarım Makineleri Ltd. Şti.</a>
+                    </li>
+                </ul>
+                <hr class="mg-y-30 bd-0" />
+                <label class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">
+                    Yeni Eklenenler
+                </label>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">Erkunt Traktör A.Ş</a>
+                    </li>
+                    <li>
+                        <a href="#">Ertuğrullar Tarım Makinaları A.Ş.</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="mail-wrapper">
+        <div class="mail-sidebar">
+            <div class="mail-sidebar-body">
+                <div class="bd-b bd-ui-02 mg-b-15 pd-11">
+                    <button id="mailComposeBtn" class="btn btn-primary btn-block tx-uppercase tx-10 tx-medium tx-sans tx-spacing-4">
+                        Yeni Görüşme
+                    </button>
+                </div>
+                <div class="pd-b-10 pd-x-10">
+                    <label class="tx-sans tx-uppercase tx-medium tx-10 tx-spacing-1 tx-color-03 pd-l-10 mg-b-15">Görüşme Durumu</label>
+                    <nav class="nav nav-sidebar tx-13">
+                        <a href="#" class="nav-link active d-flex mb-1">
+                            <i class="far fa-comment-lines"></i><span>Devam Eden</span>
+                            <span class="badge text-primary">16</span>
+                        </a>
+                        <a href="#" class="nav-link d-flex mb-1">
+                            <i class="far fa-check-circle"></i> <span>Tamamlandı</span>
+                            <span class="badge">9</span>
+                        </a>
+                        <a href="#" class="nav-link d-flex mb-1">
+                            <i class="far fa-clock"></i> <span>Kritik</span>
+                            <span class="badge">12</span>
+                        </a>
+                        <a href="#" class="nav-link d-flex mb-1">
+                            <i class="far fa-ban"></i> <span>Önemsiz</span>
+                            <span class="badge">12</span>
+                        </a>
+                    </nav>
+                    <label class="tx-sans tx-uppercase tx-medium tx-10 tx-spacing-1 tx-color-03 pd-l-10 mg-y-15">Kategorİ</label>
+                    <nav class="nav nav-sidebar tx-13">
+                        <a href="#" class="nav-link active d-flex mb-1">
+                            <i class="far fa-folder"></i><span>Bilgi</span>
+                            <span class="badge text-primary">16</span>
+                        </a>
+                        <a href="#" class="nav-link  d-flex mb-1">
+                            <i class="far fa-folder"></i><span>Talep</span>
+                            <span class="badge">34</span>
+                        </a>
+                        <a href="#" class="nav-link d-flex mb-1">
+                            <i class="far fa-folder"></i> <span>Şikayet</span>
+                            <span class="badge">5</span>
+                        </a>
+                        <a href="#" class="nav-link d-flex mb-1">
+                            <i class="far fa-folder"></i> <span>Müşteri Memnuniyeti</span>
+                            <span class="badge">5</span>
+                        </a>
+                        <a href="#" class="nav-link d-flex mb-1">
+                            <i class="far fa-folder"></i> <span>Finans & Muhasebe</span>
+                            <span class="badge">5</span>
+                        </a>
+                    </nav>
+                    <label class="tx-sans tx-uppercase tx-medium tx-10 tx-spacing-1 tx-color-03 pd-l-10 mg-y-15">Etiket</label>
+                    <nav class="nav nav-sidebar tx-13">
+                        <a href="#" class="nav-link active d-flex mb-1">
+                            <i class="far fa-tag"></i><span>Ürün Grubu</span>
+                            <span class="badge text-primary">16</span>
+                        </a>
+                        <a href="#" class="nav-link d-flex mb-1">
+                            <i class="far fa-tag"></i><span>Marka</span>
+                            <span class="badge">16</span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="pos-absolute b-15 d-flex align-items-center justify-content-center wd-100p">
+                    <div class="btn-group">
+                        <button class="btn btn-xs btn-white btn-uppercase active">
+                            Liste
+                        </button>
+                        <a class="btn btn-xs btn-white btn-uppercase" href="gorusme-listesi.html">
+                            Tablo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mail-group">
+            <div class="mail-group-header">
+                <i data-feather="search"></i>
+                <div class="search-form">
+                    <input type="search" class="form-control" placeholder="Görüşmelerde Ara" />
+                </div>
+                <a href="#" class="mg-r-15 link-02 text-muted" type="button" data-toggle="tooltip" title="Yenile">
+                    <i class="fal fa-sync"></i>
+                </a>
+                <div class="dropdown tx-13" data-toggle="tooltip" title="Filtrele">
+                    <a href="#" class="dropdown-link link-02" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fal fa-filter"></i>
+                    </a>
+                    <div class="dropdown-menu z-index-200">
+                        <h6 class="dropdown-header tx-uppercase tx-12 tx-bold tx-inverse">
+                            Görüşme Filtreleri
+                        </h6>
+                        <a class="dropdown-item" href="#">Bugün</a>
+                        <a class="dropdown-item" href="#">Bu Hafta</a>
+                        <a class="dropdown-item" href="#">Son Ay</a>
+                        <a class="dropdown-item" href="#">Son 2 Ay</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Son 1 Yıl</a>
+                    </div>
+                </div>
+            </div>
+            <!-- mail-group-header -->
+            <div class="mail-group-body">
+                <label class="mail-group-label">Bugün</label>
+                <ul class="list-unstyled media-list mg-b-0">
+                    <li class="media unread">
+                        <div class="d-flex flex-column justify-content-center align-items-center ht-55">
+                            <div class="avatar">
+                                <span class="avatar-initial rounded bg-gray-700 text-monospace">SGİ <span class="ys-badge">3</span></span>
+                            </div>
+                        </div>
+                        <div class="media-body mg-l-15">
+                            <h6 class="tx-13 tx-bold mail-company-text mb-0">
+                                Senkron Güvenlik ve İletişim Sistemleri
+                            </h6>
+                            <span class="tx-12 tx-medium">ENDA İş Geliştirme Süreci <span class="tx-11 pos-absolute r-15 text-muted mg-t-4">14:30</span></span>
+                            <p class="tx-12 tx-color-03 mg-b-0 mail-company-text">
+                                Ertan Dönmez
+                            </p>
+                        </div>
+                    </li>
+                    <li class="media unread">
+                        <div class="d-flex flex-column justify-content-center align-items-center ht-55">
+                            <div class="avatar">
+                                <span class="avatar-initial rounded bg-gray-700 text-monospace">RKS <span class="ys-badge">2</span></span>
+                            </div>
+                        </div>
+                        <div class="media-body mg-l-15">
+                            <h6 class="tx-13 tx-bold mail-company-text mb-0">
+                                Rota Kimya Sanayi ve Ticaret Anadolu Şirketi
+                            </h6>
+                            <span class="tx-12 tx-medium">ENDA İş Geliştirme Süreci <span class="tx-11 pos-absolute r-15 text-muted mg-t-4">13:30</span></span>
+                            <p class="tx-12 tx-color-03 mg-b-0 mail-company-text">
+                                Sertuğ Melih Başol
+                            </p>
+                        </div>
+                    </li>
+                    <li class="media unread">
+                        <div class="d-flex flex-column justify-content-center align-items-center ht-55">
+                            <div class="avatar">
+                                <span class="avatar-initial rounded bg-gray-700 text-monospace">BİM <span class="ys-badge bg-primary">+</span></span>
+                            </div>
+                        </div>
+                        <div class="media-body mg-l-15">
+                            <h6 class="tx-13 tx-bold mail-company-text mb-0">
+                                Bim Anadolu Şirketi
+                            </h6>
+                            <span class="tx-12 tx-medium">Ritma Flex 7 Modül Satış Görüşmesi <span class="tx-11 pos-absolute r-15 text-muted mg-t-4">10:30</span></span>
+                            <p class="tx-12 tx-color-03 mg-b-0 mail-company-text">
+                                Burak Varoğlu
+                            </p>
+                        </div>
+                    </li>
+                    <li class="media unread">
+                        <div class="d-flex flex-column justify-content-center align-items-center ht-55">
+                            <div class="avatar">
+                                <span class="avatar-initial rounded bg-gray-700 text-monospace">TDT</span>
+                            </div>
+                        </div>
+                        <div class="media-body mg-l-15">
+                            <h6 class="tx-13 tx-bold mail-company-text mb-0">
+                                Tolkim Dış. Tic. Limited Şirketi
+                            </h6>
+                            <span class="tx-12 tx-medium">Ritma Flex CRM Görüşmesi <span class="tx-11 pos-absolute r-15 text-muted mg-t-4">11:30</span></span>
+                            <p class="tx-12 tx-color-03 mg-b-0 mail-company-text">
+                                Fatih Başkaya
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <label class="mail-group-label">Dün</label>
+                <ul class="list-unstyled media-list mg-b-0">
+                    <li class="media unread">
+                        <div class="d-flex flex-column justify-content-center align-items-center ht-55">
+                            <div class="avatar">
+                                <span class="avatar-initial rounded bg-gray-700 text-monospace">SK <span class="ys-badge">3</span></span>
+                            </div>
+                        </div>
+                        <div class="media-body mg-l-15">
+                            <h6 class="tx-13 tx-bold mail-company-text mb-0">
+                                Sensor Endüstri Sistemleri Elektronik Elektrik Taah. San. Ve Tic Ltd Şti
+                            </h6>
+                            <span class="tx-12 tx-medium"> Ödeme Görüşmesi <span class="tx-11 pos-absolute r-15 text-muted mg-t-4">15:30</span></span>
+                            <p class="tx-12 tx-color-03 mg-b-0 mail-company-text">
+                                Ramazan Sağlam
+                            </p>
+                        </div>
+                    </li>
+                    <li class="media unread">
+                        <div class="d-flex flex-column justify-content-center align-items-center ht-55">
+                            <div class="avatar">
+                                <span class="avatar-initial rounded bg-gray-700 text-monospace">TS <span class="ys-badge bg-primary">+</span></span>
+                            </div>
+                        </div>
+                        <div class="media-body mg-l-15">
+                            <h6 class="tx-13 tx-bold mail-company-text mb-0">
+                                Tuncay Seyahat
+                            </h6>
+                            <span class="tx-12 tx-medium">Teklif Görüşmesi <span class="tx-11 pos-absolute r-15 text-muted mg-t-4">14:30</span></span>
+                            <p class="tx-12 tx-color-03 mg-b-0 mail-company-text">
+                                Ömer Tuncay
+                            </p>
+                        </div>
+                    </li>
+                    <li class="media unread">
+                        <div class="d-flex flex-column justify-content-center align-items-center ht-55">
+                            <div class="avatar">
+                                <span class="avatar-initial rounded bg-gray-700 text-monospace">VC <span class="ys-badge bg-primary">+</span></span>
+                            </div>
+                        </div>
+                        <div class="media-body mg-l-15">
+                            <h6 class="tx-13 tx-bold mail-company-text mb-0">
+                                Valeria Scarf
+                            </h6>
+                            <span class="tx-12 tx-medium">Ritma Flex Ürün Tanıtımı <span class="tx-11 pos-absolute r-15 text-muted mg-t-4">13:30</span></span>
+                            <p class="tx-12 tx-color-03 mg-b-0 mail-company-text">
+                                Merve Kılıcı
+                            </p>
+                        </div>
+                    </li>
+                    <li class="media unread">
+                        <div class="d-flex flex-column justify-content-center align-items-center ht-55">
+                            <div class="avatar">
+                                <span class="avatar-initial rounded bg-gray-700 text-monospace">RT</span>
+                            </div>
+                        </div>
+                        <div class="media-body mg-l-15">
+                            <h6 class="tx-13 tx-bold mail-company-text mb-0">
+                                Ritma Teknoloji Sanayi ve Ticaret limited Şirketi
+                            </h6>
+                            <span class="tx-12 tx-medium">Ritma Flex CRM Görüşmesi <span class="tx-11 pos-absolute r-15 text-muted mg-t-4">09:30</span></span>
+                            <p class="tx-12 tx-color-03 mg-b-0 mail-company-text">
+                                Selim Ünüvar
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- mail-group-body -->
+        </div>
+        <!-- mail-group -->
+        <div class="mail-content">
+            <div class="mail-preheader bg-white pd-20">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div class="wd-90">
+                            <div class="avatar avatar-xl">
+                                <span class="avatar-initial rounded">RT</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="d-flex w-auto text-muted ">
+                                <!-- #MN008610, Şişli / İSTANBUL -->
+                                <span class="tx-spacing-1 tx-underline-dashed">26 Ocak 10:30 - 12:30</span>
+                                <a href="#">
+                                    <i class="fas fa-pen tx-14 mg-l-10"></i>
+                                </a>
+                            </span>
+                            <div class="d-inline-flex align-items-center mg-y-5" data-toggle="modal" href="#">
+                                <h4 class="tx-spacing-1 mg-b-0 text-ellipsis w-100">
+                                    Ritma Teknoloji Sanayi ve Limited Şirketi
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="media">
+                            <div class="media-body mg-l-10">
+                                <label class="tx-sans tx-uppercase tx-medium tx-10 tx-spacing-1 tx-color-03 pd-l-10">
+                                    BİZDEN İLGİLİ
+                                </label>
+                                <div class="img-group img-group-sm">
+                                    <img src="https://via.placeholder.com/500" class="img wd-40 ht-40 rounded-circle" alt="" href="#" data-toggle="popover" data-tooltip title="Selim Ünüvar" />
+                                    <img src="https://via.placeholder.com/500" class="img wd-40 ht-40 rounded-circle" alt="" href="#" data-toggle="popover" data-tooltip title="Uğur Büyükalkan" />
+                                    <img src="assets/images/esezer.png" class="img wd-40 ht-40 rounded-circle" alt="" href="#" data-toggle="popover" data-tooltip title="Ebru Sezer" />
+                                    <a data-toggle="modal" href="#modal_approvelist" class="img wd-40 ht-40 rounded-circle d-flex align-items-center bg-gray-100 justify-content-center">
+                                        <i class="fal fa-user-plus tx-secondary"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-body mg-l-10">
+                                <label class="tx-sans tx-uppercase tx-medium tx-10 tx-spacing-1 tx-color-03 pd-l-10">
+                                    ONLARDAN İLGİLİ
+                                </label>
+                                <div class="img-group img-group-sm">
+                                    <img src="https://via.placeholder.com/500" class="img wd-40 ht-40 rounded-circle" alt="" href="#" data-toggle="popover" data-tooltip title="Selim Ünüvar" />
+                                    <img src="https://via.placeholder.com/500" class="img wd-40 ht-40 rounded-circle" alt="" href="#" data-toggle="popover" data-tooltip title="Uğur Büyükalkan" />
+                                    <img src="https://via.placeholder.com/500" class="img wd-40 ht-40 rounded-circle" alt="" href="#" data-toggle="popover" data-tooltip title="Selim Ünüvar" />
+                                    <img src="https://via.placeholder.com/500" class="img wd-40 ht-40 rounded-circle" alt="" href="#" data-toggle="popover" data-tooltip title="Uğur Büyükalkan" />
+                                    <img src="assets/images/esezer.png" class="img wd-40 ht-40 rounded-circle" alt="" href="#" data-toggle="popover" data-tooltip title="Ebru Sezer" />
+                                    <a data-toggle="modal" href="#modal_approvelist" class="img wd-40 ht-40 rounded-circle d-flex align-items-center bg-gray-100 justify-content-center">
+                                        <i class="fal fa-user-plus tx-secondary"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mail-content-header d-none bg-gray-100">
+                <a href="#" id="mailContentClose" class="link-02 d-none d-lg-block d-xl-none mg-r-20">
+                    <i data-feather="arrow-left"></i>
+                </a>
+                <div class="dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <div data-toggle="tooltip" title="Görüşmeye Ekle" class="d-flex align-items-center">
+                            <i class="fal fa-plus mg-0 mg-r-10 tx-secondary"></i>
+                            <span class="tx-secondary">Ekle</span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#uploadfile">
+                            <div data-toggle="tooltip" title="Görüşme Ekle" class="d-flex align-items-center">
+                                <i class="far fa-comments mg-0 mg-r-10"></i>
+                                <span>Yeni Görüşme</span>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#uploadfile" id="upload-file">
+                            <div data-toggle="tooltip" title="Dosya Ekle" class="d-flex align-items-center">
+                                <i class="far fa-upload mg-0 mg-r-10"></i>
+                                <span>Dosya Ekle</span>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" data-toggle="modal" href="#modal_add-que">
+                            <div data-toggle="tooltip" title="Görev Oluştur" class="d-flex align-items-center">
+                                <i class="far fa-tasks mg-0 mg-r-10"></i>
+                                <span>Görev Oluştur</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <div data-toggle="tooltip" title="Görüşmeye Ekle" class="d-flex align-items-center">
+                            <i class="fal fa-sticky-note mg-0 mg-r-10 tx-secondary"></i>
+                            <span class="tx-secondary">Etiket</span>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#modal_category" data-toggle="modal">
+                            <div data-toggle="tooltip" title="Kategori Ekle" class="d-flex align-items-center">
+                                <i class="far fa-th-list mg-0 mg-r-10"></i>
+                                <span>Kategori</span>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#modal_filters" data-toggle="modal">
+                            <div data-toggle="tooltip" title="Ürün Ekle" class="d-flex align-items-center">
+                                <i class="far fa-barcode-read mg-0 mg-r-10"></i>
+                                <span>Ürün</span>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" data-toggle="modal" href="#modal_product_group">
+                            <div data-toggle="tooltip" title="Görev Oluştur" class="d-flex align-items-center">
+                                <i class="far fa-tasks mg-0 mg-r-10"></i>
+                                <span>Ürün Grubu</span>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" data-toggle="modal" href="#modal_brands">
+                            <div data-toggle="tooltip" title="Görev Oluştur" class="d-flex align-items-center">
+                                <i class="far fa-copyright mg-0 mg-r-10"></i>
+                                <span>Marka</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <nav class="nav nav-icon-only mg-l-auto">
+                    <a href="#" data-toggle="tooltip" id="delete-conversation" title="Görüşmeyi Sil" class="nav-link d-none d-sm-block mg-x-10-f">
+                        <i data-feather="trash"></i>
+                    </a>
+                    <a href="#" data-toggle="tooltip" title="Görüşmeyi Yazdır" class="nav-link d-none d-sm-block mg-x-10-f" id="print-conversation">
+                        <i data-feather="printer"></i>
+                    </a>
+                    <a class="nav-link mg-x-15-f" data-toggle="modal" href="#modal_sharelist">
+                        <div data-toggle="tooltip" title="Görevi Paylaş" class="d-flex align-items-center">
+                            <i class="far fa-share mg-0"></i>
+                        </div>
+                    </a>
+                </nav>
+            </div>
+            <!-- mail-content-header -->
+            <div class="mail-content-body d-none">
+                <div class="pd-20 pd-lg-25 pd-xl-30 pd-b-0-f">
+                    <div class="d-flex wd-100p align-items-center justify-content-start  mg-b-25">
+                        <div class="media wd-100p">
+                            <div class="media-body d-flex ">
+                                <div>
+                                    <label class="tx-sans tx-uppercase tx-medium tx-10 tx-spacing-1 tx-color-03 pd-l-0">
+                                        Kategoriler
+                                    </label>
+                                    <div>
+                                        <span class="badge badge-light">Bilgi</span>
+                                        <span class="badge badge-light">Talep</span>
+                                        <span class="badge badge-light">Şirkayet</span>
+                                    </div>
+                                </div>
+                                <div class="mg-l-25">
+                                    <label class="tx-sans tx-uppercase tx-medium tx-10 tx-spacing-1 tx-color-03 pd-l-0">
+                                        Markalar
+                                    </label>
+                                    <div>
+                                        <span class="badge badge-light">DELL</span>
+                                        <span class="badge badge-light">HP</span>
+                                        <span class="badge badge-light">Samsung</span>
+                                    </div>
+                                </div>
+                                <div class="mg-l-25">
+                                    <label class="tx-sans tx-uppercase tx-medium tx-10 tx-spacing-1 tx-color-03 pd-l-0">
+                                        Ürün Gurupları
+                                    </label>
+                                    <div>
+                                        <span class="badge badge-light">Laptop</span>
+                                        <span class="badge badge-light">Telefon</span>
+                                        <span class="badge badge-light">Yazılım</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex wd-100p align-items-center justify-content-start">
+                        <div class="media d-block d-sm-flex">
+                            <div class="media-body">
+                                <h5 class="mg-b-15 tx-inverse">Toplantı Notlarım</h5>
+                                <p class="mg-b-0">
+                                    E-Fatura ve E-arşiv mükellefi değiller. E-arşiv sağladığımızı söyledim.
+                                    <br />
+                                    <br />
+                                    E-fatura tarafında ki fiyatımızı belirttik. 2 Yıllık Ettiler. Fiyatı 2 Yıllık Geçeceğiz.
+                                    <br />
+                                    <br />
+                                    Fakat Eğitimlerin Genel Olarak Herkese Özel Olarak Verilmesini ve Telefonda Destek Verilmesinin kesintisiz olması gerektiğini söylediler. Bunun için ekstra fiyat verdik.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex wd-100p align-items-center justify-content-start bd-ui-02 pd-t-15 mg-t-25">
+                        <div class="media wd-100p d-flex pd-b-15">
+                            <a href="#" title=""><i class="far fa-play mg-l-5 tx-20-f mg-t-5 tx-gray-600 "></i></a>
+                            <div class="media-body d-flex align-items-center ht-33">
+                                <p class="mg-l-15 mg-b-0 mg-r-10 tx-sans tx-uppercase tx-medium tx-14 tx-spacing-1 tx-color-03 pd-l-0 ">
+                                    02:16
+                                </p>
+                                <div class="progress wd-250">
+                                    <div class="progress-bar bg-gray-600 wd-40p" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="mg-l-15 mg-b-0 tx-sans tx-uppercase tx-medium tx-14 tx-spacing-1 tx-color-03 pd-l-0 mg-0">
+                                    05:32
+                                </p>
+                            </div>
+                            <div class="d-flex pos-absolute r-35">
+                                <!-- <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0 mg-l-6" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Sil">
+                                    <i class="fal fa-trash-alt"></i>
+                                </button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex wd-100p align-items-center justify-content-start  bd-t bd-ui-02 pd-t-15">
+                        <div class="media wd-100p mg-b-15 d-flex bd-b pd-b-15">
+                            <div class="media-body d-flex align-items-center ">
+                                <label class="tx-sans tx-uppercase tx-medium tx-16 tx-spacing-1 tx-color-03 pd-l-0 mg-0 mg-t-4 mg-r-15">
+                                    <i class="fal fa-barcode-read mg-r-5"></i>
+                                    765765
+                                </label>
+                                <p class="mg-t-4 mg-b-0">
+                                    Ritma Flex Yeni Tasarım Revizyonu Satışı
+                                </p>
+                            </div>
+                            <div class="d-flex pos-absolute r-35">
+                                <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0 mg-l-6" data-tooltip="" title="" data-toggle="modal" href="#modal_filters" data-original-title="Düzenle">
+                                    <i class="fal fa-pen"></i>
+                                </button>
+                                <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0 mg-l-6" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Sil">
+                                    <i class="fal fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex wd-100p align-items-center justify-content-start">
+                        <div class="media d-block d-sm-flex justify-content-between wd-100p mg-b-10">
+                            <div class="media-body d-flex align-items-center ">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1" checked />
+                                    <label class="custom-control-label l-tho" style="text-decoration: line-through;" for="customCheck1">
+                                        Flexin Demosunun BTS Bilişimden Abdülkadir Çiftçioğlu'na iletilmesi.
+                                    </label>
+                                </div>
+                                <div class="d-flex pos-absolute r-35">
+                                    <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0 mg-l-6" data-tooltip="" title="" href="#modal_add-que" data-toggle="modal" data-original-title="Düzenle">
+                                        <i class="fal fa-pen"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0 mg-l-6" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Sil">
+                                        <i class="fal fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="card mg-30 mg-t-10 bd bd">
+                    <div class="card-body">
+                        <div class="media align-items-center">
+                            <div class="avatar avatar-online">
+                                <img class="avatar-initial rounded-circle" src="assets/yersoy.jpg" />
+                            </div>
+                            <div class="media-body mg-l-20">
+                                <h6 class="mg-b-2">
+                                    Yusuf Ersoy
+                                    <small class="text-muted">Bugün 14:30</small>
+                                </h6>
+                                <div class="text-muted">
+                                    "Toplantı Notları Dosyası" isimli bir word dosyası yükledi.
+                                </div>
+                            </div>
+                            <a href="#">
+                                <i class="far fa-file-word text-primary mg-r-6"></i>
+                                Word Dosyası.docx
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mg-30 mg-t-10 bd bd">
+                    <div class="card-body">
+                        <div class="media align-items-center">
+                            <div class="avatar avatar-online">
+                                <span class="avatar-initial rounded-circle">UB</span>
+                            </div>
+                            <div class="media-body mg-l-20">
+                                <h6 class="mg-b-2">
+                                    Uğur Büyükalkan
+                                    <small class="text-muted">Bugün 14:30</small>
+                                </h6>
+                                <div class="text-muted">
+                                    Randevularına dikkat eden bir firma lütfen zamanında gidelim.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mg-30 bd bd">
+                    <div class="card-body">
+                        <div class="media align-items-center">
+                            <div class="avatar avatar-online">
+                                <span class="avatar-initial rounded-circle">SÜ</span>
+                            </div>
+                            <div class="media-body mg-l-20">
+                                <h6 class="mg-b-2">
+                                    Selim Ünüvar
+                                    <small class="text-muted">Dün 06:21</small>
+                                </h6>
+                                <div class="text-muted">
+                                    Toplantıda sorulabilecek konuları not aldım lütfen dikkate alın.
+                                </div>
+                            </div>
+                            <a href="#">
+                                <i class="far fa-file-word text-primary mg-r-6"></i>
+                                Word Dosyası.docx
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mg-30 bd bd">
+                    <div class="card-body">
+                        <div class="media align-items-center">
+                            <div class="avatar avatar-online">
+                                <img class="avatar-initial rounded-circle" src="https://i.pinimg.com/550x/3b/5a/4e/3b5a4e0dcc84055423dce752afe2d040.jpg" />
+                            </div>
+                            <div class="media-body mg-l-20">
+                                <h6 class="mg-b-2">
+                                    Ebru Sezer
+                                    <small class="text-muted">3 Gün Önce</small>
+                                </h6>
+                                <div class="text-muted">
+                                    Toplantıyı bir yemekde yapma kararı aldık.Boğazdaki
+                                    "Günaydın"dan 10 kişilik rezerve yaptım.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pd-20 pd-lg-25 pd-xl-30 pd-t-0-f">
+                    <div id="editor-container" class="tx-13 tx-lg-14 ht-100">
+                        <u>Yorum</u>
+                        yapmak için buraya yazabilirsiniz
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mg-t-10">
+                        <div id="toolbar-container" class="bd-0-f pd-0-f">
+                            <span class="ql-formats">
+                                <button class="ql-bold"></button>
+                                <button class="ql-italic"></button>
+                                <button class="ql-underline"></button>
+                            </span>
+                            <span class="ql-formats">
+                                <button class="ql-link"></button>
+                                <button class="ql-image"></button>
+                            </span>
+                        </div>
+                        <button class="btn btn-primary">Yanıtla</button>
+                    </div>
+                </div>
+            </div>
+            <!-- mail-content-body -->
+        </div>
+        <!-- mail-content -->
+    </div>
+    <!-- mail-wrapper -->
+    <div id="mailCompose" class="mail-compose">
+        <div class="mail-compose-dialog">
+            <div class="mail-compose-header">
+                <h6 class="mail-compose-title tx-white">
+                    <i class="far fa-handshake tx-16 mg-r-6"></i>
+                    Yeni Görüşme
+                </h6>
+                <nav class="nav nav-icon-only">
+                    <a id="mailComposeMinimize" href="" class="nav-link nav-link-minimize d-none d-lg-block">
+                        <i data-feather="minus"></i>
+                        <i data-feather="square"></i>
+                    </a>
+                    <a id="mailComposeShrink" href="" class="nav-link nav-link-shrink d-none d-lg-block">
+                        <i data-feather="minimize-2"></i>
+                        <i data-feather="maximize-2"></i>
+                    </a>
+                    <a id="mailComposeClose" href="" class="nav-link nav-link-close">
+                        <i data-feather="x"></i>
+                    </a>
+                </nav>
+            </div>
+            <!-- mail-compose-header -->
+            <div class="mail-compose-body">
+                <div class="form-row align-items-center">
+                    <div class="col-sm tx-nowrap">Firma</div>
+                    <div class="col-sm-10">
+                        <select class="form-control select2 bd-0-f pd-x-0" data-placeholder="Görüşeceğiniz Firmayı Seçiniz">
+                            <option selected></option>
+                            <option>
+                                Ritma Teknoloji Sanayi ve Ticaret Limited Şirketi
+                            </option>
+                            <option>Sytark Teknoloji</option>
+                            <option>Medinaca Medikal Teknolojileri</option>
+                        </select>
+                    </div>
+                </div>
+                <hr class="mg-y-10" />
+                <div class="form-row align-items-center">
+                    <div class="col-sm tx-nowrap">İlgili</div>
+                    <div class="col-sm-10">
+                        <select class="form-control bd-0-f pd-x-0" id="select2NewRelation" data-placeholder="Firmadan İlgili Kişiler" multiple>
+                            <option>Selim Ünüvar</option>
+                            <option>Yusuf Ersoy</option>
+                            <option>Ramazan Uzunkavak</option>
+                            <option>Uğur Büyükalkan</option>
+                            <option>Burak Altun</option>
+                        </select>
+                    </div>
+                </div>
+                <hr class="mg-y-10" />
+                <div class="form-row align-items-center">
+                    <div class="col-sm tx-nowrap">Konu</div>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control bd-0 pd-x-0" placeholder="Konu Giriniz" />
+                    </div>
+                </div>
+                <div id="editor-container2" class="ht-250 mg-t-15"></div>
+                <div class="d-sm-flex align-items-center justify-content-between mg-t-25">
+                    <div id="toolbar-container2" class="bd-0-f pd-0-f">
+                        <span class="ql-formats">
+                            <button class="ql-bold"></button>
+                            <button class="ql-italic"></button>
+                            <button class="ql-underline"></button>
+                        </span>
+                        <span class="ql-formats">
+                            <button class="ql-link"></button>
+                            <button class="ql-image"></button>
+                        </span>
+                    </div>
+                    <div class="tx-13 mg-t-15 mg-sm-t-0">
+                        <button class="btn btn-white mg-r-5">Taslak</button>
+                        <button class="btn btn-primary">Görüşmeyi Oluştur</button>
+                    </div>
+                </div>
+            </div>
+            <!-- mail-compose-body -->
+        </div>
+        <!-- mail-compose-dialog -->
+    </div>
+    <!-- mail-compose -->
+    <div id="modal_filters" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content tx-14">
+                <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+                    <div class="media align-items-center">
+                        <span class="tx-36 tx-color-03">
+                            <i class="fal fa-barcode"></i>
+                        </span>
+                        <div class="media-body mg-sm-l-20">
+                            <h4 class="tx-18 mg-b-2">Ürün Ekle</h4>
+                            <p class="tx-13 tx-color-03 mg-b-0">
+                                Ürün seçerek görüşmeye buradan ürün ekleyin.
+                            </p>
+                        </div>
+                    </div>
+                    <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                        <i class="far fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body pd-x-30 pd-y-15 bd-b">
+                    <form class="d-inline-flex">
+                        <div class="form-group mg-b-0 wd-150 mg-r-10">
+                            <select class="form-control select2" data-placeholder="Ürün Tipi">
+                                <option></option>
+                                <option value="Ürün">Ürün</option>
+                                <option value="İşçilik/Hizmet">İşçilik/Hizmet</option>
+                                <option value="Malzeme">Malzeme</option>
+                            </select>
+                        </div>
+                        <div class="form-group mg-b-0 wd-200 mg-r-10">
+                            <select class="form-control select2" data-placeholder="Kategori">
+                                <option></option>
+                                <option value="Traktör">Traktör</option>
+                                <option value="Yedekparça">Yedekparça</option>
+                                <option value="Motor">|--- Motor</option>
+                                <option value="İçaksamlar">|--- İçaksamlar</option>
+                                <option value="Dışaksamlar">|--- Dışaksamlar</option>
+                            </select>
+                        </div>
+                        <div class="form-group mg-b-0 wd-200 mg-r-10">
+                            <select class="form-control select2" data-placeholder="Marka">
+                                <option></option>
+                                <option value="ZY Elektrikli">ZY Elektrikli</option>
+                                <option value="Belarus">Belarus</option>
+                                <option value="Bozok">Bozok</option>
+                                <option value="Mercedes">Mercedes</option>
+                            </select>
+                        </div>
+                        <div class="input-group wd-250 mg-r-10">
+                            <input type="text" class="form-control" placeholder="0.00" />
+                            <input type="text" class="form-control" placeholder="0.00" />
+                            <select class="form-control">
+                                <option value="TL (₺)">TL (₺)</option>
+                                <option value="Dolar ($)">Dolar ($)</option>
+                                <option value="Euro (€)">Euro (€)</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-sm btn-secondary" type="button">
+                            <i class="far fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-body mx-ht-400 pd-0 rounded ritma-scrollbar4 overflow-hidden">
+                    <table class="table table-hover table-ritma2 mg-b-0">
+                        <thead class="table-borderless">
+                            <tr class="text-muted tx-12 bg-ui-01">
+                                <td class="wd-10p tx-left pd-l-30-f">Kodu</td>
+                                <td class="tx-left">Ürün</td>
+                                <td class="tx-left">Kategori</td>
+                                <td class="wd-5p tx-right pd-r-30-f">İşlem</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tx-left pd-l-30-f">
+                                    <span class="text-muted">#99654712</span>
+                                </td>
+                                <td>
+                                    <span class="tx-bold">ZY Traktör V1</span>
+                                </td>
+                                <td>
+                                    <span class="d-block text-muted">
+                                        Traktörler / Elektrikli
+                                    </span>
+                                </td>
+                                <td class="tx-center pd-r-30-f">
+                                    <button class="btn btn-sm btn-outline-success pd-y-5 pd-x-10" data-tooltip title="Seç">
+                                        <i class="far fa-check"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tx-left pd-l-30-f">
+                                    <span class="text-muted">#99654711</span>
+                                </td>
+                                <td>
+                                    <span class="tx-bold">Traktör Farı</span>
+                                </td>
+                                <td>
+                                    <span class="d-block text-muted">
+                                        Yedekparça / İçaksamlar
+                                    </span>
+                                </td>
+                                <td class="tx-center pd-r-30-f">
+                                    <button class="btn btn-sm btn-success pd-y-5 pd-x-10" data-tooltip title="Seç">
+                                        <i class="far fa-check"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer pd-x-30">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">
+                        Kapat
+                    </button>
+                    <button type="button" class="btn btn-sm btn-primary">
+                        <i class="far fa-plus mg-r-6"></i>
+                        Filtre Düzenle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal_add-que" class="modal fade effect-scale">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content tx-14">
+                <div class="modal-header d-flex align-items-center justify-content-between bg-ui-01 pd-x-30 pd-y-15">
+                    <div class="media align-items-center">
+                        <span class="tx-36 tx-color-03">
+                            <i class="fal fa-tasks"></i>
+                        </span>
+                        <div class="media-body mg-sm-l-20">
+                            <h4 class="tx-18 mg-b-2">Görev Ekle & Düzenle</h4>
+                            <p class="tx-13 tx-color-03 mg-b-0">
+                                Seçili Görüşmeye Görev Ekleyebilirsiniz
+                            </p>
+                        </div>
+                    </div>
+                    <button data-dismiss="modal" class="tx-18 tx-color-03 bg-transparent bd-0 pos-absolute t-15 r-30">
+                        <i class="far fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body pd-25">
+                    <div class="form-group">
+                        <label class="d-block text-muted">Görev Konusu</label>
+                        <textarea type="text" class="form-control" placeholder="Görev Konusu Giriniz örn.(Ürün Müşteriye Teslim Edilecek)"></textarea>
+                    </div>
+                    <!-- <div class="form-group">
+                                                                                                                                                                                                                                                                                             <label class="d-block text-muted">Görev Durumu</label>
+                                                                                                                                                                                                                                                                                             <label class="ritma-switch mg-l-20">
+                                                                                                                                                                                                                                                                                                 <input type="checkbox" checked="">
+                                                                                                                                                                                                                                                                                                 <span class="ritma-switch-slider"></span>
+                                                                                                                                                                                                                                                                                               </label>
+                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                             </div> -->
+                </div>
+                <div class="modal-footer pd-x-30">
+                    <button type="button" class="btn btn-sm btn-outline-secondary" data-dismiss="modal">
+                        Kapat
+                    </button>
+                    <button type="button" class="btn btn-sm btn-primary">
+                        <i class="far fa-plus mg-r-6"></i>
+                        Filtre Düzenle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div aria-hidden="true" aria-labelledby="modal_approvelist" class="modal fade effect-scale" id="modal_approvelist" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered mx-wd-400" role="document">
+            <div class="modal-content tx-14">
+                <div class="modal-header wd-100p-f d-flex align-items-center justify-content-between bg-ui-01 pd-15">
+                    <div class="media align-items-center">
+                        <span class="tx-24 tx-color-03 d-none d-sm-block mg-l-5">
+                            <i class="far fa-user-plus"></i>
+                        </span>
+                        <div class="media-body mg-l-20">
+                            <h4 class="tx-16-f tx-normal mg-b-0">Katılımcı Ekle</h4>
+                        </div>
+                    </div>
+                    <a href="#" data-dismiss="modal" class="close">
+                        <i class="far fa-times"></i>
+                    </a>
+                </div>
+                <div class="modal-body ht-350 overflow-auto pd-0 ">
+                    <div class="d-flex w-100 ht-50 pd-x-40 align-items-center pos-relative">
+                        <i class="pos-absolute wd-20 ht-20 l-20" data-feather="search"></i>
+                        <input class="form-control tx-14 bd-0 shadow-none" placeholder="Arama" type="text" />
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-ritma1 mg-b-0">
+                            <tbody>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <img class="avatar-initial rounded-circle bg-orange text-monospace" src="assets/yersoy.jpg" />
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Yusuf Ersoy
+                                        </h6>
+                                        <p class="mg-b-0 text-muted">Yazılım Mühendisi</p>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                SÜ
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Selim Ünüvar
+                                        </h6>
+                                        <p class="mg-b-0 text-muted">
+                                            Kurucu Yönetici
+                                        </p>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-purple text-monospace">
+                                                ES
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Ebru Sezer
+                                        </h6>
+                                        <p class="mg-b-0 text-muted">
+                                            Yönetici Asistanı
+                                        </p>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-primary text-monospace">
+                                                BA
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Burak Altun
+                                        </h6>
+                                        <p class="mg-b-0 text-muted">
+                                            Yazılım Mühendisi
+                                        </p>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-purple text-monospace">
+                                                ES
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Ebru Sezer
+                                        </h6>
+                                        <p class="mg-b-0 text-muted">
+                                            Yönetici Asistanı
+                                        </p>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-primary text-monospace">
+                                                BA
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Burak Altun
+                                        </h6>
+                                        <p class="mg-b-0 text-muted">
+                                            Yazılım Mühendisi
+                                        </p>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button class="btn btn-primary tx-13 d-flex align-items-center" data-dismiss="modal" type="button">
+                        <i class="far fa-plus mg-r-6"></i>
+                        EKLE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div aria-hidden="true" aria-labelledby="modal_category" class="modal fade effect-scale" id="modal_category" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered mx-wd-400" role="document">
+            <div class="modal-content tx-14">
+                <div class="modal-header wd-100p-f d-flex align-items-center justify-content-between bg-ui-01 pd-15">
+                    <div class="media align-items-center">
+                        <span class="tx-24 tx-color-03 d-none d-sm-block mg-l-5">
+                            <i class="far fa-th-list"></i>
+                        </span>
+                        <div class="media-body mg-l-20">
+                            <h4 class="tx-16-f tx-normal mg-b-0">Kategori Ekle</h4>
+                        </div>
+                    </div>
+                    <a href="#" data-dismiss="modal" class="close">
+                        <i class="far fa-times"></i>
+                    </a>
+                </div>
+                <div class="modal-body ht-350 pd-0 overflow-auto">
+                    <div class="d-flex w-100 ht-50 pd-x-40 align-items-center pos-relative">
+                        <i class="pos-absolute wd-20 ht-20 l-20" data-feather="search"></i>
+                        <input class="form-control tx-14 bd-0 shadow-none" placeholder="Arama" type="text" />
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-ritma1 mg-b-0">
+                            <tbody>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-th-list"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Bilgi
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-th-list"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Talep
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-th-list"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Şikayet
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-th-list"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Servis Süreci
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-th-list"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Pazarlama
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-th-list"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Bayilik Süreci
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button class="btn btn-primary tx-13 d-flex align-items-center" data-dismiss="modal" type="button">
+                        <i class="far fa-plus mg-r-6"></i>
+                        EKLE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div aria-hidden="true" aria-labelledby="modal_product_group" class="modal fade effect-scale" id="modal_product_group" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered mx-wd-400" role="document">
+            <div class="modal-content tx-14">
+                <div class="modal-header wd-100p-f d-flex align-items-center justify-content-between bg-ui-01 pd-15">
+                    <div class="media align-items-center">
+                        <span class="tx-24 tx-color-03 d-none d-sm-block mg-l-5">
+                            <i class="fal fa-boxes"></i>
+                        </span>
+                        <div class="media-body mg-l-20">
+                            <h4 class="tx-16-f tx-normal mg-b-0">Ürün Grubu Ekle</h4>
+                        </div>
+                    </div>
+                    <a href="#" data-dismiss="modal" class="close">
+                        <i class="far fa-times"></i>
+                    </a>
+                </div>
+                <div class="modal-body ht-350 pd-0 overflow-auto">
+                    <div class="d-flex w-100 ht-50 pd-x-40 align-items-center pos-relative">
+                        <i class="pos-absolute wd-20 ht-20 l-20" data-feather="search"></i>
+                        <input class="form-control tx-14 bd-0 shadow-none" placeholder="Arama" type="text" />
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-ritma1 mg-b-0">
+                            <tbody>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-box-alt"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Sunucu
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-box-alt"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Masaüstü PC
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-box-alt"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Notebook
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-box-alt"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-box-alt"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Yazıcı
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-box-alt"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-box-alt"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Monitör
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-box-alt"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-box-alt"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Cep Telefonu
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button class="btn btn-primary tx-13 d-flex align-items-center" data-dismiss="modal" type="button">
+                        <i class="far fa-plus mg-r-6"></i>
+                        EKLE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div aria-hidden="true" aria-labelledby="modal_brands" class="modal fade effect-scale" id="modal_brands" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered mx-wd-400" role="document">
+            <div class="modal-content tx-14">
+                <div class="modal-header wd-100p-f d-flex align-items-center justify-content-between bg-ui-01 pd-15">
+                    <div class="media align-items-center">
+                        <span class="tx-24 tx-color-03 d-none d-sm-block mg-l-5">
+                            <i class="fal fa-copyright"></i>
+                        </span>
+                        <div class="media-body mg-l-20">
+                            <h4 class="tx-16-f tx-normal mg-b-0">Marka Ekle</h4>
+                        </div>
+                    </div>
+                    <a href="#" data-dismiss="modal" class="close">
+                        <i class="far fa-times"></i>
+                    </a>
+                </div>
+                <div class="modal-body ht-350 pd-0 overflow-auto">
+                    <div class="d-flex w-100 ht-50 pd-x-40 align-items-center pos-relative">
+                        <i class="pos-absolute wd-20 ht-20 l-20" data-feather="search"></i>
+                        <input class="form-control tx-14 bd-0 shadow-none" placeholder="Arama" type="text" />
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-ritma1 mg-b-0">
+                            <tbody>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-copyright"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            HP
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-copyright"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            DELL
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-copyright"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            APPLE
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-copyright"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Huawei
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-copyright"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Samsung
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                <i class="fal fa-copyright"></i>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Asus
+                                        </h6>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-plus"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-end">
+                    <button class="btn btn-primary tx-13 d-flex align-items-center" data-dismiss="modal" type="button">
+                        <i class="far fa-plus mg-r-6"></i>
+                        EKLE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div aria-hidden="true" aria-labelledby="modal_sharelist" class="modal fade effect-scale" id="modal_sharelist" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered mx-wd-400" role="document">
+            <div class="modal-content tx-14">
+                <div class="modal-header wd-100p-f d-flex align-items-center justify-content-between bg-ui-01 pd-15">
+                    <div class="media align-items-center">
+                        <span class="tx-24 tx-color-03 d-none d-sm-block mg-l-5">
+                            <i class="far fa-share"></i>
+                        </span>
+                        <div class="media-body mg-l-20">
+                            <h4 class="tx-16-f tx-normal mg-b-0">Görüşmeyi Paylaş</h4>
+                        </div>
+                    </div>
+                    <a href="#" data-dismiss="modal" class="close">
+                        <i class="far fa-times"></i>
+                    </a>
+                </div>
+                <div class="modal-body pd-0 scrollbar-primary ritma-scrollbar7">
+                    <div class="d-flex w-100 ht-50 pd-x-40 align-items-center pos-relative">
+                        <i class="pos-absolute wd-20 ht-20 l-20" data-feather="search"></i>
+                        <input class="form-control tx-14 bd-0 shadow-none" placeholder="Arama" type="text" />
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-ritma1 mg-b-0">
+                            <tbody>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <img class="avatar-initial rounded-circle bg-orange text-monospace" src="assets/yersoy.jpg" />
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Yusuf Ersoy
+                                        </h6>
+                                        <p class="mg-b-0 text-muted">Yazılım Mühendisi</p>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-success lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-check-double"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-orange text-monospace">
+                                                SÜ
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Selim Ünüvar
+                                        </h6>
+                                        <p class="mg-b-0 text-muted">
+                                            Kurucu Yönetici
+                                        </p>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-share"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-purple text-monospace">
+                                                ES
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Ebru Sezer
+                                        </h6>
+                                        <p class="mg-b-0 text-muted">
+                                            Yönetici Asistanı
+                                        </p>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-success lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-check-double"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-primary text-monospace">
+                                                BA
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Burak Altun
+                                        </h6>
+                                        <p class="mg-b-0 text-muted">
+                                            Yazılım Mühendisi
+                                        </p>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-share"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-purple text-monospace">
+                                                ES
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Ebru Sezer
+                                        </h6>
+                                        <p class="mg-b-0 text-muted">
+                                            Yönetici Asistanı
+                                        </p>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-success lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="far fa-check-double"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tx-nowrap wd-70 pd-r-0-f">
+                                        <div class="avatar mg-l-10">
+                                            <span class="avatar-initial rounded-circle bg-primary text-monospace">
+                                                BA
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="tx-nowrap valign-middle-f">
+                                        <h6 class="tx-14 mg-b-2">
+                                            Burak Altun
+                                        </h6>
+                                        <p class="mg-b-0 text-muted">
+                                            Yazılım Mühendisi
+                                        </p>
+                                    </td>
+                                    <td class="tx-right valign-middle-f pd-r-25-f">
+                                        <button type="button" class="btn btn-xs btn-icon btn-outline-secondary lh-0" data-tooltip="" title="" href="#" data-toggle="modal" data-original-title="Ekle">
+                                            <i class="fal fa-share"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination pagination-circle mg-b-0">
+                            <li class="page-item disabled">
+                                <a class="page-link page-link-icon" href="#">
+                                    <i data-feather="chevron-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link page-link-icon" href="#">
+                                    <i data-feather="chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="btn btn-primary tx-13 d-flex align-items-center" data-dismiss="modal" type="button">
+                        <i class="fal fa-paper-plane mg-r-10"></i>
+                        Paylaş
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="file" class="d-none upload" />
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/feather-icons/feather.min.js"></script>
+    <script src="assets/js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/quill/quill.min.js"></script>
+    <script src="assets/js/select2/select2.min.js"></script>
+    <script src="assets/js-customs/ortak.js"></script>
+    <script src="assets/js/dashforge.js"></script>
+    <script src="assets/js/dashforge.mail.js"></script>
+    <script src="https://kit-pro.fontawesome.com/releases/v5.10.1/js/pro.min.js" data-auto-fetch-svg></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.6/sweetalert2.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#select2NewRelation').select2({ placeholder: 'Select Status' })
+        $('#delete-conversation').click(function() {
+            Swal.fire({
+                title: '<strong>Görüşmeyi Siliyorsunuz</strong>',
+                icon: 'error',
+                html: 'Bu işlemi onaylayarak görüşmeyi silmiş olursunuz, geri almak mümkün değildir. ',
+                showCloseButton: true,
+                showCancelButton: false,
+                focusConfirm: false,
+                confirmButtonColor: '#0168fa',
+                confirmButtonText: '<i class="fa fa-times mg-r-6"></i> Görüşmeyi Sil',
+                confirmButtonAriaLabel: 'Görüşmeyi Sil'
+            })
+        })
+        $('#print-conversation').click(function() {
+            window.print()
+        })
+        $('#share-conversation').click(function() {
+            Swal.fire({
+                icon: 'info',
+                title: 'Görüşmeyi Paylaşacağınız Mail Adresini Giriniz',
+                input: 'email',
+                confirmButtonColor: '#0168fa',
+                inputPlaceholder: 'E-Mail Adresi ',
+                confirmButtonText: '<i class="fa fa-check mg-r-6"></i> Görüşmeyi Paylaş'
+            }).then(function(email) {
+                Swal.fire({
+                    type: 'success',
+                    icon: 'success',
+                    confirmButtonColor: '#0168fa',
+                    title: 'Görüşme Başarıyla Paylaşılmıştır',
+                    confirmButtonText: '<i class="fa fa-check mg-r-6"></i> Tamamdır'
+                })
+            })
+        })
+        $('#upload-file').click(function() {
+            $('.upload').trigger('click')
+        })
+    })
+    </script>
+</body>
+
+</html>
